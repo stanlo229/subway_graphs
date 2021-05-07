@@ -1,0 +1,67 @@
+[
+    {
+        "name" : "aldehyde",
+        "SMILES" : "Brc1cc(C=O)c(O)cc1",
+        "g/mol": 201.02,
+        "purchasable" : true,
+        "cost" : 724.47,
+        "quantity" : 1  
+    },
+    {
+        "name" : "CBr4",
+        "SMILES" : "BrC(Br)(Br)Br",
+        "g/mol": 331.63,
+        "purchasable" : true,
+        "cost" : 2779.03,
+        "quantity" : 3  
+    },
+    {
+        "name" : "PPh3",
+        "SMILES" : "P(c1ccccc1)(c2ccccc2)c3ccccc3",
+        "g/mol": 262.29,
+        "purchasable" : true,
+        "cost" : 6714.68,
+        "quantity" : 6  
+    },
+    {
+        "name" : "NEt3",
+        "SMILES" : "CCN(CC)CC",
+        "g/mol": 101.19,
+        "purchasable" : true,
+        "cost" : 50.77,
+        "quantity" : 6  
+    },
+    {
+        "name" : "gem olefin",
+        "SMILES" : "Brc1cc(/C=C(Br)/Br)c(O)cc1",
+        "g/mol": 356.84,
+        "purchasable" : true,
+        "cost" : 273.65,
+        "quantity" : 1
+    },
+    {
+        "name" : "CuI",
+        "SMILES" : "[Cu]I",
+        "g/mol": 190.45,
+        "purchasable" : true,
+        "cost" : 158.45,
+        "quantity" : 0.05 
+    },
+    {
+        "name" : "K3PO4",
+        "SMILES" : "O=P(O[K])(O[K])O[K]",
+        "g/mol": 212.27,
+        "purchasable" : true,
+        "cost" : 196.99,
+        "quantity" : 2 
+    },
+    {
+        "name" : "2,5-dibromobenzofuran",
+        "SMILES" : "Brc1ccc2oc(Br)cc2c1",
+        "g/mol": 275.93,
+        "purchasable" : false,
+        "cost" : null,
+        "quantity" : null,
+        "manual": true
+    }
+]

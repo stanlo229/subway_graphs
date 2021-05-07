@@ -1,0 +1,52 @@
+{
+    "a": {
+        "Frag_type": "a",
+        "Frag_num": "15",
+        "SMILES": "OB(O)c1ccnc(-n2c3ccccc3c3ccccc32)c1",
+        "Name": "-",
+        "g/mol": "288.115",
+        "Quantity": "0",
+        "CAD": "0",
+        "$/mol": "0"
+    },
+    "b": {
+        "Frag_type": "b",
+        "Frag_num": "17",
+        "SMILES": "C[N+]12CC(=O)O[B-]1(c1cccc(Br)c1-n1c3ccccc3c3ccccc31)OC(=O)C2",
+        "Name": "-",
+        "g/mol": "477.123",
+        "Quantity": "0",
+        "CAD": "0",
+        "$/mol": "0"
+    },
+    "c": {
+        "Frag_type": "c",
+        "Frag_num": "19",
+        "SMILES": "Brc1cc(-n2c3ccccc3c3ccccc32)c(Br)cc1-n1c2ccccc2c2ccccc21",
+        "Name": "-",
+        "g/mol": "566.296",
+        "Quantity": "0",
+        "CAD": "0",
+        "$/mol": "0"
+    },
+    "buch": {
+        "Frag_type": "buch",
+        "Frag_num": "1",
+        "SMILES": "Brc1nccnc1",
+        "Name": "",
+        "g/mol": "158.98",
+        "Quantity": "1",
+        "CAD": "183",
+        "$/mol": "29093.34"
+    },
+    "snar": {
+        "Frag_type": "snar",
+        "Frag_num": "1",
+        "SMILES": "c1ccc2c(c1)[nH]c1ccccc12",
+        "Name": "",
+        "g/mol": "167.21",
+        "Quantity": "5",
+        "CAD": "36",
+        "$/mol": "1203.912"
+    }
+}
