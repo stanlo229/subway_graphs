@@ -1,5 +1,6 @@
 [
     {
+        "id": "0r",
         "name": "Step 1",
         "rxn_SMILES": "Brc1cc(C=O)c(O)cc1.BrC(Br)(Br)Br>P(c1ccccc1)(c2ccccc2)c3ccccc3.CCN(CC)CC>Brc1cc(/C=C(Br)/Br)c(O)cc1",
         "tH": 7.84,
@@ -8,6 +9,7 @@
         "max_sites": null
     },
     {
+        "id": "1r",
         "name": "Step 2",
         "rxn_SMILES": "Brc1cc(/C=C(Br)/Br)c(O)cc1>[Cu]I.O=P(O[K])(O[K])O[K]>Brc1ccc2oc(Br)cc2c1",
         "tH": 2.52,

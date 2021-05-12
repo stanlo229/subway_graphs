@@ -1,15 +1,14 @@
-import routescore
 import pickle
 import json
 from rdkit import Chem
 from rdkit.Chem import rdChemReactions
 import timeit
 
-path_to_molecule = 'molecule_node_basic.json'
+path_to_molecule = r'C:\Users\Stanley Lo\Documents\Summer 2021 NSERC\subway_graphs\subway\data\molecule_node_basic.json'
 with open(path_to_molecule) as f:
     mol_data = json.load(f)
 
-path_to_reaction = 'reaction_node_basic.json'
+path_to_reaction = r'C:\Users\Stanley Lo\Documents\Summer 2021 NSERC\subway_graphs\subway\data\reaction_node_basic.json'
 with open(path_to_reaction) as f2:
     rxn_data = json.load(f2)
 
@@ -88,4 +87,5 @@ def RouteSearch(root_node: Node):
             
 
 trial = Node("Brc1ccc2oc(Br)cc2c1", 0)
-print(trial.child[0].child)
+print(trial.child[0].data[0]["id"])
+print(rxn_data[0])
