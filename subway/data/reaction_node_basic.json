@@ -1,7 +1,7 @@
 [
     {
         "id": "0r",
-        "name": "Step 1",
+        "Name": "Step 1",
         "rxn_SMILES": "Brc1cc(C=O)c(O)cc1.BrC(Br)(Br)Br>P(c1ccccc1)(c2ccccc2)c3ccccc3.CCN(CC)CC>Brc1cc(/C=C(Br)/Br)c(O)cc1",
         "tH": 7.84,
         "tM": 0,
@@ -10,8 +10,44 @@
     },
     {
         "id": "1r",
-        "name": "Step 2",
+        "Name": "Step 2",
         "rxn_SMILES": "Brc1cc(/C=C(Br)/Br)c(O)cc1>[Cu]I.O=P(O[K])(O[K])O[K]>Brc1ccc2oc(Br)cc2c1",
+        "tH": 2.52,
+        "tM": 0,
+        "yield": 0.96,
+        "max_sites": null
+    },
+    {
+        "id": "2r",
+        "Name": "Step 3",
+        "rxn_SMILES": "Brc1cc(/C=C(Br)/Br)c(O)cc1>[Cu]I.O=P(O[K])(O[K])O[K]>Brc1c(Br)cccc1",
+        "tH": 2.52,
+        "tM": 0,
+        "yield": 0.96,
+        "max_sites": null
+    },
+    {
+        "id": "3r",
+        "Name": "Step 4",
+        "rxn_SMILES": "Brc1cc(/C=C(Br)/Br)c(O)cc1>CCN(CC)CC.O=P(O[K])(O[K])O[K]>Brc1ccc2oc(Br)cc2c1",
+        "tH": 2.52,
+        "tM": 0,
+        "yield": 0.96,
+        "max_sites": null
+    },
+    {
+        "id": "4r",
+        "Name": "Step 5",
+        "rxn_SMILES": "Brc1cc(/C=C(Br)/Br)c(O)cc1>CCN(CC)CC.O=P(O[K])(O[K])O[K]>Brc1ccc2oc(Br)cc2c1",
+        "tH": 2.52,
+        "tM": 0,
+        "yield": 0.96,
+        "max_sites": null
+    },
+    {
+        "id": "5r",
+        "Name": "Step 6",
+        "rxn_SMILES": "Brc1cc(/C=C(Br)/Br)c(O)cc1>CCN(CC)CC.O=P(O[K])(O[K])O[K]>Brc1ccc2oc(Br)cc2c1",
         "tH": 2.52,
         "tM": 0,
         "yield": 0.96,

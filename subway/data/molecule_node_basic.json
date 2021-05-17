@@ -1,75 +1,125 @@
 [
     {
         "id": 0,
-        "name" : "aldehyde",
+        "Name" : "aldehyde",
         "SMILES" : "Brc1cc(C=O)c(O)cc1",
         "g/mol": 201.02,
         "purchasable" : true,
-        "cost" : 724.47,
-        "quantity" : 1  
+        "CAD" : 724.47,
+        "Quantity" : 1  
     },
     {
         "id": 1,
-        "name" : "CBr4",
+        "Name" : "CBr4",
         "SMILES" : "BrC(Br)(Br)Br",
         "g/mol": 331.63,
         "purchasable" : true,
-        "cost" : 2779.03,
-        "quantity" : 3  
+        "CAD" : 2779.03,
+        "Quantity" : 3  
     },
     {
         "id": 2,
-        "name" : "PPh3",
+        "Name" : "PPh3",
         "SMILES" : "P(c1ccccc1)(c2ccccc2)c3ccccc3",
         "g/mol": 262.29,
         "purchasable" : true,
-        "cost" : 6714.68,
-        "quantity" : 6  
+        "CAD" : 6714.68,
+        "Quantity" : 6  
     },
     {
         "id": 3,
-        "name" : "NEt3",
+        "Name" : "NEt3",
         "SMILES" : "CCN(CC)CC",
         "g/mol": 101.19,
         "purchasable" : true,
-        "cost" : 50.77,
-        "quantity" : 6  
+        "CAD" : 50.77,
+        "Quantity" : 6  
     },
     {
         "id": 4,
-        "name" : "gem olefin",
+        "Name" : "gem olefin",
         "SMILES" : "Brc1cc(/C=C(Br)/Br)c(O)cc1",
         "g/mol": 356.84,
         "purchasable" : true,
-        "cost" : 273.65,
-        "quantity" : 1
+        "CAD" : 273.65,
+        "Quantity" : 1
     },
     {
         "id": 5,
-        "name" : "CuI",
+        "Name" : "CuI",
         "SMILES" : "[Cu]I",
         "g/mol": 190.45,
         "purchasable" : true,
-        "cost" : 158.45,
-        "quantity" : 0.05 
+        "CAD" : 158.45,
+        "Quantity" : 0.05 
     },
     {
         "id": 6,
-        "name" : "K3PO4",
+        "Name" : "K3PO4",
         "SMILES" : "O=P(O[K])(O[K])O[K]",
         "g/mol": 212.27,
         "purchasable" : true,
-        "cost" : 196.99,
-        "quantity" : 2 
+        "CAD" : 196.99,
+        "Quantity" : 2 
     },
     {
         "id": 7,
-        "name" : "2,5-dibromobenzofuran",
+        "Name" : "2,5-dibromobenzofuran",
         "SMILES" : "Brc1ccc2oc(Br)cc2c1",
         "g/mol": 275.93,
         "purchasable" : false,
-        "cost" : null,
-        "quantity" : null,
+        "CAD" : null,
+        "Quantity" : 2,
+        "manual": true
+    },
+    {
+        "id": 8,
+        "Name" : "2,5-dibromobenzofuran",
+        "SMILES" : "O=P(O[K])(O[K])O[K]",
+        "g/mol": 275.93,
+        "purchasable" : false,
+        "CAD" : 196.99,
+        "Quantity" : 2,
+        "manual": true
+    },
+    {
+        "id": 9,
+        "Name" : "2,5-dibromobenzofuran",
+        "SMILES" : "[Cu]I",
+        "g/mol": 275.93,
+        "purchasable" : false,
+        "CAD" : 196.99,
+        "Quantity" : 2,
+        "manual": true
+    },
+    {
+        "id": 10,
+        "Name" : "2,5-dibromobenzofuran",
+        "SMILES" : "[Cu]I",
+        "g/mol": 275.93,
+        "purchasable" : false,
+        "CAD" : 196.99,
+        "Quantity" : 2,
+        "manual": true
+    },
+    {
+        "id": 11,
+        "Name" : "2,5-dibromobenzofuran",
+        "SMILES" : "[Cu]I",
+        "g/mol": 275.93,
+        "purchasable" : false,
+        "CAD" : 196.99,
+        "Quantity" : 2,
+        "manual": true
+    },
+    {
+        "id": 12,
+        "Name" : "2,5-dibromobenzofuran",
+        "SMILES" : "[Cu]I",
+        "g/mol": 275.93,
+        "purchasable" : false,
+        "CAD" : 196.99,
+        "Quantity" : 2,
         "manual": true
     }
 ]
