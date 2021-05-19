@@ -41,8 +41,15 @@ def target_to_adj(PIK, tgtFile, mol_jsonFile, rxn_jsonFile):
             ab_SMILES = rows["ab"]
             c_SMILES = rows["c"]
             pent_SMILES = rows["pentamer"]
-            F_SMILES = rows["F"]
-            carb_SMILES = rows["carbazole"]
+            # F_SMILES = rows["F"]
+            # carb_SMILES = rows["carbazole"]
+            xphos_SMILES = "CC(C)C1=CC(=C(C(=C1)C(C)C)C2=CC(=CC=C2)P(C3CCCCC3)C4CCCCC4)C(C)C.C1=CC=C([C-]=C1)C2=CC=CC=C2N.Cl[Pd+]"
+            kpo_SMILES = "[O-]P(=O)([O-])[O-].[K+].[K+].[K+]"
+            pdba_SMILES = "C1=CC=C(C=C1)C=CC(=O)C=CC2=CC=CC=C2.C1=CC=C(C=C1)C=CC(=O)C=CC2=CC=CC=C2.C1=CC=C(C=C1)C=CC(=O)C=CC2=CC=CC=C2.[Pd].[Pd]"
+            dave_SMILES = "CN(C)C1=CC=CC=C1C2=CC=CC=C2P(C3CCCCC3)C4CCCCC4"
+            naot_SMILES = "CC(C)(C)[O-].[Na+]"
+            cs_SMILES = "C(=O)([O-])[O-].[Cs+].[Cs+]"
+            kco_SMILES = "C(=O)([O-])[O-].[K+].[K+]"
             # NH_SMILES = rows["N-H"]
             # NBoc_SMILES = rows["N-Boc"]
             # hal_SMILES = rows["halide"]
@@ -61,7 +68,25 @@ def target_to_adj(PIK, tgtFile, mol_jsonFile, rxn_jsonFile):
                 (item for item in csvReader if item["SMILES"] == ab_SMILES), None
             )
             ab_mol_id = ab_m_node["id"]
-            rxn_SMILES = a_SMILES + "." + b_SMILES + ">>" + ab_SMILES
+            xphos_m_node = next(
+                (item for item in csvReader if item["SMILES"] == xphos_SMILES), None,
+            )
+            xphos_mol_id = xphos_m_node["id"]
+            kpo_m_node = next(
+                (item for item in csvReader if item["SMILES"] == kpo_SMILES), None,
+            )
+            kpo_mol_id = kpo_m_node["id"]
+            rxn_SMILES = (
+                a_SMILES
+                + "."
+                + b_SMILES
+                + ">"
+                + xphos_SMILES
+                + "."
+                + kpo_SMILES
+                + ">"
+                + ab_SMILES
+            )
             rxn_node = next(
                 (item for item in csvReader3 if item["rxn_SMILES"] == rxn_SMILES), None
             )
@@ -71,7 +96,9 @@ def target_to_adj(PIK, tgtFile, mol_jsonFile, rxn_jsonFile):
             adj_from.append(a_mol_id)
             adj_from.append(b_mol_id)
             adj_from.append(ab_mol_id)
-            for i in range(3):
+            adj_from.append(xphos_mol_id)
+            adj_from.append(kpo_mol_id)
+            for i in range(5):
                 adj_to.append(rxn_id)
 
             # Step 2
@@ -83,11 +110,29 @@ def target_to_adj(PIK, tgtFile, mol_jsonFile, rxn_jsonFile):
                 (item for item in csvReader if item["SMILES"] == c_SMILES), None
             )
             c_mol_id = c_m_node["id"]
-            F_m_node = next(
-                (item for item in csvReader if item["SMILES"] == F_SMILES), None
+            pent_m_node = next(
+                (item for item in csvReader if item["SMILES"] == pent_SMILES), None
             )
-            F_mol_id = F_m_node["id"]
-            rxn_SMILES = ab_SMILES + "." + c_SMILES + ">>" + F_SMILES
+            pent_mol_id = pent_m_node["id"]
+            xphos_m_node = next(
+                (item for item in csvReader if item["SMILES"] == xphos_SMILES), None,
+            )
+            xphos_mol_id = xphos_m_node["id"]
+            kpo_m_node = next(
+                (item for item in csvReader if item["SMILES"] == kpo_SMILES), None,
+            )
+            kpo_mol_id = kpo_m_node["id"]
+            rxn_SMILES = (
+                ab_SMILES
+                + "."
+                + c_SMILES
+                + ">"
+                + xphos_SMILES
+                + "."
+                + kpo_SMILES
+                + ">"
+                + pent_SMILES
+            )
             rxn_node = next(
                 (item for item in csvReader3 if item["rxn_SMILES"] == rxn_SMILES), None
             )
@@ -96,10 +141,12 @@ def target_to_adj(PIK, tgtFile, mol_jsonFile, rxn_jsonFile):
             rxn_id = int(rxn_id)
             adj_from.append(ab_mol_id)
             adj_from.append(c_mol_id)
-            adj_from.append(F_mol_id)
-            for i in range(3):
+            adj_from.append(pent_mol_id)
+            adj_from.append(xphos_mol_id)
+            adj_from.append(kpo_mol_id)
+            for i in range(5):
                 adj_to.append(rxn_id)
-
+            """
             # Step 3
             F_m_node = next(
                 (item for item in csvReader if item["SMILES"] == F_SMILES), None
@@ -113,7 +160,13 @@ def target_to_adj(PIK, tgtFile, mol_jsonFile, rxn_jsonFile):
                 (item for item in csvReader if item["SMILES"] == pent_SMILES), None
             )
             pent_mol_id = pent_node["id"]
-            rxn_SMILES = F_SMILES + "." + carb_SMILES + ">>" + pent_SMILES
+            cs_node = next(
+                (item for item in csvReader if item["SMILES"] == cs_SMILES), None
+            )
+            cs_mol_id = cs_node["id"]
+            rxn_SMILES = (
+                F_SMILES + "." + carb_SMILES + ">" + cs_SMILES + ">" + pent_SMILES
+            )
             rxn_node = next(
                 (item for item in csvReader3 if item["rxn_SMILES"] == rxn_SMILES), None
             )
@@ -122,43 +175,88 @@ def target_to_adj(PIK, tgtFile, mol_jsonFile, rxn_jsonFile):
             rxn_id = int(rxn_id)
             adj_from.append(F_mol_id)
             adj_from.append(carb_mol_id)
+            adj_from.append(cs_mol_id)
             adj_from.append(pent_mol_id)
-            for i in range(3):
+            for i in range(4):
                 adj_to.append(rxn_id)
 
-            """
             # Step 4
-            nboc_m_node = next((item for item in csvReader if item["SMILES"] == NBoc_SMILES), None)
+            nboc_m_node = next(
+                (item for item in csvReader if item["SMILES"] == NBoc_SMILES), None
+            )
             nboc_mol_id = nboc_m_node["id"]
-            nh_node = next((item for item in csvReader if item["SMILES"] == NH_SMILES), None)
+            nh_node = next(
+                (item for item in csvReader if item["SMILES"] == NH_SMILES), None
+            )
             nh_mol_id = nh_node["id"]
-            rxn_SMILES = NBoc_SMILES + ">>" + NH_SMILES
-            rxn_node = next((item for item in csvReader3 if item["rxn_SMILES"] == rxn_SMILES), None)
+            kco_node = next(
+                (item for item in csvReader if item["SMILES"] == kco_SMILES), None
+            )
+            kco_mol_id = kco_node["id"]
+            rxn_SMILES = NBoc_SMILES + ">" + kco_SMILES + ">" + NH_SMILES
+            rxn_node = next(
+                (item for item in csvReader3 if item["rxn_SMILES"] == rxn_SMILES), None
+            )
             rxn_id = str(rxn_node["id"])
             rxn_id = rxn_id.replace("r", "")
             rxn_id = int(rxn_id)
             adj_from.append(nboc_mol_id)
             adj_from.append(nh_mol_id)
-            for i in range(2):
+            adj_from.append(kco_mol_id)
+            for i in range(3):
                 adj_to.append(rxn_id)
-            """
-            """
+
             # Step 5
-            nh_node = next((item for item in csvReader if item["SMILES"] == NH_SMILES), None)
+            nh_node = next(
+                (item for item in csvReader if item["SMILES"] == NH_SMILES), None
+            )
             nh_mol_id = nh_node["id"]
-            hal_node = next((item for item in csvReader if item["SMILES"] == hal_SMILES), None)
+            hal_node = next(
+                (item for item in csvReader if item["SMILES"] == hal_SMILES), None
+            )
             hal_mol_id = hal_node["id"]
-            pent_node = next((item for item in csvReader if item["SMILES"] == pent_SMILES), None)
-            pent_mol_id = pent_node["id"]
-            rxn_SMILES = NH_SMILES + "." + hal_SMILES + ">>" + pent_SMILES
-            rxn_node = next((item for item in csvReader3 if item["rxn_SMILES"] == rxn_SMILES), None)
+            F_node = next(
+                (item for item in csvReader if item["SMILES"] == F_SMILES), None
+            )
+            F_mol_id = F_node["id"]
+            dave_node = next(
+                (item for item in csvReader if item["SMILES"] == dave_SMILES), None
+            )
+            dave_mol_id = dave_node["id"]
+            naot_node = next(
+                (item for item in csvReader if item["SMILES"] == naot_SMILES), None
+            )
+            naot_mol_id = naot_node["id"]
+            pdba_node = next(
+                (item for item in csvReader if item["SMILES"] == pdba_SMILES), None
+            )
+            pdba_mol_id = pdba_node["id"]
+            rxn_SMILES = (
+                NH_SMILES
+                + "."
+                + hal_SMILES
+                + ">"
+                + pdba_SMILES
+                + "."
+                + dave_SMILES
+                + "."
+                + naot_SMILES
+                + ">"
+                + F_SMILES
+            )
+            rxn_node = next(
+                (item for item in csvReader3 if item["rxn_SMILES"] == rxn_SMILES), None
+            )
             rxn_id = str(rxn_node["id"])
             rxn_id = rxn_id.replace("r", "")
             rxn_id = int(rxn_id)
             adj_from.append(nh_mol_id)
             adj_from.append(hal_mol_id)
-            adj_from.append(pent_mol_id)
-            for i in range(3):
+            adj_from.append(pdba_mol_id)
+            adj_from.append(naot_mol_id)
+            adj_from.append(dave_mol_id)
+            adj_from.append(F_mol_id)
+            for i in range(6):
                 adj_to.append(rxn_id)
             """
     # append data
@@ -180,16 +278,90 @@ def clear_pkl(PIK):
     file.close()
 
 
+# get multiple index positions; returns a list
+def get_index_positions(list_of_elems, element):
+    """ Returns the indexes of all occurrences of give element in
+    the list- listOfElements """
+    index_pos_list = []
+    index_pos = 0
+    while True:
+        try:
+            # Search for item in list from indexPos to the end of list
+            index_pos = list_of_elems.index(element, index_pos)
+            # Add the index position in list
+            index_pos_list.append(index_pos)
+            index_pos += 1
+        except ValueError as e:
+            break
+    return index_pos_list
+
+
 def read_pkl(PIK):
     file = open(PIK, "rb")
     data = pickle.load(file)
-    for i in data:
-        print(i)
-        # print("Number of connections:", len(i))
+    file.close()
+    print(data[0])
+
+
+def add_man_pkl(PIK):
+    file = open(PIK, "rb")
+    data = pickle.load(file)
+    file.close()
+    man_from = [
+        3868,
+        3869,
+        3870,
+        3871,
+        3872,
+        3872,
+        3873,
+        3874,
+        32,
+        3875,
+        3876,
+        3877,
+        42,
+        3878,
+        3879,
+        3880,
+        3884,
+        40,
+        3881,
+        3882,
+        3883,
+    ]
+    data[0].extend(man_from)
+    man_to = [
+        8935,
+        8935,
+        8935,
+        8935,
+        8935,
+        8936,
+        8936,
+        8936,
+        8936,
+        8937,
+        8937,
+        8937,
+        8937,
+        8938,
+        8938,
+        8938,
+        8938,
+        8939,
+        8939,
+        8939,
+        8939,
+    ]
+    data[1].extend(man_to)
+    file = open(PIK, "wb")
+    pickle.dump(data, file)
     file.close()
 
 
-# target_to_adj(PIK, tgt_SNAr_FilePath, mol_jsonFilePath, rxn_jsonFilePath)
+# target_to_adj(PIK, tgt_Base_FilePath, mol_jsonFilePath, rxn_jsonFilePath)
 # clear_pkl(PIK)
-read_pkl(PIK)
+# read_pkl(PIK)
+# add_man_pkl(PIK)
 
