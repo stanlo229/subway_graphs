@@ -1,0 +1,113 @@
+[
+    {
+        "id": 0,
+        "type": "reaction",
+        "reaction_type": "manual",
+        "rxn_SMILES": "Brc1cc(C=O)c(O)cc1.BrC(Br)(Br)Br>P(c1ccccc1)(c2ccccc2)c3ccccc3.CCN(CC)CC>Brc1cc(/C=C(Br)/Br)c(O)cc1",
+        "tH": 7.84,
+        "tM": 0,
+        "yield": 0.76,
+        "n_parr": 1,
+        "max_sites": null
+    },
+    {
+        "id": 1,
+        "type": "reaction",
+        "reaction_type": "manual",
+        "rxn_SMILES": "Brc1cc(/C=C(Br)/Br)c(O)cc1>[Cu]I.O=P(O[K])(O[K])O[K]>Brc1ccc2oc(Br)cc2c1",
+        "tH": 2.52,
+        "tM": 0,
+        "yield": 0.96,
+        "n_parr": 1,
+        "max_sites": null
+    },
+    {
+        "id": 2,
+        "Name": "aldehyde",
+        "type": "molecule",
+        "SMILES": "Brc1cc(C=O)c(O)cc1",
+        "g/mol": 201.02,
+        "purchasable": true,
+        "CAD": 724.47,
+        "$/mol": 0.0,
+        "eq": 1
+    },
+    {
+        "id": 3,
+        "Name": "CBr4",
+        "type": "molecule",
+        "SMILES": "BrC(Br)(Br)Br",
+        "g/mol": 331.63,
+        "purchasable": true,
+        "CAD": 2779.03,
+        "$/mol": 0.0,
+        "eq": 3
+    },
+    {
+        "id": 4,
+        "Name": "PPh3",
+        "type": "molecule",
+        "SMILES": "P(c1ccccc1)(c2ccccc2)c3ccccc3",
+        "g/mol": 262.29,
+        "purchasable": true,
+        "CAD": 6714.68,
+        "$/mol": 0.0,
+        "eq": 6
+    },
+    {
+        "id": 5,
+        "Name": "NEt3",
+        "type": "molecule",
+        "SMILES": "CCN(CC)CC",
+        "g/mol": 101.19,
+        "purchasable": true,
+        "CAD": 50.77,
+        "$/mol": 0.0,
+        "eq": 6
+    },
+    {
+        "id": 6,
+        "Name": "gem olefin",
+        "type": "molecule",
+        "SMILES": "Brc1cc(/C=C(Br)/Br)c(O)cc1",
+        "g/mol": 356.84,
+        "purchasable": true,
+        "CAD": 273.65,
+        "$/mol": 0.0,
+        "eq": 1
+    },
+    {
+        "id": 7,
+        "Name": "CuI",
+        "type": "molecule",
+        "SMILES": "[Cu]I",
+        "g/mol": 190.45,
+        "purchasable": true,
+        "CAD": 158.45,
+        "$/mol": 0.0,
+        "eq": 0.05
+    },
+    {
+        "id": 8,
+        "Name": "K3PO4",
+        "type": "molecule",
+        "SMILES": "O=P(O[K])(O[K])O[K]",
+        "g/mol": 212.27,
+        "purchasable": true,
+        "CAD": 196.99,
+        "$/mol": 0.0,
+        "eq": 2
+    },
+    {
+        "id": 9,
+        "Name": "2,5-dibromobenzofuran",
+        "type": "molecule",
+        "SMILES": "Brc1ccc2oc(Br)cc2c1",
+        "g/mol": 275.93,
+        "purchasable": false,
+        "CAD": null,
+        "$/mol": 0.0,
+        "eq": 2,
+        "manual": true
+    }
+]
