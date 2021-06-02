@@ -13,7 +13,6 @@ strict digraph "" {
 		SMILES="Brc1cc(/C=C(Br)/Br)c(O)cc1",
 		eq=1,
 		"g/mol"=356.84,
-		purchasable=True,
 		type=molecule];
 	0 -> 6;
 	1	[max_sites=None,
@@ -25,13 +24,12 @@ strict digraph "" {
 		type=reaction,
 		yield=0.96];
 	9	["$/mol"=0.0,
-		CAD=None,
+		CAD=0.0,
 		Name="2,5-dibromobenzofuran",
 		SMILES="Brc1ccc2oc(Br)cc2c1",
 		eq=2,
 		"g/mol"=275.93,
 		manual=True,
-		purchasable=False,
 		type=molecule];
 	1 -> 9;
 	2	["$/mol"=0.0,
@@ -40,7 +38,6 @@ strict digraph "" {
 		SMILES="Brc1cc(C=O)c(O)cc1",
 		eq=1,
 		"g/mol"=201.02,
-		purchasable=True,
 		type=molecule];
 	2 -> 0;
 	3	["$/mol"=0.0,
@@ -49,7 +46,6 @@ strict digraph "" {
 		SMILES="BrC(Br)(Br)Br",
 		eq=3,
 		"g/mol"=331.63,
-		purchasable=True,
 		type=molecule];
 	3 -> 0;
 	4	["$/mol"=0.0,
@@ -58,7 +54,6 @@ strict digraph "" {
 		SMILES="P(c1ccccc1)(c2ccccc2)c3ccccc3",
 		eq=6,
 		"g/mol"=262.29,
-		purchasable=True,
 		type=molecule];
 	4 -> 0;
 	5	["$/mol"=0.0,
@@ -67,7 +62,6 @@ strict digraph "" {
 		SMILES="CCN(CC)CC",
 		eq=6,
 		"g/mol"=101.19,
-		purchasable=True,
 		type=molecule];
 	5 -> 0;
 	6 -> 1;
@@ -77,7 +71,6 @@ strict digraph "" {
 		SMILES="[Cu]I",
 		eq=0.05,
 		"g/mol"=190.45,
-		purchasable=True,
 		type=molecule];
 	7 -> 1;
 	8	["$/mol"=0.0,
@@ -86,7 +79,6 @@ strict digraph "" {
 		SMILES="O=P(O[K])(O[K])O[K]",
 		eq=2,
 		"g/mol"=212.27,
-		purchasable=True,
 		type=molecule];
 	8 -> 1;
 }
