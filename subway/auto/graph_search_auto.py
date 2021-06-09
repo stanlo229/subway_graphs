@@ -7,6 +7,7 @@ import copy
 import networkx as nx
 import matplotlib.pyplot as plt
 from networkx.drawing.nx_agraph import graphviz_layout, write_dot
+from pandas.core.algorithms import unique
 
 from rdkit import Chem
 from rdkit.Chem import rdChemReactions
@@ -89,9 +90,10 @@ class Search:
                     "routescore": route[0] / final_scale,
                     "visited_nodes": route[1],
                 }
+                route_name += 1
                 route_data.append(route_dict)
 
-        return route_lists
+        # return route_data
 
         # column names
         headers = [
@@ -249,11 +251,13 @@ class Search:
         - None
         """
         df = pd.read_csv(full_props_path)
+        # find all unique smiles so routes are not repeated
+        unique_smiles = df.smiles.unique()
         count = 0
-        while count < len(df["smiles"]):
-            self.route_search(df["smiles"][count], 0.000016666666)
+        while count < len(unique_smiles):
+            self.route_search(unique_smiles[count], 0.000016666666)
             count += 1
-            print(count)
+        print(count)
 
     # NOTE: for debugging
     def route_visualizer(self, visited_nodes):
@@ -615,11 +619,11 @@ class Calculate:
         cost_time = self.TTC(tH, tM)
         cost_money += tH * self.cH + tM * self.cM
         cost = cost_time * cost_money * cost_materials
-        print("----------")
-        print(reaction_type)
-        print("pre: ", scale)
-        print("cost:", cost_money, "time:", cost_time, "materials:", cost_materials)
-        print("stepscore: ", cost)
+        # print("----------")
+        # print(reaction_type)
+        # print("pre: ", scale)
+        # print("cost:", cost_money, "time:", cost_time, "materials:", cost_materials)
+        # print("stepscore: ", cost)
         # process scale
         # (NOTE: inverse design because recursive search follows backward reaction steps)
         # (NOTE: manual comes in between so order matters a lot because scale is modified in order)
@@ -659,25 +663,25 @@ class Calculate:
                 elif reaction_type == "SNAr":
                     if mol_node["smiles_type"] == "smilesAr":
                         man_scale = scale * mol_node["eq_per_site"]
-        print("post: ", scale)
-        print("man: ", man_scale)
+        # print("post: ", scale)
+        # print("man: ", man_scale)
         return cost, scale, man_scale
 
 
 tester = Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH)
 
-
+"""
 route_dict = tester.route_search(
     "c1cc(-c2cc(-c3cccc(-c4ccc5c(ccn5-c5cnccn5)c4)c3-n3c4ccccc4c4ccccc43)c3ccccc3c2)c(-n2c3ccccc3c3ccccc32)c(-c2ccc3c(ccn3-c3cnccn3)c2)c1",
     0.0000166666666666,
 )
 
 print(route_dict)
-
+"""
 # tester.route_visualizer(route_dict["visited_nodes"])
 
 
-# tester.run(FULL_PROPS_PATH)
+tester.run(FULL_PROPS_PATH)
 
 """
 substruct = Chem.MolFromSmarts("Br")
