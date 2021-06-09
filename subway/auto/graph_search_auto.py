@@ -4,6 +4,9 @@ import pickle
 import pandas as pd
 from typing import Tuple, List
 import copy
+import networkx as nx
+import matplotlib.pyplot as plt
+from networkx.drawing.nx_agraph import graphviz_layout, write_dot
 
 from rdkit import Chem
 from rdkit.Chem import rdChemReactions
@@ -21,6 +24,8 @@ CSV_PATH = pkg_resources.resource_filename("subway", "data/results.csv")
 FULL_PROPS_PATH = pkg_resources.resource_filename(
     "subway", "data/subway_maps/full_props.csv"
 )
+ADJ_PATH = pkg_resources.resource_filename("subway", "data/adj_list.pkl")
+PNG_PATH = pkg_resources.resource_filename("subway", "auto/visualized_graph_tree.png")
 
 
 class Search:
@@ -29,7 +34,7 @@ class Search:
     produce routescores for a desired product.
     """
 
-    def __init__(self, graph_path, json_file, csv_path):
+    def __init__(self, graph_path, json_file, csv_path, adj_path):
         """
         Parameters
         ----------
@@ -43,6 +48,9 @@ class Search:
         self.json_data = json.load(file)
         file.close()
         self.csv_path = csv_path
+        file = open(adj_path, "rb")
+        self.adj_list = pickle.load(file)
+        file.close()
 
     def route_search(self, product_smiles: str, final_scale: float):
         """ Determines routescore of all routes used to produce product_smiles
@@ -71,8 +79,8 @@ class Search:
         child_of_product = list(self.graph.predecessors(product_node_index))
         route_name = 1
         for rxn in child_of_product:
-            route_lists, visited = self.recursive_traversal(
-                rxn, [], 0, final_scale, [], 0
+            route_lists, visited, scores, tracker, scale = self.recursive_traversal(
+                rxn, [], 0, final_scale, [], True, [], 0
             )
             for route in route_lists:
                 route_dict = {
@@ -83,9 +91,8 @@ class Search:
                 }
                 route_data.append(route_dict)
 
-        print(route_dict)
+        return route_lists
 
-        """
         # column names
         headers = [
             "index",
@@ -118,7 +125,6 @@ class Search:
                 writer = csv.DictWriter(csvfile, fieldnames=headers)
                 writer.writerows(route_data)
             # print("Dataframe loaded successfully!!")
-        """
 
     def recursive_traversal(
         self,
@@ -127,7 +133,9 @@ class Search:
         score: float,
         final_scale: float,
         route_list: List[List],
-        count_neighbours: int,
+        separate_route: bool,
+        route_tracker: List,
+        man_scale: float,
     ) -> List[List]:
         """ Traverses through graph to find all routes that produce product_node
 
@@ -138,7 +146,8 @@ class Search:
         - score: sum of stepscores in the recursion search
         - final_scale: final scale of reaction in mols
         - route_list: main list of routescores and visited nodes for all routes
-        - count_neighbours: number of neighbours in the current level
+        - separate_route: boolean for differentiating between breadth search and depth search, breadth search are separate routes, depth search is one route.
+        - route_tracker: list of routes that are tracked for depth search
 
         Returns
         -------
@@ -149,8 +158,8 @@ class Search:
         # top down
         # calculate stepscore
         child_of_rxn = list(self.graph.predecessors(rxn_node))
-        step_score, scale = Calculate().StepScore(
-            self.graph, rxn_node, child_of_rxn, final_scale
+        step_score, scale, man_scale = Calculate().StepScore(
+            self.graph, rxn_node, child_of_rxn, final_scale, man_scale
         )
         score += step_score
 
@@ -167,37 +176,140 @@ class Search:
                 not_last_mols.append(mol)
             new_visited.append(mol)
 
+        # re-order not_last_mols so manual molecules are searched through first
+        # NOTE: important because of scale in StepScore
+        for mol in not_last_mols:
+            if self.graph.nodes[mol]["Manual?"] == "Yes":
+                not_last_mols.insert(0, not_last_mols.pop(not_last_mols.index(mol)))
+
         if len(not_last_mols) != 0:
-            count_neighbours = len(
-                not_last_mols
-            )  # count the number of neighbour molecules in the same level
             for mol in not_last_mols:
-                child_of_not_last_mol = list(self.graph.predecessors(mol))
-                count_neighbours -= 1
-                # visited one neighbour so the next node in the same level will have one less neighbour
-                for rxn_node in child_of_not_last_mol:
-                    intermediate_routes, new_visited = self.recursive_traversal(
-                        rxn_node,
-                        new_visited,
-                        score,
-                        scale,
-                        route_list,
-                        count_neighbours,
-                    )
-        elif count_neighbours != 0:
-            pass
+                child_of_not_last_mol = list(
+                    self.graph.predecessors(mol)
+                )  # visited one neighbour so the next node in the same level will have one less neighbour
+                if len(child_of_not_last_mol) > 1:
+                    for rxn_node in child_of_not_last_mol:
+                        (
+                            intermediate_routes,
+                            inter_visited,
+                            inter_score,
+                            inter_tracker,
+                            inter_scale,
+                        ) = self.recursive_traversal(
+                            rxn_node,
+                            new_visited,
+                            score,
+                            scale,
+                            route_list,
+                            True,
+                            route_tracker,
+                            man_scale,
+                        )
+                elif len(child_of_not_last_mol) == 1:
+                    for rxn_node in child_of_not_last_mol:
+                        (
+                            route_list,
+                            new_visited,
+                            score,
+                            route_tracker,
+                            scale,
+                        ) = self.recursive_traversal(
+                            rxn_node,
+                            new_visited,
+                            score,
+                            scale,
+                            route_list,
+                            False,
+                            route_tracker,
+                            man_scale,
+                        )
+        elif not separate_route:
+            if route_list == []:
+                route_list.append([score, new_visited])
+                route_tracker = [0]
+            else:
+                for route in route_tracker:
+                    route_list[route][0] += step_score
+                    list_difference = new_visited[len(route_list[route][1]) :]
+                    route_list[route][1].extend(list_difference)
         else:
             route_list.append([score, new_visited])
-
-        return route_list, new_visited
+            route_tracker.append(len(route_list) - 1)
+        return route_list, new_visited, score, route_tracker, scale
 
     def run(self, full_props_path):
+        """ Opens full_props.csv and runs route_search for all target molecules
+
+        Parameters
+        ----------
+        - full_props_path: path to full_props.csv
+
+        Returns
+        -------
+        - None
+        """
         df = pd.read_csv(full_props_path)
         count = 0
         while count < len(df["smiles"]):
             self.route_search(df["smiles"][count], 0.000016666666)
             count += 1
             print(count)
+
+    # NOTE: for debugging
+    def route_visualizer(self, visited_nodes):
+        """ Produces .png of graph of visited_nodes in a route
+
+        Parameters
+        ----------
+        - visited_nodes: list of nodes that were visited
+
+        Returns
+        -------
+        - route_graph: .png of graph with visited nodes
+        """
+        # find edges from list of visited_nodes
+        visualized_graph = nx.DiGraph()
+        color_map = []
+        reaction_list = []
+        molecule_list = []
+        for visit in visited_nodes:
+            visualized_graph.add_node(visit)
+            for node in self.json_data:
+                if node["id"] == visit:
+                    if node["type"] == "reaction":
+                        reaction_list.append(visit)
+                    elif node["type"] == "molecule":
+                        molecule_list.append(visit)
+
+        for rxn in reaction_list:
+            for mol in molecule_list:
+                if [rxn, mol] in self.adj_list:
+                    visualized_graph.add_edge(rxn, mol)
+                if [mol, rxn] in self.adj_list:
+                    visualized_graph.add_edge(mol, rxn)
+
+        # add colour
+        for node in visualized_graph.nodes:
+            for data in self.json_data:
+                if data["id"] == node:
+                    if data["type"] == "reaction":
+                        color_map.append("green")
+                    elif data["type"] == "molecule":
+                        color_map.append("blue")
+        """
+        # tree graph
+        write_dot(visualized_graph, "test.dot")
+        plt.title("route_visualized_tree")
+        pos = graphviz_layout(visualized_graph, prog="dot")
+        nx.draw(visualized_graph, node_color=color_map, with_labels=True, arrows=True)
+        plt.savefig(PNG_PATH)
+        """
+        # draw_networkx
+        plt.title("route_visualized")
+        nx.draw_networkx(
+            visualized_graph, node_color=color_map, with_labels=True, arrows=True
+        )
+        plt.savefig("visualized_graph.png")
 
 
 class Calculate:
@@ -331,7 +443,7 @@ class Calculate:
             patts: list = [
                 {
                     "name": "smilesNBoc",
-                    "substructure": [Chem.MolFromSmiles("O=C([N])OC(C)(C)C")],
+                    "substructure": [Chem.MolFromSmiles("CC(C)(C)OC(=O)")],
                     "eq": 1,
                 }
             ]
@@ -339,7 +451,7 @@ class Calculate:
             patts: list = [
                 {
                     "name": "smilesNH",
-                    "substructure": [Chem.MolFromSmiles("nH")],
+                    "substructure": [Chem.MolFromSmarts("[nH]")],
                     "eq": 1,
                 },
                 {
@@ -366,7 +478,13 @@ class Calculate:
 
         mol_info = []
         mol_smiles = mol_node["SMILES"]
-        mol = Chem.MolFromSmiles(mol_smiles)
+
+        # make sure mol is converted from smiles or smarts
+        if Chem.MolFromSmiles(mol_smiles) is None:
+            mol = Chem.MolFromSmarts(mol_smiles)
+        else:
+            mol = Chem.MolFromSmiles(mol_smiles)
+
         for structure in patts:
             for substruct in structure["substructure"]:
                 if mol.HasSubstructMatch(substruct):
@@ -378,7 +496,9 @@ class Calculate:
 
         return mol_info
 
-    def StepScore(self, graph, rxn_node: int, mol_nodes: List[int], scale: float):
+    def StepScore(
+        self, graph, rxn_node: int, mol_nodes: List[int], scale: float, man_scale: float
+    ):
         """Perform calculations for the StepScore.
 
         Parameters
@@ -424,7 +544,6 @@ class Calculate:
             )[1]
 
         # find reaction sites
-        # print(reaction_type)
         if reaction_type == "BHA":
             reaction = rdChemReactions.ReactionFromSmarts(reaction_smiles)
             product = reaction.GetProductTemplate(0)
@@ -485,7 +604,6 @@ class Calculate:
 
         # calculate money and materials
         for mol_node in copy_mol_nodes:
-            # print(mol_node)
             gmol = float(mol_node["g/mol"])
             cost_per_mol = float(mol_node["$/mol"])
             eq = float(mol_node["eq_per_site"])
@@ -497,40 +615,74 @@ class Calculate:
         cost_time = self.TTC(tH, tM)
         cost_money += tH * self.cH + tM * self.cM
         cost = cost_time * cost_money * cost_materials
-        # print("time:", cost_time, "money:", cost_money, "materials:", cost_materials)
-        # print("stepscore: ", cost)
+        print("----------")
+        print(reaction_type)
+        print("pre: ", scale)
+        print("cost:", cost_money, "time:", cost_time, "materials:", cost_materials)
+        print("stepscore: ", cost)
         # process scale
         # (NOTE: inverse design because recursive search follows backward reaction steps)
+        # (NOTE: manual comes in between so order matters a lot because scale is modified in order)
+        # check if there are manually made molecules
+        manual_bool = False
         for mol_node in copy_mol_nodes:
-            if reaction_type == "pentamerSuzuki":
-                if mol_node["smiles_type"] == "smilesAB":
-                    scale = scale * mol_node["eq_per_site"]
-            elif reaction_type == "deboc":
-                if mol_node["smiles_type"] == "smilesNBoc":
-                    scale = scale * mol_node["eq_per_site"]
-            elif reaction_type == "BHA":
-                if mol_node["smiles_type"] == "smilesNH":
-                    scale = scale * mol_node["eq_per_site"]
-            elif reaction_type == "SNAr":
-                if mol_node["smiles_type"] == "smilesAr":
-                    scale = scale * mol_node["eq_per_site"]
-        return cost, scale
+            if mol_node["Manual?"] == "Yes":
+                manual_bool = True
+
+        if not manual_bool:
+            for mol_node in copy_mol_nodes:
+                if reaction_type == "pentamerSuzuki":
+                    if mol_node["smiles_type"] == "smilesAB":
+                        scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "deboc":
+                    if mol_node["smiles_type"] == "smilesNBoc":
+                        scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "BHA":
+                    if mol_node["smiles_type"] == "smilesNH":
+                        scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "SNAr":
+                    if mol_node["smiles_type"] == "smilesAr":
+                        scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "manual":
+                    scale = man_scale
+        else:
+            for mol_node in copy_mol_nodes:
+                if reaction_type == "pentamerSuzuki":
+                    if mol_node["smiles_type"] == "smilesAB":
+                        man_scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "deboc":
+                    if mol_node["smiles_type"] == "smilesNBoc":
+                        man_scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "BHA":
+                    if mol_node["smiles_type"] == "smilesNH":
+                        man_scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "SNAr":
+                    if mol_node["smiles_type"] == "smilesAr":
+                        man_scale = scale * mol_node["eq_per_site"]
+        print("post: ", scale)
+        print("man: ", man_scale)
+        return cost, scale, man_scale
 
 
-tester = Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH)
+tester = Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH)
 
-tester.route_search(
-    "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5-n5c6ccccc6c6ccccc65)c5ccccc5c4)c3-n3c4ccccc4c4ccccc43)ccc21",
-    0.0000166666666,
+
+route_dict = tester.route_search(
+    "c1cc(-c2cc(-c3cccc(-c4ccc5c(ccn5-c5cnccn5)c4)c3-n3c4ccccc4c4ccccc43)c3ccccc3c2)c(-n2c3ccccc3c3ccccc32)c(-c2ccc3c(ccn3-c3cnccn3)c2)c1",
+    0.0000166666666666,
 )
+
+print(route_dict)
+
+# tester.route_visualizer(route_dict["visited_nodes"])
 
 
 # tester.run(FULL_PROPS_PATH)
+
 """
 substruct = Chem.MolFromSmarts("Br")
 print(substruct)
 mol = Chem.MolFromSmiles("C[N+]12CC(=O)O[B-]1(c1ccc(Br)s1)OC(=O)C2")
 check = mol.HasSubstructMatch(substruct)
-print(check)
+print(check)eeqcx
 """
-

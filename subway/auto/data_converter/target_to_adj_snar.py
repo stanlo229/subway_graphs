@@ -1,6 +1,7 @@
 import pickle
 import csv
 import json
+from rdkit import Chem
 
 import pkg_resources
 from rdkit import Chem
@@ -50,13 +51,13 @@ def target_to_adj(pkl_path, tgt_path, json_path):
         for rows in csvReader:
             # get SMILES of all molecules in each route
             # remove ones not in target file
-            a_SMILES = rows["a"]
-            b_SMILES = rows["b"]
-            ab_SMILES = rows["ab"]
-            c_SMILES = rows["c"]
-            pent_SMILES = rows["pentamer"]
-            F_SMILES = rows["F"]
-            carb_SMILES = rows["carbazole"]
+            a_SMILES = Chem.CanonSmiles(rows["a"])
+            b_SMILES = Chem.CanonSmiles(rows["b"])
+            ab_SMILES = Chem.CanonSmiles(rows["ab"])
+            c_SMILES = Chem.CanonSmiles(rows["c"])
+            pent_SMILES = Chem.CanonSmiles(rows["pentamer"])
+            F_SMILES = Chem.CanonSmiles(rows["F"])
+            carb_SMILES = Chem.CanonSmiles(rows["carbazole"])
             xphos_SMILES = "CC(C)C1=CC(=C(C(=C1)C(C)C)C2=CC(=CC=C2)P(C3CCCCC3)C4CCCCC4)C(C)C.C1=CC=C([C-]=C1)C2=CC=CC=C2N.Cl[Pd+]"
             kpo_SMILES = "[O-]P(=O)([O-])[O-].[K+].[K+].[K+]"
             cs_SMILES = "C(=O)([O-])[O-].[Cs+].[Cs+]"
@@ -116,17 +117,17 @@ def target_to_adj(pkl_path, tgt_path, json_path):
                 + ">"
                 + ab_SMILES
             )
-
+            count = 0
             for item in jsonReader:
                 if item["type"] == "reaction":
                     if item["rxn_SMILES"] == rxn_SMILES:
                         rxn_node = item
-            rxn_id = rxn_node["id"]
-            adj_list.append([a_mol_id, rxn_id])
-            adj_list.append([b_mol_id, rxn_id])
-            adj_list.append([xphos_mol_id, rxn_id])
-            adj_list.append([kpo_mol_id, rxn_id])
-            adj_list.append([rxn_id, ab_mol_id])
+                        rxn_id = rxn_node["id"]
+                        adj_list.append([a_mol_id, rxn_id])
+                        adj_list.append([b_mol_id, rxn_id])
+                        adj_list.append([xphos_mol_id, rxn_id])
+                        adj_list.append([kpo_mol_id, rxn_id])
+                        adj_list.append([rxn_id, ab_mol_id])
 
             # pentamerSuzuki
             rxn_SMILES = (
@@ -144,12 +145,12 @@ def target_to_adj(pkl_path, tgt_path, json_path):
                 if item["type"] == "reaction":
                     if item["rxn_SMILES"] == rxn_SMILES:
                         rxn_node = item
-            rxn_id = rxn_node["id"]
-            adj_list.append([ab_mol_id, rxn_id])
-            adj_list.append([c_mol_id, rxn_id])
-            adj_list.append([xphos_mol_id, rxn_id])
-            adj_list.append([kpo_mol_id, rxn_id])
-            adj_list.append([rxn_id, F_mol_id])
+                        rxn_id = rxn_node["id"]
+                        adj_list.append([ab_mol_id, rxn_id])
+                        adj_list.append([c_mol_id, rxn_id])
+                        adj_list.append([xphos_mol_id, rxn_id])
+                        adj_list.append([kpo_mol_id, rxn_id])
+                        adj_list.append([rxn_id, F_mol_id])
 
             # SNAr
             rxn_SMILES = (
@@ -159,12 +160,11 @@ def target_to_adj(pkl_path, tgt_path, json_path):
                 if item["type"] == "reaction":
                     if item["rxn_SMILES"] == rxn_SMILES:
                         rxn_node = item
-
-            rxn_id = rxn_node["id"]
-            adj_list.append([F_mol_id, rxn_id])
-            adj_list.append([carb_mol_id, rxn_id])
-            adj_list.append([cs_mol_id, rxn_id])
-            adj_list.append([rxn_id, pent_mol_id])
+                        rxn_id = rxn_node["id"]
+                        adj_list.append([F_mol_id, rxn_id])
+                        adj_list.append([carb_mol_id, rxn_id])
+                        adj_list.append([cs_mol_id, rxn_id])
+                        adj_list.append([rxn_id, pent_mol_id])
 
     file = open(pkl_path, "wb")
     # dump information to that file

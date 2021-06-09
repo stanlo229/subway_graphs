@@ -1,6 +1,7 @@
 import csv
 import json
 import pickle
+from rdkit import Chem
 
 import pkg_resources
 
@@ -16,6 +17,18 @@ TGT_BS_FILEPATH = r"C:\Users\Stanley Lo\Documents\Summer 2021 NSERC\subway_maps_
 TGT_BUCH_FILEPATH = r"C:\Users\Stanley Lo\Documents\Summer 2021 NSERC\subway_maps_repo\Targets\targets_Buch_BLANK.csv"
 TGT_SB_FILEPATH = r"C:\Users\Stanley Lo\Documents\Summer 2021 NSERC\subway_maps_repo\Targets\targets_S-B_BLANK.csv"
 TGT_SNAR_FILEPATH = r"C:\Users\Stanley Lo\Documents\Summer 2021 NSERC\subway_maps_repo\Targets\targets_SNAr_BLANK.csv"
+
+
+def check_json(json_path, reaction_smile):
+    with open(json_path, encoding="utf-8") as file:
+        jsonReader = json.load(file)
+        for node in jsonReader:
+            if node["type"] == "reaction":
+                if node["rxn_SMILES"] == reaction_smile:
+                    return False
+                else:
+                    continue
+        return True
 
 
 def sum_properties(sum_path):
@@ -41,6 +54,7 @@ def add_rxn_json(
         rxn_id = len(jsonReader)  # 3861
 
     data = []
+    rxn_repo = []
     # wingSuzuki
     tH, tM, yld, scale, n_parr = sum_properties(sum_suzuki_path)
     with open(tgt_path, encoding="utf-8") as csvf:
@@ -53,25 +67,27 @@ def add_rxn_json(
             temp_data["scale"] = scale
             temp_data["n_parr"] = n_parr
             rxn_SMILES = (
-                rows["a"]
+                Chem.CanonSmiles(rows["a"])
                 + "."
-                + rows["b"]
+                + Chem.CanonSmiles(rows["b"])
                 + ">"
                 + "CC(C)C1=CC(=C(C(=C1)C(C)C)C2=CC(=CC=C2)P(C3CCCCC3)C4CCCCC4)C(C)C.C1=CC=C([C-]=C1)C2=CC=CC=C2N.Cl[Pd+]"
                 + "."
                 + "[O-]P(=O)([O-])[O-].[K+].[K+].[K+]"
                 + ">"
-                + rows["ab"]
+                + Chem.CanonSmiles(rows["ab"])
             )
             temp_data["rxn_SMILES"] = rxn_SMILES
-            temp_data["id"] = rxn_id
-            temp_data["type"] = "reaction"
-            temp_data["target"] = "Buch"
-            temp_data["reaction_type"] = "wingSuzuki"
-            rxn_id += 1
-            data.append(temp_data)
+            if rxn_SMILES not in rxn_repo and check_json(json_path, rxn_SMILES):
+                rxn_repo.append(rxn_SMILES)
+                temp_data["id"] = rxn_id
+                temp_data["type"] = "reaction"
+                temp_data["reaction_type"] = "wingSuzuki"
+                rxn_id += 1
+                data.append(temp_data)
 
     # pentamerSuzuki
+    rxn_repo = []
     tH, tM, yld, scale, n_parr = sum_properties(sum_suzuki_path)
     with open(tgt_path, encoding="utf-8") as csvf2:
         csvReader2 = csv.DictReader(csvf2)
@@ -83,25 +99,27 @@ def add_rxn_json(
             temp_data["scale"] = scale
             temp_data["n_parr"] = n_parr
             rxn_SMILES = (
-                rows["ab"]
+                Chem.CanonSmiles(rows["ab"])
                 + "."
-                + rows["c"]
+                + Chem.CanonSmiles(rows["c"])
                 + ">"
                 + "CC(C)C1=CC(=C(C(=C1)C(C)C)C2=CC(=CC=C2)P(C3CCCCC3)C4CCCCC4)C(C)C.C1=CC=C([C-]=C1)C2=CC=CC=C2N.Cl[Pd+]"
                 + "."
                 + "[O-]P(=O)([O-])[O-].[K+].[K+].[K+]"
                 + ">"
-                + rows["N-Boc"]
+                + Chem.CanonSmiles(rows["N-Boc"])
             )
             temp_data["rxn_SMILES"] = rxn_SMILES
-            temp_data["id"] = rxn_id
-            temp_data["type"] = "reaction"
-            temp_data["target"] = "Buch"
-            temp_data["rxn_type"] = "pentamerSuzuki"
-            rxn_id += 1
-            data.append(temp_data)
+            if rxn_SMILES not in rxn_repo and check_json(json_path, rxn_SMILES):
+                rxn_repo.append(rxn_SMILES)
+                temp_data["id"] = rxn_id
+                temp_data["type"] = "reaction"
+                temp_data["rxn_type"] = "pentamerSuzuki"
+                rxn_id += 1
+                data.append(temp_data)
 
     # deboc
+    rxn_repo = []
     tH, tM, yld, scale, n_parr = sum_properties(sum_deboc_path)
     with open(tgt_path, encoding="utf-8") as csvf3:
         csvReader3 = csv.DictReader(csvf3)
@@ -113,17 +131,23 @@ def add_rxn_json(
             temp_data["scale"] = scale
             temp_data["n_parr"] = n_parr
             rxn_SMILES = (
-                rows["N-Boc"] + ">" + "C(=O)([O-])[O-].[K+].[K+]" + ">" + rows["N-H"]
+                Chem.CanonSmiles(rows["N-Boc"])
+                + ">"
+                + "C(=O)([O-])[O-].[K+].[K+]"
+                + ">"
+                + Chem.CanonSmiles(rows["N-H"])
             )
             temp_data["rxn_SMILES"] = rxn_SMILES
-            temp_data["id"] = rxn_id
-            temp_data["type"] = "reaction"
-            temp_data["target"] = "Buch"
-            temp_data["rxn_type"] = "deboc"
-            rxn_id += 1
-            data.append(temp_data)
+            if rxn_SMILES not in rxn_repo and check_json(json_path, rxn_SMILES):
+                rxn_repo.append(rxn_SMILES)
+                temp_data["id"] = rxn_id
+                temp_data["type"] = "reaction"
+                temp_data["rxn_type"] = "deboc"
+                rxn_id += 1
+                data.append(temp_data)
 
     # BHA
+    rxn_repo = []
     tH, tM, yld, scale, n_parr = sum_properties(sum_bha_path)
     with open(tgt_path, encoding="utf-8") as csvf4:
         csvReader4 = csv.DictReader(csvf4)
@@ -136,9 +160,9 @@ def add_rxn_json(
             temp_data["scale"] = scale
             temp_data["n_parr"] = n_parr
             rxn_SMILES = (
-                rows["N-H"]
+                Chem.CanonSmiles(rows["N-H"])
                 + "."
-                + rows["halide"]
+                + Chem.CanonSmiles(rows["halide"])
                 + ">"
                 + "C1=CC=C(C=C1)C=CC(=O)C=CC2=CC=CC=C2.C1=CC=C(C=C1)C=CC(=O)C=CC2=CC=CC=C2.C1=CC=C(C=C1)C=CC(=O)C=CC2=CC=CC=C2.[Pd].[Pd]"
                 + "."
@@ -146,15 +170,16 @@ def add_rxn_json(
                 + "."
                 + "CC(C)(C)[O-].[Na+]"
                 + ">"
-                + rows["pentamer"]
+                + Chem.CanonSmiles(rows["pentamer"])
             )
             temp_data["rxn_SMILES"] = rxn_SMILES
-            temp_data["id"] = rxn_id
-            temp_data["type"] = "reaction"
-            temp_data["target"] = "Buch"
-            temp_data["rxn_type"] = "BHA"
-            rxn_id += 1
-            data.append(temp_data)
+            if rxn_SMILES not in rxn_repo and check_json(json_path, rxn_SMILES):
+                rxn_repo.append(rxn_SMILES)
+                temp_data["id"] = rxn_id
+                temp_data["type"] = "reaction"
+                temp_data["rxn_type"] = "BHA"
+                rxn_id += 1
+                data.append(temp_data)
 
     with open(json_path, "a", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))

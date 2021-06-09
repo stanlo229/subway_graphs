@@ -1,6 +1,7 @@
 import csv
 import json
 import pickle
+from rdkit import Chem
 
 import pkg_resources
 
@@ -10,7 +11,7 @@ csv_path = pkg_resources.resource_filename(
 )
 """
 CSV_PATH = r"C:\Users\Stanley Lo\Documents\Summer 2021 NSERC\subway_maps_repo\Inventory\Inventory.csv"
-JSON_PATH = pkg_resources.resource_filename("subway", "auto/auto_nodes.json")
+JSON_PATH = pkg_resources.resource_filename("subway", "data/auto_nodes.json")
 
 # add molecule from inventory to json
 def add_mol_json(csv_path, json_path):
@@ -25,6 +26,7 @@ def add_mol_json(csv_path, json_path):
             rows["id"] = id
             rows["type"] = "molecule"
             rows["eq_per_site"] = rows["Quantity"]
+            rows["SMILES"] = Chem.CanonSmiles(rows["SMILES"])
             del rows["Quantity"]
             id += 1
             data.append(rows)

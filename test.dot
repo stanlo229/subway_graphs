@@ -1,0 +1,168 @@
+strict digraph "" {
+	0	[max_sites=None,
+		n_parr=1,
+		reaction_type=manual,
+		rxn_SMILES="Brc1cc(C=O)c(O)cc1.BrC(Br)(Br)Br>P(c1ccccc1)(c2ccccc2)c3ccccc3.CCN(CC)CC>Brc1cc(/C=C(Br)/Br)c(O)cc1",
+		tH=7.84,
+		tM=0,
+		type=reaction,
+		yield=0.76];
+	6	["$/mol"=0.0,
+		CAD=273.65,
+		Name="gem olefin",
+		SMILES="Brc1cc(/C=C(Br)/Br)c(O)cc1",
+		eq=1,
+		"g/mol"=356.84,
+		type=molecule];
+	0 -> 6;
+	1	[max_sites=None,
+		n_parr=1,
+		reaction_type=manual,
+		rxn_SMILES="Brc1cc(/C=C(Br)/Br)c(O)cc1>[Cu]I.O=P(O[K])(O[K])O[K]>Brc1ccc2oc(Br)cc2c1",
+		tH=2.52,
+		tM=0,
+		type=reaction,
+		yield=0.96];
+	11	["$/mol"=0.0,
+		CAD=196.99,
+		Name=K3PO4,
+		SMILES="O=P(O[K])(O[K])O[K]",
+		eq=2,
+		"g/mol"=212.27,
+		type=molecule];
+	1 -> 11;
+	2	["$/mol"=0.0,
+		CAD=724.47,
+		Name=aldehyde,
+		SMILES="Brc1cc(C=O)c(O)cc1",
+		eq=1,
+		"g/mol"=201.02,
+		type=molecule];
+	2 -> 0;
+	3	["$/mol"=0.0,
+		CAD=2779.03,
+		Name=CBr4,
+		SMILES="BrC(Br)(Br)Br",
+		eq=3,
+		"g/mol"=331.63,
+		type=molecule];
+	3 -> 0;
+	4	["$/mol"=0.0,
+		CAD=6714.68,
+		Name=PPh3,
+		SMILES="P(c1ccccc1)(c2ccccc2)c3ccccc3",
+		eq=6,
+		"g/mol"=262.29,
+		type=molecule];
+	4 -> 0;
+	5	["$/mol"=0.0,
+		CAD=50.77,
+		Name=NEt3,
+		SMILES="CCN(CC)CC",
+		eq=6,
+		"g/mol"=101.19,
+		type=molecule];
+	5 -> 0;
+	6 -> 1;
+	7	["$/mol"=0.0,
+		CAD=158.45,
+		Name=CuI,
+		SMILES="[Cu]I",
+		eq=0.05,
+		"g/mol"=190.45,
+		type=molecule];
+	7 -> 1;
+	8	["$/mol"=0.0,
+		CAD=196.99,
+		Name=K3PO4,
+		SMILES="O=P(O[K])(O[K])O[K]",
+		eq=2,
+		"g/mol"=212.27,
+		type=molecule];
+	8 -> 1;
+	9	["$/mol"=0.0,
+		CAD=0.0,
+		Name="2,5-dibromobenzofuran",
+		SMILES="Brc1ccc2oc(Br)cc2c1",
+		eq=2,
+		"g/mol"=275.93,
+		manual=True,
+		type=molecule];
+	10	[max_sites=None,
+		n_parr=1,
+		reaction_type=manual,
+		rxn_SMILES="Brc1cc(/C=C(Br)/Br)c(O)cc1>O=P(O[K])(O[K])O[K]>Brc1ccc2oc(Br)",
+		tH=2.52,
+		tM=0,
+		type=reaction,
+		yield=0.96];
+	10 -> 9;
+	11 -> 10;
+	12	["$/mol"=0.0,
+		CAD=196.99,
+		Name=K3PO4,
+		SMILES="O=P(O[K])(O[K])O[K]",
+		eq=2,
+		"g/mol"=212.27,
+		type=molecule];
+	12 -> 10;
+	13	[max_sites=None,
+		n_parr=1,
+		reaction_type=manual,
+		rxn_SMILES="Brc1cc(/C=C(Br)/Br)c(O)cc1>O=P(O[K])(O[K])O[K]>Brc1ccc2oc(Br)",
+		tH=2.52,
+		tM=0,
+		type=reaction,
+		yield=0.96];
+	13 -> 12;
+	14	["$/mol"=0.0,
+		CAD=196.99,
+		Name=K3PO4,
+		SMILES="O=P(O[K])(O[K])O[K]",
+		eq=2,
+		"g/mol"=212.27,
+		type=molecule];
+	14 -> 10;
+	14 -> 13;
+	15	["$/mol"=0.0,
+		CAD=196.99,
+		Name=K3PO4,
+		SMILES="O=P(O[K])(O[K])O[K]",
+		eq=2,
+		"g/mol"=212.27,
+		type=molecule];
+	15 -> 10;
+	15 -> 13;
+	16	[max_sites=None,
+		n_parr=1,
+		reaction_type=manual,
+		rxn_SMILES="Brc1cc(/C=C(Br)/Br)c(O)cc1>O=P(O[K])(O[K])O[K]>Brc1ccc2oc(Br)",
+		tH=2.52,
+		tM=0,
+		type=reaction,
+		yield=0.96];
+	17	[max_sites=None,
+		n_parr=1,
+		reaction_type=manual,
+		rxn_SMILES="Brc1cc(/C=C(Br)/Br)c(O)cc1>O=P(O[K])(O[K])O[K]>Brc1ccc2oc(Br)",
+		tH=2.52,
+		tM=0,
+		type=reaction,
+		yield=0.96];
+	18	["$/mol"=0.0,
+		CAD=196.99,
+		Name=K3PO4,
+		SMILES="O=P(O[K])(O[K])O[K]",
+		eq=2,
+		"g/mol"=212.27,
+		type=molecule];
+	18 -> 13;
+	19	["$/mol"=0.0,
+		CAD=196.99,
+		Name=K3PO4,
+		SMILES="O=P(O[K])(O[K])O[K]",
+		eq=2,
+		"g/mol"=212.27,
+		type=molecule];
+	19 -> 13;
+}

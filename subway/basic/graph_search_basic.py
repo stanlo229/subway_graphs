@@ -72,7 +72,9 @@ class Search:
         child_of_product = list(self.graph.predecessors(product_node_index))
         route_name = 1
         for rxn in child_of_product:
-            route_lists, visited = self.recursive_traversal(rxn, [], 0, 0.0001, [], 0)
+            route_lists, visited, scores, tracker = self.recursive_traversal(
+                rxn, [], 0, 0.0001, [], True, []
+            )
             for route in route_lists:
                 route_dict[route_name] = route
                 route_name += 1
@@ -87,8 +89,9 @@ class Search:
         score: float,
         scale: float,
         route_list: List[Tuple],
-        count_neighbours: int,
-    ) -> List[Tuple]:
+        separate_route: bool,
+        route_tracker: List,
+    ) -> List[List]:
         """ Traverses through graph to find all routes that produce molecule with node_index
         Parameters
         ----------
@@ -97,7 +100,8 @@ class Search:
         - score: sum of stepscores in the recursion search
         - scale: scale of current reaction step
         - route_list: main list of routescores and visited nodes for each route
-        - count_neighbours: number of neighbours in the current level
+        - separate_route: boolean for differentiating between breadth search and depth search, breadth search are separate routes, depth search is one route.
+        - route_tracker: list of routes that are tracked for depth search
 
         Returns
         -------
@@ -125,27 +129,55 @@ class Search:
             new_visited.append(mol)
 
         if len(not_last_mols) != 0:
-            count_neighbours = len(
-                not_last_mols
-            )  # count the number of neighbour molecules in the same level
             for mol in not_last_mols:
-                child_of_not_last_mol = list(self.graph.predecessors(mol))
-                count_neighbours -= 1  # visited one neighbour so the next node in the same level will have one less neighbour
-                for rxn_node in child_of_not_last_mol:
-                    intermediate_routes, new_visited = self.recursive_traversal(
-                        rxn_node,
-                        new_visited,
-                        score,
-                        scale,
-                        route_list,
-                        count_neighbours,
-                    )
-        elif count_neighbours != 0:
-            pass
+                child_of_not_last_mol = list(
+                    self.graph.predecessors(mol)
+                )  # visited one neighbour so the next node in the same level will have one less neighbour
+                if len(child_of_not_last_mol) > 1:
+                    for rxn_node in child_of_not_last_mol:
+                        (
+                            intermediate_routes,
+                            inter_visited,
+                            inter_score,
+                            inter_tracker,
+                        ) = self.recursive_traversal(
+                            rxn_node,
+                            new_visited,
+                            score,
+                            scale,
+                            route_list,
+                            True,
+                            route_tracker,
+                        )
+                elif len(child_of_not_last_mol) == 1:
+                    for rxn_node in child_of_not_last_mol:
+                        (
+                            intermediate_routes,
+                            new_visited,
+                            score,
+                            route_tracker,
+                        ) = self.recursive_traversal(
+                            rxn_node,
+                            new_visited,
+                            score,
+                            scale,
+                            route_list,
+                            False,
+                            route_tracker,
+                        )
+        elif not separate_route:
+            if route_list == []:
+                route_list.append([score, new_visited])
+                route_tracker = [0]
+            else:
+                for route in route_tracker:
+                    route_list[route][0] += step_score
+                    list_difference = new_visited[len(route_list[route][1]) :]
+                    route_list[route][1].extend(list_difference)
         else:
-            route_list.append((score, new_visited))
+            route_list.append([score, new_visited])
 
-        return route_list, new_visited
+        return route_list, new_visited, score, route_tracker
 
 
 class Calculate:
@@ -281,3 +313,10 @@ class Calculate:
 graph = General.load_pkl(GRAPH_PKL_PATH)
 search_graph = Search(graph)
 a = search_graph.route_search("Brc1ccc2oc(Br)cc2c1")
+
+a = [1, 2, 3]
+for i in a:
+    if i == 2:
+        a.insert(0, a.pop(a.index(2)))
+
+print(a)

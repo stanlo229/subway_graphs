@@ -61,7 +61,7 @@ class Graph:
 graph = Graph.create_graph_from_file(JSON_PATH, PKL_PATH)
 graph_to_pkl(graph.graph, GRAPH_PATH)
 
-"""
+
 # tree graph
 write_dot(graph.graph, "test.dot")
 plt.title("subway_graph")
@@ -73,3 +73,4 @@ plt.savefig("directed_graph_tree.png")
 plt.title("subway_graph")
 nx.draw_networkx(graph.graph, node_color=graph.color_map, with_labels=True, arrows=True)
 plt.savefig("directed_graph.png")
+"""
