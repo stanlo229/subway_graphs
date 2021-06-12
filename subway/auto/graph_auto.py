@@ -28,6 +28,11 @@ def graph_to_pkl(graph, pkl_path):
 
 
 class Graph:
+    """
+    Class initialized to contain json and adjacency list (nodes and edges) information, 
+    and the functions for creating the graph.
+    """
+
     def __init__(self, json_data, adj_data):
         self.graph = nx.DiGraph()
         self.color_map = []

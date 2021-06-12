@@ -251,7 +251,7 @@ class Search:
         - None
         """
         df = pd.read_csv(full_props_path)
-        # find all unique smiles so routes are not repeated
+        # find all unique smiles so routes are not
         unique_smiles = df.smiles.unique()
         count = 0
         while count < len(unique_smiles):
@@ -670,14 +670,13 @@ class Calculate:
 
 tester = Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH)
 
-"""
-route_dict = tester.route_search(
-    "c1cc(-c2cc(-c3cccc(-c4ccc5c(ccn5-c5cnccn5)c4)c3-n3c4ccccc4c4ccccc43)c3ccccc3c2)c(-n2c3ccccc3c3ccccc32)c(-c2ccc3c(ccn3-c3cnccn3)c2)c1",
-    0.0000166666666666,
-)
 
-print(route_dict)
-"""
+# route_dict = tester.route_search(
+#     "Fc1cc(-c2ccsc2-c2ccc(-c3sccc3-c3ccnc(F)c3)o2)ccn1", 0.0000166666666666,
+# )
+
+# print(route_dict)
+
 # tester.route_visualizer(route_dict["visited_nodes"])
 
 
