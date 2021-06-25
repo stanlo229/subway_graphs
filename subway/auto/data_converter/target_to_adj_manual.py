@@ -9,7 +9,8 @@ Format: [node_from, node_to]
 """
 
 JSON_PATH = pkg_resources.resource_filename("subway", "data/auto_nodes.json")
-PKL_PATH = pkg_resources.resource_filename("subway", "data/adj_list.pkl")
+# PKL_PATH = pkg_resources.resource_filename("subway", "data/adj_list.pkl")
+PKL_PATH = pkg_resources.resource_filename("subway", "gephi/adj_list_gephi.pkl")
 
 
 def clear_pkl(pkl_path):
@@ -58,12 +59,11 @@ def manual_to_adj(pkl_path, json_path):
         [3869, 7749],
         [3870, 7749],
         [3871, 7749],
-        [7752, 3884],
+        [7752, 42],
         [3878, 7752],
         [3879, 7752],
         [3880, 7752],
-        [42, 7752],
-        [7751, 42],
+        [7751, 3878],
         [3875, 7751],
         [3876, 7751],
         [3877, 7751],

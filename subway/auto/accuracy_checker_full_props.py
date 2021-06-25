@@ -21,19 +21,21 @@ def accuracy_checker(full_props_csv, results_csv):
         full_props_index = 0
         for smile in full_props_df["smiles"]:
             if pdt_smile == smile:
-                if round(results_df["routescore"][results_index], -1) == round(
-                    full_props_df["route_score"][full_props_index], -1
+                # print(round(results_df["routescore"][results_index], 0))
+                if round(results_df["routescore"][results_index], 3) == round(
+                    full_props_df["route_score"][full_props_index], 3
                 ):
                     matches += 1
-                elif (
-                    results_df["routescore"][results_index]
-                    != full_props_df["route_score"][full_props_index]
-                ):
+                else:
+                    print(
+                        results_df["routescore"][results_index]
+                        - full_props_df["route_score"][full_props_index]
+                    )
                     print(full_props_index)
             full_props_index += 1
         total += 1
         results_index += 1
-
+    print(matches, total)
     print(matches / total)
 
 

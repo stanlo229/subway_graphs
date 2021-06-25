@@ -73480,7 +73480,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3cc(F)c(-c4cccnc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2cccnc2-c2ccc3[nH]ccc3c2)c(F)cc1-c1cccnc1-c1ccc2[nH]ccc2c1",
         "id": 5975,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73491,7 +73491,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3ccccc3[Si](C)(C)c3ccccc3-c3c(F)cccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1c(F)cccc1-c1ccc2[nH]ccc2c1)c1ccccc1-c1c(F)cccc1-c1ccc2[nH]ccc2c1",
         "id": 5976,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73502,7 +73502,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3ccc(-c4c(F)cccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)nc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1ccc(-c2c(F)cccc2-c2ccc3[nH]ccc3c2)nc1",
         "id": 5977,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73513,7 +73513,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3cc(F)c(-c4c(F)cccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2c(F)cccc2-c2ccc3[nH]ccc3c2)c(F)cc1-c1c(F)cccc1-c1ccc2[nH]ccc2c1",
         "id": 5978,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73524,7 +73524,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3cc(-c4c(F)cccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4ccccc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1cc(-c2c(F)cccc2-c2ccc3[nH]ccc3c2)c2ccccc2c1",
         "id": 5979,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73535,7 +73535,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3cc(Cl)c(-c4c(F)cccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1cc(Cl)c(-c2c(F)cccc2-c2ccc3[nH]ccc3c2)s1",
         "id": 5980,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73546,7 +73546,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3c(F)cccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)c3nsnc3c(-c3c(F)cccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3c(F)cccc3-c3ccc4[nH]ccc4c3)c3nsnc3c(-c3c(F)cccc3-c3ccc4[nH]ccc4c3)c2nc1C",
         "id": 5981,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73557,7 +73557,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3ccccc3Oc3ccccc3-c3c(F)cccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1ccccc1Oc1ccccc1-c1c(F)cccc1-c1ccc2[nH]ccc2c1",
         "id": 5982,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73568,7 +73568,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3c4ccccc4c(-c4c(F)cccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4cc(C(C)(C)C)ccc34)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3c(F)cccc3-c3ccc4[nH]ccc4c3)c3ccccc3c(-c3c(F)cccc3-c3ccc4[nH]ccc4c3)c2c1",
         "id": 5983,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73579,7 +73579,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3ccc4oc(-c5c(F)cccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1ccc2oc(-c3c(F)cccc3-c3ccc4[nH]ccc4c3)cc2c1",
         "id": 5984,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73590,7 +73590,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3ccc(-c4c(F)cccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)o3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1ccc(-c2c(F)cccc2-c2ccc3[nH]ccc3c2)o1",
         "id": 5985,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73601,7 +73601,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3ccc4c(c3)C3(c5ccccc5-c5ccccc53)c3cc(-c5c(F)cccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc3-4)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1ccc2c(c1)C1(c3ccccc3-c3ccccc31)c1cc(-c3c(F)cccc3-c3ccc4[nH]ccc4c3)ccc1-2",
         "id": 5986,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73612,7 +73612,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3cc(-c4c(F)cccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c(Cl)cc3Cl)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1cc(-c2c(F)cccc2-c2ccc3[nH]ccc3c2)c(Cl)cc1Cl",
         "id": 5987,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73623,7 +73623,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3cnc4nc(-c5c(F)cccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1cnc2nc(-c3c(F)cccc3-c3ccc4[nH]ccc4c3)ccc2c1",
         "id": 5988,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73634,7 +73634,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3cccc4cccc(-c5c(F)cccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)c34)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1cccc2cccc(-c3c(F)cccc3-c3ccc4[nH]ccc4c3)c12",
         "id": 5989,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73645,7 +73645,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3c(F)cccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc2-c2ccc(-c3c(F)cccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3c(F)cccc3-c3ccc4[nH]ccc4c3)ccc2-c2ccc(-c3c(F)cccc3-c3ccc4[nH]ccc4c3)cc21",
         "id": 5990,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73656,7 +73656,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3c(F)c(F)c(-c4c(F)cccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4nsnc34)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1c(F)c(F)c(-c2c(F)cccc2-c2ccc3[nH]ccc3c2)c2nsnc12",
         "id": 5991,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73667,7 +73667,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3ccc([Si](C)(C)c4ccc(-c5c(F)cccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2c(F)cccc2-c2ccc3[nH]ccc3c2)cc1)c1ccc(-c2c(F)cccc2-c2ccc3[nH]ccc3c2)cc1",
         "id": 5992,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73678,7 +73678,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3ccc4nc5ccc(-c6c(F)cccc6-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5nc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1ccc2nc3ccc(-c4c(F)cccc4-c4ccc5[nH]ccc5c4)cc3nc2c1",
         "id": 5993,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73689,7 +73689,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cc(F)c(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5)cc4F)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2ccc(-c3ccc4[nH]ccc4c3)cc2)c(F)cc1-c1ccc(-c2ccc3[nH]ccc3c2)cc1",
         "id": 5994,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73700,7 +73700,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccccc4[Si](C)(C)c4ccccc4-c4cccc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)c4F)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1cccc(-c2ccc3[nH]ccc3c2)c1F)c1ccccc1-c1cccc(-c2ccc3[nH]ccc3c2)c1F",
         "id": 5995,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73711,7 +73711,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5F)nc4)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc(-c3cccc(-c4ccc5[nH]ccc5c4)c3F)nc2)cccc1-c1ccc2[nH]ccc2c1",
         "id": 5996,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73722,7 +73722,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(F)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5F)cc4F)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2cccc(-c3ccc4[nH]ccc4c3)c2F)c(F)cc1-c1cccc(-c2ccc3[nH]ccc3c2)c1F",
         "id": 5997,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73733,7 +73733,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5F)c5ccccc5c4)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc3[nH]ccc3c2)cccc1-c1cc(-c2cccc(-c3ccc4[nH]ccc4c3)c2F)c2ccccc2c1",
         "id": 5998,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73744,7 +73744,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(Cl)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5F)s4)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc3[nH]ccc3c2)cccc1-c1cc(Cl)c(-c2cccc(-c3ccc4[nH]ccc4c3)c2F)s1",
         "id": 5999,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73755,7 +73755,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3F)c3nsnc3c(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3F)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3cccc(-c4ccc5[nH]ccc5c4)c3F)c3nsnc3c(-c3cccc(-c4ccc5[nH]ccc5c4)c3F)c2nc1C",
         "id": 6000,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73766,7 +73766,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccccc4Oc4ccccc4-c4cccc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)c4F)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc3[nH]ccc3c2)cccc1-c1ccccc1Oc1ccccc1-c1cccc(-c2ccc3[nH]ccc3c2)c1F",
         "id": 6001,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73777,7 +73777,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4c5ccccc5c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5F)c5cc(C(C)(C)C)ccc45)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3cccc(-c4ccc5[nH]ccc5c4)c3F)c3ccccc3c(-c3cccc(-c4ccc5[nH]ccc5c4)c3F)c2c1",
         "id": 6002,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73788,7 +73788,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc5oc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6F)cc5c4)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc3[nH]ccc3c2)cccc1-c1ccc2oc(-c3cccc(-c4ccc5[nH]ccc5c4)c3F)cc2c1",
         "id": 6003,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73799,7 +73799,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5F)o4)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc3[nH]ccc3c2)cccc1-c1ccc(-c2cccc(-c3ccc4[nH]ccc4c3)c2F)o1",
         "id": 6004,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73810,7 +73810,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc5c(c4)C4(c6ccccc6-c6ccccc64)c4cc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6F)ccc4-5)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc3c(c2)C2(c4ccccc4-c4ccccc42)c2cc(-c4cccc(-c5ccc6[nH]ccc6c5)c4F)ccc2-3)cccc1-c1ccc2[nH]ccc2c1",
         "id": 6005,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73821,7 +73821,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5F)c(Cl)cc4Cl)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc3[nH]ccc3c2)cccc1-c1cc(-c2cccc(-c3ccc4[nH]ccc4c3)c2F)c(Cl)cc1Cl",
         "id": 6006,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73832,7 +73832,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cnc5nc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6F)ccc5c4)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2cnc3nc(-c4cccc(-c5ccc6[nH]ccc6c5)c4F)ccc3c2)cccc1-c1ccc2[nH]ccc2c1",
         "id": 6007,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73843,7 +73843,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cccc5cccc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6F)c45)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc3[nH]ccc3c2)cccc1-c1cccc2cccc(-c3cccc(-c4ccc5[nH]ccc5c4)c3F)c12",
         "id": 6008,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73854,7 +73854,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3F)ccc2-c2ccc(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3F)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cccc(-c4ccc5[nH]ccc5c4)c3F)ccc2-c2ccc(-c3cccc(-c4ccc5[nH]ccc5c4)c3F)cc21",
         "id": 6009,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73865,7 +73865,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4c(F)c(F)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5F)c5nsnc45)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc3[nH]ccc3c2)cccc1-c1c(F)c(F)c(-c2cccc(-c3ccc4[nH]ccc4c3)c2F)c2nsnc12",
         "id": 6010,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73876,7 +73876,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc([Si](C)(C)c5ccc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6F)cc5)cc4)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2cccc(-c3ccc4[nH]ccc4c3)c2F)cc1)c1ccc(-c2cccc(-c3ccc4[nH]ccc4c3)c2F)cc1",
         "id": 6011,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73887,7 +73887,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc5nc6ccc(-c7cccc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)c7F)cc6nc5c4)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc3[nH]ccc3c2)cccc1-c1ccc2nc3ccc(-c4cccc(-c5ccc6[nH]ccc6c5)c4F)cc3nc2c1",
         "id": 6012,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73898,7 +73898,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1cc(F)c(-c2c(-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cnn2C)cc1F>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1cc(F)c(-c2c(-c3ccc4[nH]ccc4c3)cnn2C)cc1F",
         "id": 6013,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73909,7 +73909,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(F)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5)cc4F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2cccc(-c3ccc4[nH]ccc4c3)c2)c(F)cc1-c1cccc(-c2ccc3[nH]ccc3c2)c1",
         "id": 6014,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73920,7 +73920,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cc(F)c(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)s5)cc4F)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2ccc(-c3ccc4[nH]ccc4c3)s2)c(F)cc1-c1ccc(-c2ccc3[nH]ccc3c2)s1",
         "id": 6015,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73931,7 +73931,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3cc(F)c(-c4ccccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2ccccc2-c2ccc3[nH]ccc3c2)c(F)cc1-c1ccccc1-c1ccc2[nH]ccc2c1",
         "id": 6016,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73942,7 +73942,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5cc(F)c(-c6cc7cc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)ccc7o6)cc5F)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2cc3cc(-c4ccc5[nH]ccc5c4)ccc3o2)c(F)cc1-c1cc2cc(-c3ccc4[nH]ccc4c3)ccc2o1",
         "id": 6017,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73953,7 +73953,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3cc(F)c(-c4sccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2sccc2-c2ccc3[nH]ccc3c2)c(F)cc1-c1sccc1-c1ccc2[nH]ccc2c1",
         "id": 6018,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -73964,7 +73964,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4cc(F)c(-c5cc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc(C(F)(F)F)c5)cc4F)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2cc(-c3ccc4[nH]ccc4c3)cc(C(F)(F)F)c2)c(F)cc1-c1cc(-c2ccc3[nH]ccc3c2)cc(C(F)(F)F)c1",
         "id": 6019,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6,
@@ -75009,7 +75009,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3ccccc3[Si](C)(C)c3ccccc3-c3cccnc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1cccnc1-c1ccc2[nH]ccc2c1)c1ccccc1-c1cccnc1-c1ccc2[nH]ccc2c1",
         "id": 6114,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75020,7 +75020,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3ccc(-c4cccnc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)nc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cnc(-c2ccc3[nH]ccc3c2)c(-c2ccc(-c3cccnc3-c3ccc4[nH]ccc4c3)nc2)c1",
         "id": 6115,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75031,7 +75031,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3cc(-c4cccnc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4ccccc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cnc(-c2ccc3[nH]ccc3c2)c(-c2cc(-c3cccnc3-c3ccc4[nH]ccc4c3)c3ccccc3c2)c1",
         "id": 6116,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75042,7 +75042,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3cc(Cl)c(-c4cccnc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(-c2cccnc2-c2ccc3[nH]ccc3c2)sc1-c1cccnc1-c1ccc2[nH]ccc2c1",
         "id": 6117,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75053,7 +75053,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3cccnc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)c3nsnc3c(-c3cccnc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3cccnc3-c3ccc4[nH]ccc4c3)c3nsnc3c(-c3cccnc3-c3ccc4[nH]ccc4c3)c2nc1C",
         "id": 6118,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75064,7 +75064,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3ccccc3Oc3ccccc3-c3cccnc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2cccnc2-c2ccc3[nH]ccc3c2)c(Oc2ccccc2-c2cccnc2-c2ccc3[nH]ccc3c2)c1",
         "id": 6119,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75075,7 +75075,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3c4ccccc4c(-c4cccnc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4cc(C(C)(C)C)ccc34)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3cccnc3-c3ccc4[nH]ccc4c3)c3ccccc3c(-c3cccnc3-c3ccc4[nH]ccc4c3)c2c1",
         "id": 6120,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75086,7 +75086,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3ccc4oc(-c5cccnc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cnc(-c2ccc3[nH]ccc3c2)c(-c2ccc3oc(-c4cccnc4-c4ccc5[nH]ccc5c4)cc3c2)c1",
         "id": 6121,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75097,7 +75097,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3ccc(-c4cccnc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)o3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cnc(-c2ccc3[nH]ccc3c2)c(-c2ccc(-c3cccnc3-c3ccc4[nH]ccc4c3)o2)c1",
         "id": 6122,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75108,7 +75108,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3ccc4c(c3)C3(c5ccccc5-c5ccccc53)c3cc(-c5cccnc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc3-4)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(c1)-c1ccccc1C21c2cc(-c3cccnc3-c3ccc4[nH]ccc4c3)ccc2-c2ccc(-c3cccnc3-c3ccc4[nH]ccc4c3)cc21",
         "id": 6123,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75119,7 +75119,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3cc(-c4cccnc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c(Cl)cc3Cl)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(Cl)c(-c2cccnc2-c2ccc3[nH]ccc3c2)cc1-c1cccnc1-c1ccc2[nH]ccc2c1",
         "id": 6124,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75130,7 +75130,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3cnc4nc(-c5cccnc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cnc(-c2ccc3[nH]ccc3c2)c(-c2cnc3nc(-c4cccnc4-c4ccc5[nH]ccc5c4)ccc3c2)c1",
         "id": 6125,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75141,7 +75141,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3cccc4cccc(-c5cccnc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)c34)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cnc(-c2ccc3[nH]ccc3c2)c(-c2cccc3cccc(-c4cccnc4-c4ccc5[nH]ccc5c4)c23)c1",
         "id": 6126,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75152,7 +75152,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cccnc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc2-c2ccc(-c3cccnc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cccnc3-c3ccc4[nH]ccc4c3)ccc2-c2ccc(-c3cccnc3-c3ccc4[nH]ccc4c3)cc21",
         "id": 6127,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75163,7 +75163,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3c(F)c(F)c(-c4cccnc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4nsnc34)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(F)c(-c2cccnc2-c2ccc3[nH]ccc3c2)c2nsnc2c1-c1cccnc1-c1ccc2[nH]ccc2c1",
         "id": 6128,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75174,7 +75174,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3ccc([Si](C)(C)c4ccc(-c5cccnc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2cccnc2-c2ccc3[nH]ccc3c2)cc1)c1ccc(-c2cccnc2-c2ccc3[nH]ccc3c2)cc1",
         "id": 6129,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75185,7 +75185,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3ccc4nc5ccc(-c6cccnc6-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5nc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cnc(-c2ccc3[nH]ccc3c2)c(-c2ccc3nc4ccc(-c5cccnc5-c5ccc6[nH]ccc6c5)cc4nc3c2)c1",
         "id": 6130,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75196,7 +75196,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccccc4[Si](C)(C)c4ccccc4-c4ccc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1ccc(-c2ccc3[nH]ccc3c2)cc1)c1ccccc1-c1ccc(-c2ccc3[nH]ccc3c2)cc1",
         "id": 6131,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75207,7 +75207,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5)nc4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc(-c4ccc(-c5ccc(-c6ccc7[nH]ccc7c6)cc5)nc4)cc3)ccc2[nH]1",
         "id": 6132,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75218,7 +75218,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cc(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5)c5ccccc5c4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(-c3ccc(-c4ccc5[nH]ccc5c4)cc3)cc(-c3ccc(-c4ccc5[nH]ccc5c4)cc3)cc2c1",
         "id": 6133,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75229,7 +75229,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cc(Cl)c(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5)s4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(-c2ccc(-c3ccc4[nH]ccc4c3)cc2)sc1-c1ccc(-c2ccc3[nH]ccc3c2)cc1",
         "id": 6134,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75240,7 +75240,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3ccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3)c3nsnc3c(-c3ccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3ccc(-c4ccc5[nH]ccc5c4)cc3)c3nsnc3c(-c3ccc(-c4ccc5[nH]ccc5c4)cc3)c2nc1C",
         "id": 6135,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75251,7 +75251,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccccc4Oc4ccccc4-c4ccc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2ccc(-c3ccc4[nH]ccc4c3)cc2)c(Oc2ccccc2-c2ccc(-c3ccc4[nH]ccc4c3)cc2)c1",
         "id": 6136,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75262,7 +75262,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4c5ccccc5c(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5)c5cc(C(C)(C)C)ccc45)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3ccc(-c4ccc5[nH]ccc5c4)cc3)c3ccccc3c(-c3ccc(-c4ccc5[nH]ccc5c4)cc3)c2c1",
         "id": 6137,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75273,7 +75273,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc5oc(-c6ccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)cc6)cc5c4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc(-c4ccc5oc(-c6ccc(-c7ccc8[nH]ccc8c7)cc6)cc5c4)cc3)ccc2[nH]1",
         "id": 6138,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75284,7 +75284,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5)o4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc(-c4ccc(-c5ccc(-c6ccc7[nH]ccc7c6)cc5)o4)cc3)ccc2[nH]1",
         "id": 6139,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75295,7 +75295,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc5c(c4)C4(c6ccccc6-c6ccccc64)c4cc(-c6ccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)cc6)ccc4-5)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(c1)-c1ccccc1C21c2cc(-c3ccc(-c4ccc5[nH]ccc5c4)cc3)ccc2-c2ccc(-c3ccc(-c4ccc5[nH]ccc5c4)cc3)cc21",
         "id": 6140,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75306,7 +75306,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cc(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5)c(Cl)cc4Cl)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(Cl)c(-c2ccc(-c3ccc4[nH]ccc4c3)cc2)cc1-c1ccc(-c2ccc3[nH]ccc3c2)cc1",
         "id": 6141,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75317,7 +75317,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cnc5nc(-c6ccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)cc6)ccc5c4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc(-c4cnc5nc(-c6ccc(-c7ccc8[nH]ccc8c7)cc6)ccc5c4)cc3)ccc2[nH]1",
         "id": 6142,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75328,7 +75328,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cccc5cccc(-c6ccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)cc6)c45)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc(-c3ccc4[nH]ccc4c3)cc2)c2c(-c3ccc(-c4ccc5[nH]ccc5c4)cc3)cccc2c1",
         "id": 6143,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75339,7 +75339,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3ccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3)ccc2-c2ccc(-c3ccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3ccc(-c4ccc5[nH]ccc5c4)cc3)ccc2-c2ccc(-c3ccc(-c4ccc5[nH]ccc5c4)cc3)cc21",
         "id": 6144,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75350,7 +75350,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4c(F)c(F)c(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5)c5nsnc45)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(F)c(-c2ccc(-c3ccc4[nH]ccc4c3)cc2)c2nsnc2c1-c1ccc(-c2ccc3[nH]ccc3c2)cc1",
         "id": 6145,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75361,7 +75361,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc([Si](C)(C)c5ccc(-c6ccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)cc6)cc5)cc4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2ccc(-c3ccc4[nH]ccc4c3)cc2)cc1)c1ccc(-c2ccc(-c3ccc4[nH]ccc4c3)cc2)cc1",
         "id": 6146,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75372,7 +75372,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc5nc6ccc(-c7ccc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)cc7)cc6nc5c4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc(-c4ccc5nc6ccc(-c7ccc(-c8ccc9[nH]ccc9c8)cc7)cc6nc5c4)cc3)ccc2[nH]1",
         "id": 6147,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75383,7 +75383,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1ccccc1[Si](C)(C)c1ccccc1-c1c(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)cnn1C>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1ccccc1[Si](C)(C)c1ccccc1-c1c(-c2ccc3[nH]ccc3c2)cnn1C",
         "id": 6148,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75394,7 +75394,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1ccc(-c2c(-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cnn2C)nc1>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1ccc(-c2c(-c3ccc4[nH]ccc4c3)cnn2C)nc1",
         "id": 6149,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75405,7 +75405,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1cc(-c2c(-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cnn2C)c2ccccc2c1>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1cc(-c2c(-c3ccc4[nH]ccc4c3)cnn2C)c2ccccc2c1",
         "id": 6150,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75416,7 +75416,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1cc(Cl)c(-c2c(-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cnn2C)s1>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1cc(Cl)c(-c2c(-c3ccc4[nH]ccc4c3)cnn2C)s1",
         "id": 6151,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75427,7 +75427,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cnn3C)c3nsnc3c(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cnn3C)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3c(-c4ccc5[nH]ccc5c4)cnn3C)c3nsnc3c(-c3c(-c4ccc5[nH]ccc5c4)cnn3C)c2nc1C",
         "id": 6152,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75438,7 +75438,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1ccccc1Oc1ccccc1-c1c(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)cnn1C>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1ccccc1Oc1ccccc1-c1c(-c2ccc3[nH]ccc3c2)cnn1C",
         "id": 6153,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75449,7 +75449,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1c2ccccc2c(-c2c(-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cnn2C)c2cc(C(C)(C)C)ccc12>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1c2ccccc2c(-c2c(-c3ccc4[nH]ccc4c3)cnn2C)c2cc(C(C)(C)C)ccc12",
         "id": 6154,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75460,7 +75460,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1ccc2oc(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cnn3C)cc2c1>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1ccc2oc(-c3c(-c4ccc5[nH]ccc5c4)cnn3C)cc2c1",
         "id": 6155,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75471,7 +75471,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1ccc(-c2c(-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cnn2C)o1>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1ccc(-c2c(-c3ccc4[nH]ccc4c3)cnn2C)o1",
         "id": 6156,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75482,7 +75482,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1ccc2c(c1)C1(c3ccccc3-c3ccccc31)c1cc(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cnn3C)ccc1-2>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1ccc2c(c1)C1(c3ccccc3-c3ccccc31)c1cc(-c3c(-c4ccc5[nH]ccc5c4)cnn3C)ccc1-2",
         "id": 6157,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75493,7 +75493,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1cc(-c2c(-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cnn2C)c(Cl)cc1Cl>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1cc(-c2c(-c3ccc4[nH]ccc4c3)cnn2C)c(Cl)cc1Cl",
         "id": 6158,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75504,7 +75504,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1cnc2nc(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cnn3C)ccc2c1>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1cnc2nc(-c3c(-c4ccc5[nH]ccc5c4)cnn3C)ccc2c1",
         "id": 6159,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75515,7 +75515,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1cccc2cccc(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cnn3C)c12>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1cccc2cccc(-c3c(-c4ccc5[nH]ccc5c4)cnn3C)c12",
         "id": 6160,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75526,7 +75526,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cnn3C)ccc2-c2ccc(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cnn3C)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3c(-c4ccc5[nH]ccc5c4)cnn3C)ccc2-c2ccc(-c3c(-c4ccc5[nH]ccc5c4)cnn3C)cc21",
         "id": 6161,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75537,7 +75537,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1c(F)c(F)c(-c2c(-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cnn2C)c2nsnc12>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1c(F)c(F)c(-c2c(-c3ccc4[nH]ccc4c3)cnn2C)c2nsnc12",
         "id": 6162,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75548,7 +75548,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1ccc([Si](C)(C)c2ccc(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cnn3C)cc2)cc1>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1ccc([Si](C)(C)c2ccc(-c3c(-c4ccc5[nH]ccc5c4)cnn3C)cc2)cc1",
         "id": 6163,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75559,7 +75559,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1ccc2nc3ccc(-c4c(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cnn4C)cc3nc2c1>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1ccc2nc3ccc(-c4c(-c5ccc6[nH]ccc6c5)cnn4C)cc3nc2c1",
         "id": 6164,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75570,7 +75570,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccccc4[Si](C)(C)c4ccccc4-c4cccc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)c4)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1cccc(-c2ccc3[nH]ccc3c2)c1)c1ccccc1-c1cccc(-c2ccc3[nH]ccc3c2)c1",
         "id": 6165,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75581,7 +75581,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5)nc4)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc(-c3cccc(-c4ccc5[nH]ccc5c4)c3)nc2)cc(-c2ccc3[nH]ccc3c2)c1",
         "id": 6166,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75592,7 +75592,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5)c5ccccc5c4)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)cc(-c2cc(-c3cccc(-c4ccc5[nH]ccc5c4)c3)c3ccccc3c2)c1",
         "id": 6167,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75603,7 +75603,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(Cl)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5)s4)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(-c2cccc(-c3ccc4[nH]ccc4c3)c2)sc1-c1cccc(-c2ccc3[nH]ccc3c2)c1",
         "id": 6168,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75614,7 +75614,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3)c3nsnc3c(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3cccc(-c4ccc5[nH]ccc5c4)c3)c3nsnc3c(-c3cccc(-c4ccc5[nH]ccc5c4)c3)c2nc1C",
         "id": 6169,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75625,7 +75625,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccccc4Oc4ccccc4-c4cccc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)c4)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)cc(-c2ccccc2Oc2ccccc2-c2cccc(-c3ccc4[nH]ccc4c3)c2)c1",
         "id": 6170,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75636,7 +75636,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4c5ccccc5c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5)c5cc(C(C)(C)C)ccc45)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3cccc(-c4ccc5[nH]ccc5c4)c3)c3ccccc3c(-c3cccc(-c4ccc5[nH]ccc5c4)c3)c2c1",
         "id": 6171,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75647,7 +75647,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc5oc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6)cc5c4)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)cc(-c2ccc3oc(-c4cccc(-c5ccc6[nH]ccc6c5)c4)cc3c2)c1",
         "id": 6172,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75658,7 +75658,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5)o4)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)cc(-c2ccc(-c3cccc(-c4ccc5[nH]ccc5c4)c3)o2)c1",
         "id": 6173,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75669,7 +75669,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc5c(c4)C4(c6ccccc6-c6ccccc64)c4cc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6)ccc4-5)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3c(c2)C2(c4ccccc4-c4ccccc42)c2cc(-c4cccc(-c5ccc6[nH]ccc6c5)c4)ccc2-3)cc(-c2ccc3[nH]ccc3c2)c1",
         "id": 6174,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75680,7 +75680,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5)c(Cl)cc4Cl)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(Cl)c(-c2cccc(-c3ccc4[nH]ccc4c3)c2)cc1-c1cccc(-c2ccc3[nH]ccc3c2)c1",
         "id": 6175,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75691,7 +75691,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cnc5nc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6)ccc5c4)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2cnc3nc(-c4cccc(-c5ccc6[nH]ccc6c5)c4)ccc3c2)cc(-c2ccc3[nH]ccc3c2)c1",
         "id": 6176,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75702,7 +75702,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cccc5cccc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6)c45)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)cc(-c2cccc3cccc(-c4cccc(-c5ccc6[nH]ccc6c5)c4)c23)c1",
         "id": 6177,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75713,7 +75713,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3)ccc2-c2ccc(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cccc(-c4ccc5[nH]ccc5c4)c3)ccc2-c2ccc(-c3cccc(-c4ccc5[nH]ccc5c4)c3)cc21",
         "id": 6178,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75724,7 +75724,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4c(F)c(F)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5)c5nsnc45)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(F)c(-c2cccc(-c3ccc4[nH]ccc4c3)c2)c2nsnc2c1-c1cccc(-c2ccc3[nH]ccc3c2)c1",
         "id": 6179,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75735,7 +75735,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc([Si](C)(C)c5ccc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6)cc5)cc4)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2cccc(-c3ccc4[nH]ccc4c3)c2)cc1)c1ccc(-c2cccc(-c3ccc4[nH]ccc4c3)c2)cc1",
         "id": 6180,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75746,7 +75746,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc5nc6ccc(-c7cccc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)c7)cc6nc5c4)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)cc(-c2ccc3nc4ccc(-c5cccc(-c6ccc7[nH]ccc7c6)c5)cc4nc3c2)c1",
         "id": 6181,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75757,7 +75757,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccccc4[Si](C)(C)c4ccccc4-c4ccc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)s4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1ccc(-c2ccc3[nH]ccc3c2)s1)c1ccccc1-c1ccc(-c2ccc3[nH]ccc3c2)s1",
         "id": 6182,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75768,7 +75768,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)s5)nc4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc(-c4ccc(-c5ccc(-c6ccc7[nH]ccc7c6)s5)nc4)s3)ccc2[nH]1",
         "id": 6183,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75779,7 +75779,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cc(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)s5)c5ccccc5c4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(-c3ccc(-c4ccc5[nH]ccc5c4)s3)cc(-c3ccc(-c4ccc5[nH]ccc5c4)s3)cc2c1",
         "id": 6184,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75790,7 +75790,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cc(Cl)c(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)s5)s4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(-c2ccc(-c3ccc4[nH]ccc4c3)s2)sc1-c1ccc(-c2ccc3[nH]ccc3c2)s1",
         "id": 6185,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75801,7 +75801,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3ccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)s3)c3nsnc3c(-c3ccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)s3)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3ccc(-c4ccc5[nH]ccc5c4)s3)c3nsnc3c(-c3ccc(-c4ccc5[nH]ccc5c4)s3)c2nc1C",
         "id": 6186,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75812,7 +75812,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccccc4Oc4ccccc4-c4ccc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)s4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2ccc(-c3ccc4[nH]ccc4c3)s2)c(Oc2ccccc2-c2ccc(-c3ccc4[nH]ccc4c3)s2)c1",
         "id": 6187,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75823,7 +75823,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4c5ccccc5c(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)s5)c5cc(C(C)(C)C)ccc45)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3ccc(-c4ccc5[nH]ccc5c4)s3)c3ccccc3c(-c3ccc(-c4ccc5[nH]ccc5c4)s3)c2c1",
         "id": 6188,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75834,7 +75834,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc5oc(-c6ccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)s6)cc5c4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc(-c4ccc5oc(-c6ccc(-c7ccc8[nH]ccc8c7)s6)cc5c4)s3)ccc2[nH]1",
         "id": 6189,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75845,7 +75845,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)s5)o4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc(-c4ccc(-c5ccc(-c6ccc7[nH]ccc7c6)s5)o4)s3)ccc2[nH]1",
         "id": 6190,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75856,7 +75856,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc5c(c4)C4(c6ccccc6-c6ccccc64)c4cc(-c6ccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)s6)ccc4-5)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(c1)-c1ccccc1C21c2cc(-c3ccc(-c4ccc5[nH]ccc5c4)s3)ccc2-c2ccc(-c3ccc(-c4ccc5[nH]ccc5c4)s3)cc21",
         "id": 6191,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75867,7 +75867,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cc(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)s5)c(Cl)cc4Cl)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(Cl)c(-c2ccc(-c3ccc4[nH]ccc4c3)s2)cc1-c1ccc(-c2ccc3[nH]ccc3c2)s1",
         "id": 6192,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75878,7 +75878,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cnc5nc(-c6ccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)s6)ccc5c4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc(-c4cnc5nc(-c6ccc(-c7ccc8[nH]ccc8c7)s6)ccc5c4)s3)ccc2[nH]1",
         "id": 6193,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75889,7 +75889,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cccc5cccc(-c6ccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)s6)c45)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc(-c3ccc4[nH]ccc4c3)s2)c2c(-c3ccc(-c4ccc5[nH]ccc5c4)s3)cccc2c1",
         "id": 6194,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75900,7 +75900,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3ccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)s3)ccc2-c2ccc(-c3ccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)s3)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3ccc(-c4ccc5[nH]ccc5c4)s3)ccc2-c2ccc(-c3ccc(-c4ccc5[nH]ccc5c4)s3)cc21",
         "id": 6195,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75911,7 +75911,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4c(F)c(F)c(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)s5)c5nsnc45)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(F)c(-c2ccc(-c3ccc4[nH]ccc4c3)s2)c2nsnc2c1-c1ccc(-c2ccc3[nH]ccc3c2)s1",
         "id": 6196,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75922,7 +75922,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc([Si](C)(C)c5ccc(-c6ccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)s6)cc5)cc4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2ccc(-c3ccc4[nH]ccc4c3)s2)cc1)c1ccc(-c2ccc(-c3ccc4[nH]ccc4c3)s2)cc1",
         "id": 6197,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75933,7 +75933,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4ccc5nc6ccc(-c7ccc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)s7)cc6nc5c4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc(-c4ccc5nc6ccc(-c7ccc(-c8ccc9[nH]ccc9c8)s7)cc6nc5c4)s3)ccc2[nH]1",
         "id": 6198,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75944,7 +75944,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3ccccc3[Si](C)(C)c3ccccc3-c3ccccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1ccccc1-c1ccc2[nH]ccc2c1)c1ccccc1-c1ccccc1-c1ccc2[nH]ccc2c1",
         "id": 6199,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75955,7 +75955,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3ccc(-c4ccccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)nc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2ccc3[nH]ccc3c2)c(-c2ccc(-c3ccccc3-c3ccc4[nH]ccc4c3)nc2)c1",
         "id": 6200,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75966,7 +75966,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3cc(-c4ccccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4ccccc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2cc(-c3ccccc3-c3ccc4[nH]ccc4c3)c3ccccc3c2)c(-c2ccc3[nH]ccc3c2)c1",
         "id": 6201,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75977,7 +75977,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3cc(Cl)c(-c4ccccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(-c2ccccc2-c2ccc3[nH]ccc3c2)sc1-c1ccccc1-c1ccc2[nH]ccc2c1",
         "id": 6202,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75988,7 +75988,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3ccccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)c3nsnc3c(-c3ccccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3ccccc3-c3ccc4[nH]ccc4c3)c3nsnc3c(-c3ccccc3-c3ccc4[nH]ccc4c3)c2nc1C",
         "id": 6203,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -75999,7 +75999,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3ccccc3Oc3ccccc3-c3ccccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2ccccc2-c2ccc3[nH]ccc3c2)c(Oc2ccccc2-c2ccccc2-c2ccc3[nH]ccc3c2)c1",
         "id": 6204,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76010,7 +76010,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3c4ccccc4c(-c4ccccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4cc(C(C)(C)C)ccc34)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3ccccc3-c3ccc4[nH]ccc4c3)c3ccccc3c(-c3ccccc3-c3ccc4[nH]ccc4c3)c2c1",
         "id": 6205,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76021,7 +76021,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3ccc4oc(-c5ccccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2ccc3oc(-c4ccccc4-c4ccc5[nH]ccc5c4)cc3c2)c(-c2ccc3[nH]ccc3c2)c1",
         "id": 6206,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76032,7 +76032,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3ccc(-c4ccccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)o3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2ccc(-c3ccccc3-c3ccc4[nH]ccc4c3)o2)c(-c2ccc3[nH]ccc3c2)c1",
         "id": 6207,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76043,7 +76043,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3ccc4c(c3)C3(c5ccccc5-c5ccccc53)c3cc(-c5ccccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc3-4)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2ccc3[nH]ccc3c2)c(-c2ccc3c(c2)C2(c4ccccc4-c4ccccc42)c2cc(-c4ccccc4-c4ccc5[nH]ccc5c4)ccc2-3)c1",
         "id": 6208,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76054,7 +76054,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3cc(-c4ccccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c(Cl)cc3Cl)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(Cl)c(-c2ccccc2-c2ccc3[nH]ccc3c2)cc1-c1ccccc1-c1ccc2[nH]ccc2c1",
         "id": 6209,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76065,7 +76065,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3cnc4nc(-c5ccccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2ccc3[nH]ccc3c2)c(-c2cnc3nc(-c4ccccc4-c4ccc5[nH]ccc5c4)ccc3c2)c1",
         "id": 6210,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76076,7 +76076,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3cccc4cccc(-c5ccccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)c34)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2cccc3cccc(-c4ccccc4-c4ccc5[nH]ccc5c4)c23)c(-c2ccc3[nH]ccc3c2)c1",
         "id": 6211,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76087,7 +76087,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3ccccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc2-c2ccc(-c3ccccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3ccccc3-c3ccc4[nH]ccc4c3)ccc2-c2ccc(-c3ccccc3-c3ccc4[nH]ccc4c3)cc21",
         "id": 6212,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76098,7 +76098,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3c(F)c(F)c(-c4ccccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4nsnc34)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(F)c(-c2ccccc2-c2ccc3[nH]ccc3c2)c2nsnc2c1-c1ccccc1-c1ccc2[nH]ccc2c1",
         "id": 6213,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76109,7 +76109,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3ccc([Si](C)(C)c4ccc(-c5ccccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2ccccc2-c2ccc3[nH]ccc3c2)cc1)c1ccc(-c2ccccc2-c2ccc3[nH]ccc3c2)cc1",
         "id": 6214,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76120,7 +76120,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3ccc4nc5ccc(-c6ccccc6-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5nc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2ccc3nc4ccc(-c5ccccc5-c5ccc6[nH]ccc6c5)cc4nc3c2)c(-c2ccc3[nH]ccc3c2)c1",
         "id": 6215,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76131,7 +76131,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5ccccc5[Si](C)(C)c5ccccc5-c5cc6cc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)ccc6o5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1cc2cc(-c3ccc4[nH]ccc4c3)ccc2o1)c1ccccc1-c1cc2cc(-c3ccc4[nH]ccc4c3)ccc2o1",
         "id": 6216,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76142,7 +76142,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5ccc(-c6cc7cc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)ccc7o6)nc5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc4oc(-c5ccc(-c6cc7cc(-c8ccc9[nH]ccc9c8)ccc7o6)nc5)cc4c3)ccc2[nH]1",
         "id": 6217,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76153,7 +76153,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5cc(-c6cc7cc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)ccc7o6)c6ccccc6c5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(-c3cc4cc(-c5ccc6[nH]ccc6c5)ccc4o3)cc(-c3cc4cc(-c5ccc6[nH]ccc6c5)ccc4o3)cc2c1",
         "id": 6218,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76164,7 +76164,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5cc(Cl)c(-c6cc7cc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)ccc7o6)s5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(-c2cc3cc(-c4ccc5[nH]ccc5c4)ccc3o2)sc1-c1cc2cc(-c3ccc4[nH]ccc4c3)ccc2o1",
         "id": 6219,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76175,7 +76175,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3cc4cc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc4o3)c3nsnc3c(-c3cc4cc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc4o3)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3cc4cc(-c5ccc6[nH]ccc6c5)ccc4o3)c3nsnc3c(-c3cc4cc(-c5ccc6[nH]ccc6c5)ccc4o3)c2nc1C",
         "id": 6220,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76186,7 +76186,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5ccccc5Oc5ccccc5-c5cc6cc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)ccc6o5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2cc3cc(-c4ccc5[nH]ccc5c4)ccc3o2)c(Oc2ccccc2-c2cc3cc(-c4ccc5[nH]ccc5c4)ccc3o2)c1",
         "id": 6221,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76197,7 +76197,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5c6ccccc6c(-c6cc7cc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)ccc7o6)c6cc(C(C)(C)C)ccc56)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3cc4cc(-c5ccc6[nH]ccc6c5)ccc4o3)c3ccccc3c(-c3cc4cc(-c5ccc6[nH]ccc6c5)ccc4o3)c2c1",
         "id": 6222,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76208,7 +76208,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5ccc6oc(-c7cc8cc(-c9ccc%10c(ccn%10C(=O)OC(C)(C)C)c9)ccc8o7)cc6c5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc4oc(-c5ccc6oc(-c7cc8cc(-c9ccc%10[nH]ccc%10c9)ccc8o7)cc6c5)cc4c3)ccc2[nH]1",
         "id": 6223,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76219,7 +76219,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5ccc(-c6cc7cc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)ccc7o6)o5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc4oc(-c5ccc(-c6cc7cc(-c8ccc9[nH]ccc9c8)ccc7o6)o5)cc4c3)ccc2[nH]1",
         "id": 6224,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76230,7 +76230,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5ccc6c(c5)C5(c7ccccc7-c7ccccc75)c5cc(-c7cc8cc(-c9ccc%10c(ccn%10C(=O)OC(C)(C)C)c9)ccc8o7)ccc5-6)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(c1)-c1ccccc1C21c2cc(-c3cc4cc(-c5ccc6[nH]ccc6c5)ccc4o3)ccc2-c2ccc(-c3cc4cc(-c5ccc6[nH]ccc6c5)ccc4o3)cc21",
         "id": 6225,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76241,7 +76241,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5cc(-c6cc7cc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)ccc7o6)c(Cl)cc5Cl)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(Cl)c(-c2cc3cc(-c4ccc5[nH]ccc5c4)ccc3o2)cc1-c1cc2cc(-c3ccc4[nH]ccc4c3)ccc2o1",
         "id": 6226,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76252,7 +76252,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5cnc6nc(-c7cc8cc(-c9ccc%10c(ccn%10C(=O)OC(C)(C)C)c9)ccc8o7)ccc6c5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc4oc(-c5cnc6nc(-c7cc8cc(-c9ccc%10[nH]ccc%10c9)ccc8o7)ccc6c5)cc4c3)ccc2[nH]1",
         "id": 6227,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76263,7 +76263,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5cccc6cccc(-c7cc8cc(-c9ccc%10c(ccn%10C(=O)OC(C)(C)C)c9)ccc8o7)c56)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2cc3cc(-c4ccc5[nH]ccc5c4)ccc3o2)c2c(-c3cc4cc(-c5ccc6[nH]ccc6c5)ccc4o3)cccc2c1",
         "id": 6228,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76274,7 +76274,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cc4cc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc4o3)ccc2-c2ccc(-c3cc4cc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc4o3)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cc4cc(-c5ccc6[nH]ccc6c5)ccc4o3)ccc2-c2ccc(-c3cc4cc(-c5ccc6[nH]ccc6c5)ccc4o3)cc21",
         "id": 6229,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76285,7 +76285,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5c(F)c(F)c(-c6cc7cc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)ccc7o6)c6nsnc56)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(F)c(-c2cc3cc(-c4ccc5[nH]ccc5c4)ccc3o2)c2nsnc2c1-c1cc2cc(-c3ccc4[nH]ccc4c3)ccc2o1",
         "id": 6230,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76296,7 +76296,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5ccc([Si](C)(C)c6ccc(-c7cc8cc(-c9ccc%10c(ccn%10C(=O)OC(C)(C)C)c9)ccc8o7)cc6)cc5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2cc3cc(-c4ccc5[nH]ccc5c4)ccc3o2)cc1)c1ccc(-c2cc3cc(-c4ccc5[nH]ccc5c4)ccc3o2)cc1",
         "id": 6231,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76307,7 +76307,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5ccc6nc7ccc(-c8cc9cc(-c%10ccc%11c(ccn%11C(=O)OC(C)(C)C)c%10)ccc9o8)cc7nc6c5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccc4oc(-c5ccc6nc7ccc(-c8cc9cc(-c%10ccc%11[nH]ccc%11c%10)ccc9o8)cc7nc6c5)cc4c3)ccc2[nH]1",
         "id": 6232,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76318,7 +76318,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3ccccc3[Si](C)(C)c3ccccc3-c3sccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1sccc1-c1ccc2[nH]ccc2c1)c1ccccc1-c1sccc1-c1ccc2[nH]ccc2c1",
         "id": 6233,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76329,7 +76329,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3ccc(-c4sccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)nc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccsc3-c3ccc(-c4sccc4-c4ccc5[nH]ccc5c4)nc3)ccc2[nH]1",
         "id": 6234,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76340,7 +76340,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3cc(-c4sccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4ccccc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(-c3sccc3-c3ccc4[nH]ccc4c3)cc(-c3sccc3-c3ccc4[nH]ccc4c3)cc2c1",
         "id": 6235,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76351,7 +76351,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3cc(Cl)c(-c4sccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(-c2sccc2-c2ccc3[nH]ccc3c2)sc1-c1sccc1-c1ccc2[nH]ccc2c1",
         "id": 6236,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76362,7 +76362,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3sccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)c3nsnc3c(-c3sccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3sccc3-c3ccc4[nH]ccc4c3)c3nsnc3c(-c3sccc3-c3ccc4[nH]ccc4c3)c2nc1C",
         "id": 6237,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76373,7 +76373,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3ccccc3Oc3ccccc3-c3sccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2sccc2-c2ccc3[nH]ccc3c2)c(Oc2ccccc2-c2sccc2-c2ccc3[nH]ccc3c2)c1",
         "id": 6238,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76384,7 +76384,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3c4ccccc4c(-c4sccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4cc(C(C)(C)C)ccc34)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3sccc3-c3ccc4[nH]ccc4c3)c3ccccc3c(-c3sccc3-c3ccc4[nH]ccc4c3)c2c1",
         "id": 6239,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76395,7 +76395,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3ccc4oc(-c5sccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccsc3-c3ccc4oc(-c5sccc5-c5ccc6[nH]ccc6c5)cc4c3)ccc2[nH]1",
         "id": 6240,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76406,7 +76406,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3ccc(-c4sccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)o3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccsc3-c3ccc(-c4sccc4-c4ccc5[nH]ccc5c4)o3)ccc2[nH]1",
         "id": 6241,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76417,7 +76417,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3ccc4c(c3)C3(c5ccccc5-c5ccccc53)c3cc(-c5sccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc3-4)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(c1)-c1ccccc1C21c2cc(-c3sccc3-c3ccc4[nH]ccc4c3)ccc2-c2ccc(-c3sccc3-c3ccc4[nH]ccc4c3)cc21",
         "id": 6242,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76428,7 +76428,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3cc(-c4sccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c(Cl)cc3Cl)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(Cl)c(-c2sccc2-c2ccc3[nH]ccc3c2)cc1-c1sccc1-c1ccc2[nH]ccc2c1",
         "id": 6243,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76439,7 +76439,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3cnc4nc(-c5sccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)ccc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccsc3-c3cnc4nc(-c5sccc5-c5ccc6[nH]ccc6c5)ccc4c3)ccc2[nH]1",
         "id": 6244,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76450,7 +76450,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3cccc4cccc(-c5sccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)c34)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2sccc2-c2ccc3[nH]ccc3c2)c2c(-c3sccc3-c3ccc4[nH]ccc4c3)cccc2c1",
         "id": 6245,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76461,7 +76461,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3sccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)ccc2-c2ccc(-c3sccc3-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3sccc3-c3ccc4[nH]ccc4c3)ccc2-c2ccc(-c3sccc3-c3ccc4[nH]ccc4c3)cc21",
         "id": 6246,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76472,7 +76472,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3c(F)c(F)c(-c4sccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c4nsnc34)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(F)c(-c2sccc2-c2ccc3[nH]ccc3c2)c2nsnc2c1-c1sccc1-c1ccc2[nH]ccc2c1",
         "id": 6247,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76483,7 +76483,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3ccc([Si](C)(C)c4ccc(-c5sccc5-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2sccc2-c2ccc3[nH]ccc3c2)cc1)c1ccc(-c2sccc2-c2ccc3[nH]ccc3c2)cc1",
         "id": 6248,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76494,7 +76494,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3ccc4nc5ccc(-c6sccc6-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5nc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc2cc(-c3ccsc3-c3ccc4nc5ccc(-c6sccc6-c6ccc7[nH]ccc7c6)cc5nc4c3)ccc2[nH]1",
         "id": 6249,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76505,7 +76505,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4ccccc4[Si](C)(C)c4ccccc4-c4cc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc(C(F)(F)F)c4)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1cc(-c2ccc3[nH]ccc3c2)cc(C(F)(F)F)c1)c1ccccc1-c1cc(-c2ccc3[nH]ccc3c2)cc(C(F)(F)F)c1",
         "id": 6250,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76516,7 +76516,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4ccc(-c5cc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc(C(F)(F)F)c5)nc4)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2ccc(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)nc2)cc(-c2ccc3[nH]ccc3c2)c1",
         "id": 6251,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76527,7 +76527,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4cc(-c5cc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc(C(F)(F)F)c5)c5ccccc5c4)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2ccc3[nH]ccc3c2)cc(-c2cc(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)c3ccccc3c2)c1",
         "id": 6252,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76538,7 +76538,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4cc(Cl)c(-c5cc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc(C(F)(F)F)c5)s4)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2ccc3[nH]ccc3c2)cc(-c2cc(Cl)c(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)s2)c1",
         "id": 6253,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76549,7 +76549,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3cc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc(C(F)(F)F)c3)c3nsnc3c(-c3cc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc(C(F)(F)F)c3)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)c3nsnc3c(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)c2nc1C",
         "id": 6254,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76560,7 +76560,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4ccccc4Oc4ccccc4-c4cc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cc(C(F)(F)F)c4)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2ccc3[nH]ccc3c2)cc(-c2ccccc2Oc2ccccc2-c2cc(-c3ccc4[nH]ccc4c3)cc(C(F)(F)F)c2)c1",
         "id": 6255,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76571,7 +76571,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4c5ccccc5c(-c5cc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc(C(F)(F)F)c5)c5cc(C(C)(C)C)ccc45)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)c3ccccc3c(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)c2c1",
         "id": 6256,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76582,7 +76582,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4ccc5oc(-c6cc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)cc(C(F)(F)F)c6)cc5c4)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2ccc3[nH]ccc3c2)cc(-c2ccc3oc(-c4cc(-c5ccc6[nH]ccc6c5)cc(C(F)(F)F)c4)cc3c2)c1",
         "id": 6257,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76593,7 +76593,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4ccc(-c5cc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc(C(F)(F)F)c5)o4)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2ccc3[nH]ccc3c2)cc(-c2ccc(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)o2)c1",
         "id": 6258,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76604,7 +76604,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4ccc5c(c4)C4(c6ccccc6-c6ccccc64)c4cc(-c6cc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)cc(C(F)(F)F)c6)ccc4-5)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2ccc3c(c2)C2(c4ccccc4-c4ccccc42)c2cc(-c4cc(-c5ccc6[nH]ccc6c5)cc(C(F)(F)F)c4)ccc2-3)cc(-c2ccc3[nH]ccc3c2)c1",
         "id": 6259,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76615,7 +76615,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4cc(-c5cc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc(C(F)(F)F)c5)c(Cl)cc4Cl)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2ccc3[nH]ccc3c2)cc(-c2cc(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)c(Cl)cc2Cl)c1",
         "id": 6260,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76626,7 +76626,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4cnc5nc(-c6cc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)cc(C(F)(F)F)c6)ccc5c4)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2cnc3nc(-c4cc(-c5ccc6[nH]ccc6c5)cc(C(F)(F)F)c4)ccc3c2)cc(-c2ccc3[nH]ccc3c2)c1",
         "id": 6261,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76637,7 +76637,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4cccc5cccc(-c6cc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)cc(C(F)(F)F)c6)c45)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2ccc3[nH]ccc3c2)cc(-c2cccc3cccc(-c4cc(-c5ccc6[nH]ccc6c5)cc(C(F)(F)F)c4)c23)c1",
         "id": 6262,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76648,7 +76648,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc(C(F)(F)F)c3)ccc2-c2ccc(-c3cc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc(C(F)(F)F)c3)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)ccc2-c2ccc(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)cc21",
         "id": 6263,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76659,7 +76659,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4c(F)c(F)c(-c5cc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc(C(F)(F)F)c5)c5nsnc45)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(F)c(-c2cc(-c3ccc4[nH]ccc4c3)cc(C(F)(F)F)c2)c2nsnc2c1-c1cc(-c2ccc3[nH]ccc3c2)cc(C(F)(F)F)c1",
         "id": 6264,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76670,7 +76670,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4ccc([Si](C)(C)c5ccc(-c6cc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)cc(C(F)(F)F)c6)cc5)cc4)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2cc(-c3ccc4[nH]ccc4c3)cc(C(F)(F)F)c2)cc1)c1ccc(-c2cc(-c3ccc4[nH]ccc4c3)cc(C(F)(F)F)c2)cc1",
         "id": 6265,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -76681,7 +76681,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4ccc5nc6ccc(-c7cc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)cc(C(F)(F)F)c7)cc6nc5c4)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2ccc3[nH]ccc3c2)cc(-c2ccc3nc4ccc(-c5cc(-c6ccc7[nH]ccc7c6)cc(C(F)(F)F)c5)cc4nc3c2)c1",
         "id": 6266,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "id": 6267,
@@ -78914,7 +78914,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ncccc3-c3cc(-n4c5ccccc5c5ccccc54)c(-c4cccnc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cnc(-c2ccc3[nH]ccc3c2)c(-c2cc(-n3c4ccccc4c4ccccc43)c(-c3cccnc3-c3ccc4[nH]ccc4c3)cc2-n2c3ccccc3c3ccccc32)c1",
         "id": 6469,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -78925,7 +78925,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3ccccc3[Si](C)(C)c3ccccc3-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cccc3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1c(-c2ccc3[nH]ccc3c2)cccc1-n1c2ccccc2c2ccccc21)c1ccccc1-c1c(-c2ccc3[nH]ccc3c2)cccc1-n1c2ccccc2c2ccccc21",
         "id": 6470,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -78936,7 +78936,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3ccc(-c4c(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cccc4-n4c5ccccc5c5ccccc54)nc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-c2ccc(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)nc2)c(-n2c3ccccc3c3ccccc32)c1",
         "id": 6471,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -78947,7 +78947,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3cc(-n4c5ccccc5c5ccccc54)c(-c4c(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cccc4-n4c5ccccc5c5ccccc54)cc3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-c2cc(-n3c4ccccc4c4ccccc43)c(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)cc2-n2c3ccccc3c3ccccc32)c(-n2c3ccccc3c3ccccc32)c1",
         "id": 6472,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -78958,7 +78958,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3cc(-c4c(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cccc4-n4c5ccccc5c5ccccc54)c4ccccc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-c2cc(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)c3ccccc3c2)c(-n2c3ccccc3c3ccccc32)c1",
         "id": 6473,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -78969,7 +78969,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3cc(Cl)c(-c4c(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cccc4-n4c5ccccc5c5ccccc54)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(-c2c(-c3ccc4[nH]ccc4c3)cccc2-n2c3ccccc3c3ccccc32)sc1-c1c(-c2ccc3[nH]ccc3c2)cccc1-n1c2ccccc2c2ccccc21",
         "id": 6474,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -78980,7 +78980,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cccc3-n3c4ccccc4c4ccccc43)c3nsnc3c(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cccc3-n3c4ccccc4c4ccccc43)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)c3nsnc3c(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)c2nc1C",
         "id": 6475,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -78991,7 +78991,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3ccccc3Oc3ccccc3-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cccc3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2c(-c3ccc4[nH]ccc4c3)cccc2-n2c3ccccc3c3ccccc32)c(Oc2ccccc2-c2c(-c3ccc4[nH]ccc4c3)cccc2-n2c3ccccc3c3ccccc32)c1",
         "id": 6476,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79002,7 +79002,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3c4ccccc4c(-c4c(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cccc4-n4c5ccccc5c5ccccc54)c4cc(C(C)(C)C)ccc34)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)c3ccccc3c(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)c2c1",
         "id": 6477,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79013,7 +79013,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3cc(F)c(-c4c(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cccc4-n4c5ccccc5c5ccccc54)cc3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2c(-c3ccc4[nH]ccc4c3)cccc2-n2c3ccccc3c3ccccc32)c(F)cc1-c1c(-c2ccc3[nH]ccc3c2)cccc1-n1c2ccccc2c2ccccc21",
         "id": 6478,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79024,7 +79024,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3ccc4oc(-c5c(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cccc5-n5c6ccccc6c6ccccc65)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-c2ccc3oc(-c4c(-c5ccc6[nH]ccc6c5)cccc4-n4c5ccccc5c5ccccc54)cc3c2)c(-n2c3ccccc3c3ccccc32)c1",
         "id": 6479,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79035,7 +79035,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3ccc(-c4c(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cccc4-n4c5ccccc5c5ccccc54)o3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-c2ccc(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)o2)c(-n2c3ccccc3c3ccccc32)c1",
         "id": 6480,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79046,7 +79046,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3ccc4c(c3)C3(c5ccccc5-c5ccccc53)c3cc(-c5c(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cccc5-n5c6ccccc6c6ccccc65)ccc3-4)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(c1)-c1ccccc1C21c2cc(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)ccc2-c2ccc(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)cc21",
         "id": 6481,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79057,7 +79057,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3cc(-c4c(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cccc4-n4c5ccccc5c5ccccc54)c(Cl)cc3Cl)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(Cl)c(-c2c(-c3ccc4[nH]ccc4c3)cccc2-n2c3ccccc3c3ccccc32)cc1-c1c(-c2ccc3[nH]ccc3c2)cccc1-n1c2ccccc2c2ccccc21",
         "id": 6482,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79068,7 +79068,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3cnc4nc(-c5c(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cccc5-n5c6ccccc6c6ccccc65)ccc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-c2cnc3nc(-c4c(-c5ccc6[nH]ccc6c5)cccc4-n4c5ccccc5c5ccccc54)ccc3c2)c(-n2c3ccccc3c3ccccc32)c1",
         "id": 6483,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79079,7 +79079,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3cccc4cccc(-c5c(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cccc5-n5c6ccccc6c6ccccc65)c34)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-c2cccc3cccc(-c4c(-c5ccc6[nH]ccc6c5)cccc4-n4c5ccccc5c5ccccc54)c23)c(-n2c3ccccc3c3ccccc32)c1",
         "id": 6484,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79090,7 +79090,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cccc3-n3c4ccccc4c4ccccc43)ccc2-c2ccc(-c3c(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cccc3-n3c4ccccc4c4ccccc43)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)ccc2-c2ccc(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)cc21",
         "id": 6485,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79101,7 +79101,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3c(F)c(F)c(-c4c(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)cccc4-n4c5ccccc5c5ccccc54)c4nsnc34)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(F)c(-c2c(-c3ccc4[nH]ccc4c3)cccc2-n2c3ccccc3c3ccccc32)c2nsnc2c1-c1c(-c2ccc3[nH]ccc3c2)cccc1-n1c2ccccc2c2ccccc21",
         "id": 6486,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79112,7 +79112,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3ccc([Si](C)(C)c4ccc(-c5c(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cccc5-n5c6ccccc6c6ccccc65)cc4)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2c(-c3ccc4[nH]ccc4c3)cccc2-n2c3ccccc3c3ccccc32)cc1)c1ccc(-c2c(-c3ccc4[nH]ccc4c3)cccc2-n2c3ccccc3c3ccccc32)cc1",
         "id": 6487,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79123,7 +79123,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-n4c5ccccc5c5ccccc54)c3-c3ccc4nc5ccc(-c6c(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)cccc6-n6c7ccccc7c7ccccc76)cc5nc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-c2ccc3nc4ccc(-c5c(-c6ccc7[nH]ccc7c6)cccc5-n5c6ccccc6c6ccccc65)cc4nc3c2)c(-n2c3ccccc3c3ccccc32)c1",
         "id": 6488,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79134,7 +79134,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cc(-n5c6ccccc6c6ccccc65)c(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc5)cc4-n4c5ccccc5c5ccccc54)cc3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(c1)c1ccccc1n2-c1cc(-c2ccc(-c3ccc4[nH]ccc4c3)cc2)c(-n2c3ccccc3c3ccccc32)cc1-c1ccc(-c2ccc3[nH]ccc3c2)cc1",
         "id": 6489,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79145,7 +79145,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccccc4[Si](C)(C)c4ccccc4-c4cccc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)c4-n4c5ccccc5c5ccccc54)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccccc1-c1cccc(-c2ccc3[nH]ccc3c2)c1-n1c2ccccc2c2ccccc21)c1ccccc1-c1cccc(-c2ccc3[nH]ccc3c2)c1-n1c2ccccc2c2ccccc21",
         "id": 6490,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79156,7 +79156,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5-n5c6ccccc6c6ccccc65)nc4)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)nc2)c(-n2c3ccccc3c3ccccc32)c(-c2ccc3[nH]ccc3c2)c1",
         "id": 6491,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79167,7 +79167,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(-n5c6ccccc6c6ccccc65)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5-n5c6ccccc6c6ccccc65)cc4-n4c5ccccc5c5ccccc54)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-n2c3ccccc3c3ccccc32)c(-c2cc(-n3c4ccccc4c4ccccc43)c(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)cc2-n2c3ccccc3c3ccccc32)c1",
         "id": 6492,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79178,7 +79178,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5-n5c6ccccc6c6ccccc65)c5ccccc5c4)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-n2c3ccccc3c3ccccc32)c(-c2cc(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)c3ccccc3c2)c1",
         "id": 6493,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79189,7 +79189,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(Cl)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5-n5c6ccccc6c6ccccc65)s4)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(-c2cccc(-c3ccc4[nH]ccc4c3)c2-n2c3ccccc3c3ccccc32)sc1-c1cccc(-c2ccc3[nH]ccc3c2)c1-n1c2ccccc2c2ccccc21",
         "id": 6494,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79200,7 +79200,7 @@
         "rxn_SMILES": "Cc1nc2c(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3-n3c4ccccc4c4ccccc43)c3nsnc3c(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3-n3c4ccccc4c4ccccc43)c2nc1C>C(=O)([O-])[O-].[K+].[K+]>Cc1nc2c(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)c3nsnc3c(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)c2nc1C",
         "id": 6495,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79211,7 +79211,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccccc4Oc4ccccc4-c4cccc(-c5ccc6c(ccn6C(=O)OC(C)(C)C)c5)c4-n4c5ccccc5c5ccccc54)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2cccc(-c3ccc4[nH]ccc4c3)c2-n2c3ccccc3c3ccccc32)c(Oc2ccccc2-c2cccc(-c3ccc4[nH]ccc4c3)c2-n2c3ccccc3c3ccccc32)c1",
         "id": 6496,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79222,7 +79222,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4c5ccccc5c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5-n5c6ccccc6c6ccccc65)c5cc(C(C)(C)C)ccc45)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>CC(C)(C)c1ccc2c(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)c3ccccc3c(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)c2c1",
         "id": 6497,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79233,7 +79233,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(F)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5-n5c6ccccc6c6ccccc65)cc4F)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cc(-c2cccc(-c3ccc4[nH]ccc4c3)c2-n2c3ccccc3c3ccccc32)c(F)cc1-c1cccc(-c2ccc3[nH]ccc3c2)c1-n1c2ccccc2c2ccccc21",
         "id": 6498,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79244,7 +79244,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc5oc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6-n6c7ccccc7c7ccccc76)cc5c4)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-n2c3ccccc3c3ccccc32)c(-c2ccc3oc(-c4cccc(-c5ccc6[nH]ccc6c5)c4-n4c5ccccc5c5ccccc54)cc3c2)c1",
         "id": 6499,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79255,7 +79255,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5-n5c6ccccc6c6ccccc65)o4)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-n2c3ccccc3c3ccccc32)c(-c2ccc(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)o2)c1",
         "id": 6500,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79266,7 +79266,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc5c(c4)C4(c6ccccc6-c6ccccc64)c4cc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6-n6c7ccccc7c7ccccc76)ccc4-5)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(c1)-c1ccccc1C21c2cc(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)ccc2-c2ccc(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)cc21",
         "id": 6501,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79277,7 +79277,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5-n5c6ccccc6c6ccccc65)c(Cl)cc4Cl)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>Clc1cc(Cl)c(-c2cccc(-c3ccc4[nH]ccc4c3)c2-n2c3ccccc3c3ccccc32)cc1-c1cccc(-c2ccc3[nH]ccc3c2)c1-n1c2ccccc2c2ccccc21",
         "id": 6502,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79288,7 +79288,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cnc5nc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6-n6c7ccccc7c7ccccc76)ccc5c4)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2cnc3nc(-c4cccc(-c5ccc6[nH]ccc6c5)c4-n4c5ccccc5c5ccccc54)ccc3c2)c(-n2c3ccccc3c3ccccc32)c(-c2ccc3[nH]ccc3c2)c1",
         "id": 6503,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79299,7 +79299,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cccc5cccc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6-n6c7ccccc7c7ccccc76)c45)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-n2c3ccccc3c3ccccc32)c(-c2cccc3cccc(-c4cccc(-c5ccc6[nH]ccc6c5)c4-n4c5ccccc5c5ccccc54)c23)c1",
         "id": 6504,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79310,7 +79310,7 @@
         "rxn_SMILES": "CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3-n3c4ccccc4c4ccccc43)ccc2-c2ccc(-c3cccc(-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)c3-n3c4ccccc4c4ccccc43)cc21>C(=O)([O-])[O-].[K+].[K+]>CCCCC(CC)CC1(CC(CC)CCCC)c2cc(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)ccc2-c2ccc(-c3cccc(-c4ccc5[nH]ccc5c4)c3-n3c4ccccc4c4ccccc43)cc21",
         "id": 6505,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79321,7 +79321,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4c(F)c(F)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5-n5c6ccccc6c6ccccc65)c5nsnc45)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(F)c(-c2cccc(-c3ccc4[nH]ccc4c3)c2-n2c3ccccc3c3ccccc32)c2nsnc2c1-c1cccc(-c2ccc3[nH]ccc3c2)c1-n1c2ccccc2c2ccccc21",
         "id": 6506,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79332,7 +79332,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc([Si](C)(C)c5ccc(-c6cccc(-c7ccc8c(ccn8C(=O)OC(C)(C)C)c7)c6-n6c7ccccc7c7ccccc76)cc5)cc4)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>C[Si](C)(c1ccc(-c2cccc(-c3ccc4[nH]ccc4c3)c2-n2c3ccccc3c3ccccc32)cc1)c1ccc(-c2cccc(-c3ccc4[nH]ccc4c3)c2-n2c3ccccc3c3ccccc32)cc1",
         "id": 6507,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79343,7 +79343,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4ccc5nc6ccc(-c7cccc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)c7-n7c8ccccc8c8ccccc87)cc6nc5c4)c3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)c(-n2c3ccccc3c3ccccc32)c(-c2ccc3nc4ccc(-c5cccc(-c6ccc7[nH]ccc7c6)c5-n5c6ccccc6c6ccccc65)cc4nc3c2)c1",
         "id": 6508,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79354,7 +79354,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(F)c3-c3cc(-n4c5ccccc5c5ccccc54)c(-c4c(F)cccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1cccc(-c2ccc3[nH]ccc3c2)c1-c1cc(-n2c3ccccc3c3ccccc32)c(-c2c(F)cccc2-c2ccc3[nH]ccc3c2)cc1-n1c2ccccc2c2ccccc21",
         "id": 6509,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79365,7 +79365,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(-n5c6ccccc6c6ccccc65)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5F)cc4-n4c5ccccc5c5ccccc54)c3F)ccc21>C(=O)([O-])[O-].[K+].[K+]>Fc1c(-c2ccc3[nH]ccc3c2)cccc1-c1cc(-n2c3ccccc3c3ccccc32)c(-c2cccc(-c3ccc4[nH]ccc4c3)c2F)cc1-n1c2ccccc2c2ccccc21",
         "id": 6510,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79376,7 +79376,7 @@
         "rxn_SMILES": "Cn1ncc(-c2ccc3c(ccn3C(=O)OC(C)(C)C)c2)c1-c1cc(-n2c3ccccc3c3ccccc32)c(-c2c(-c3ccc4c(ccn4C(=O)OC(C)(C)C)c3)cnn2C)cc1-n1c2ccccc2c2ccccc21>C(=O)([O-])[O-].[K+].[K+]>Cn1ncc(-c2ccc3[nH]ccc3c2)c1-c1cc(-n2c3ccccc3c3ccccc32)c(-c2c(-c3ccc4[nH]ccc4c3)cnn2C)cc1-n1c2ccccc2c2ccccc21",
         "id": 6511,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79387,7 +79387,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cccc(-c4cc(-n5c6ccccc6c6ccccc65)c(-c5cccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)c5)cc4-n4c5ccccc5c5ccccc54)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1cc(-c2ccc3[nH]ccc3c2)cc(-c2cc(-n3c4ccccc4c4ccccc43)c(-c3cccc(-c4ccc5[nH]ccc5c4)c3)cc2-n2c3ccccc3c3ccccc32)c1",
         "id": 6512,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79398,7 +79398,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc(-c4cc(-n5c6ccccc6c6ccccc65)c(-c5ccc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)s5)cc4-n4c5ccccc5c5ccccc54)s3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(c1)c1ccccc1n2-c1cc(-c2ccc(-c3ccc4[nH]ccc4c3)s2)c(-n2c3ccccc3c3ccccc32)cc1-c1ccc(-c2ccc3[nH]ccc3c2)s1",
         "id": 6513,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79409,7 +79409,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccccc3-c3cc(-n4c5ccccc5c5ccccc54)c(-c4ccccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc(-c2cc(-n3c4ccccc4c4ccccc43)c(-c3ccccc3-c3ccc4[nH]ccc4c3)cc2-n2c3ccccc3c3ccccc32)c(-c2ccc3[nH]ccc3c2)c1",
         "id": 6514,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79420,7 +79420,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccc4oc(-c5cc(-n6c7ccccc7c7ccccc76)c(-c6cc7cc(-c8ccc9c(ccn9C(=O)OC(C)(C)C)c8)ccc7o6)cc5-n5c6ccccc6c6ccccc65)cc4c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(c1)c1ccccc1n2-c1cc(-c2cc3cc(-c4ccc5[nH]ccc5c4)ccc3o2)c(-n2c3ccccc3c3ccccc32)cc1-c1cc2cc(-c3ccc4[nH]ccc4c3)ccc2o1",
         "id": 6515,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79431,7 +79431,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3ccsc3-c3cc(-n4c5ccccc5c5ccccc54)c(-c4sccc4-c4ccc5c(ccn5C(=O)OC(C)(C)C)c4)cc3-n3c4ccccc4c4ccccc43)ccc21>C(=O)([O-])[O-].[K+].[K+]>c1ccc2c(c1)c1ccccc1n2-c1cc(-c2sccc2-c2ccc3[nH]ccc3c2)c(-n2c3ccccc3c3ccccc32)cc1-c1sccc1-c1ccc2[nH]ccc2c1",
         "id": 6516,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6.5,
@@ -79442,7 +79442,7 @@
         "rxn_SMILES": "CC(C)(C)OC(=O)n1ccc2cc(-c3cc(-c4cc(-n5c6ccccc6c6ccccc65)c(-c5cc(-c6ccc7c(ccn7C(=O)OC(C)(C)C)c6)cc(C(F)(F)F)c5)cc4-n4c5ccccc5c5ccccc54)cc(C(F)(F)F)c3)ccc21>C(=O)([O-])[O-].[K+].[K+]>FC(F)(F)c1cc(-c2ccc3[nH]ccc3c2)cc(-c2cc(-n3c4ccccc4c4ccccc43)c(-c3cc(-c4ccc5[nH]ccc5c4)cc(C(F)(F)F)c3)cc2-n2c3ccccc3c3ccccc32)c1",
         "id": 6517,
         "type": "reaction",
-        "reaction_type": "deboc"
+        "reaction_type": "deBoc"
     },
     {
         "tH": 6,

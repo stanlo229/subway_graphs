@@ -1,20 +1,19 @@
+import copy
 import csv
 import json
 import pickle
-import pandas as pd
-from typing import Tuple, List
-import copy
-import networkx as nx
+from typing import List, Dict
+
 import matplotlib.pyplot as plt
+import networkx as nx
+import numpy as np
+import pandas as pd
+from IPython.display import display
 from networkx.drawing.nx_agraph import graphviz_layout, write_dot
 from pandas.core.algorithms import unique
-
 from rdkit import Chem
-from rdkit.Chem import rdChemReactions
+from rdkit.Chem import Descriptors, Draw, rdChemReactions
 from rdkit.Chem.Draw import IPythonConsole
-from rdkit.Chem import Descriptors, Draw
-from IPython.display import display
-import numpy as np
 
 IPythonConsole.ipython_useSVG = True
 import pkg_resources
@@ -156,8 +155,7 @@ class Search:
         - route_list: listing containing all routescores and visited_nodes for each route
         format: [(routescore, [visited_nodes]), ...]
         """
-        # NOTE: recursively traverse but calculate stepscore bottom up instead of
-        # top down
+        # NOTE: recursively traverse but calculate stepscore bottom up instead of top down
         # calculate stepscore
         child_of_rxn = list(self.graph.predecessors(rxn_node))
         step_score, scale, man_scale = Calculate().StepScore(
@@ -255,7 +253,9 @@ class Search:
         unique_smiles = df.smiles.unique()
         count = 0
         while count < len(unique_smiles):
-            self.route_search(unique_smiles[count], 0.000016666666)
+            self.route_search(
+                unique_smiles[count], (0.0001 / 6),
+            )
             count += 1
         print(count)
 
@@ -395,12 +395,12 @@ class Calculate:
         cost_t: float = np.sqrt((self.a * time_H) ** 2 + (self.a_ * time_M) ** 2)
         return cost_t
 
-    def molecule_classifier(self, mol_node: str, rxn_type: str, reaction_smiles: str):
+    def molecule_classifier(self, mol_node: Dict, rxn_type: str):
         """Determines molecule type by substructure and gives appropriate equivalents
         
         Parameters
         ----------
-        - mol_smiles: smiles of molecule
+        - mol_node: node of molecule with info stored as Dict
         - rxn_type: type of reaction
         
         Returns
@@ -412,15 +412,15 @@ class Calculate:
         if rxn_type == "wingSuzuki":
             patts: list = [
                 {
-                    "name": "smilesB",
+                    "name": "smiles_halo-BMIDA",
                     "substructure": [
-                        Chem.MolFromSmarts("cBr"),
-                        Chem.MolFromSmarts("cI"),
+                        Chem.MolFromSmarts("Br"),
+                        Chem.MolFromSmarts("I"),
                     ],
                     "eq": 1,
                 },
                 {
-                    "name": "smilesA",
+                    "name": "smiles_boronic_acid",
                     "substructure": [Chem.MolFromSmarts("cB(O)O")],
                     "eq": 3,
                 },
@@ -428,14 +428,12 @@ class Calculate:
         elif rxn_type == "pentamerSuzuki":
             patts: list = [
                 {
-                    "name": "smilesAB",
-                    "substructure": [
-                        Chem.MolFromSmarts("c[B-]12OC(C[N+]1(C)CC(O2)=O)=O")
-                    ],
+                    "name": "smiles_BMIDA",
+                    "substructure": [Chem.MolFromSmiles("B1OC(=O)CN(C)CC(=O)O1")],
                     "eq": 3,
                 },
                 {
-                    "name": "smilesC",
+                    "name": "smiles_dihalide",
                     "substructure": [
                         Chem.MolFromSmarts("cBr"),
                         Chem.MolFromSmarts("cI"),
@@ -443,10 +441,10 @@ class Calculate:
                     "eq": 1,
                 },
             ]
-        elif rxn_type == "deboc":
+        elif rxn_type == "deBoc":
             patts: list = [
                 {
-                    "name": "smilesNBoc",
+                    "name": "smiles_NBoc",
                     "substructure": [Chem.MolFromSmiles("CC(C)(C)OC(=O)")],
                     "eq": 1,
                 }
@@ -454,12 +452,12 @@ class Calculate:
         elif rxn_type == "BHA":
             patts: list = [
                 {
-                    "name": "smilesNH",
+                    "name": "smiles_NH",
                     "substructure": [Chem.MolFromSmarts("[nH]")],
                     "eq": 1,
                 },
                 {
-                    "name": "smilesX",
+                    "name": "smiles_halide",
                     "substructure": [Chem.MolFromSmiles("Br")],
                     "eq": 3,  # not sure if all halides
                 },
@@ -467,12 +465,12 @@ class Calculate:
         elif rxn_type == "SNAr":
             patts: list = [
                 {
-                    "name": "smilesAr",
+                    "name": "smiles_ArF",
                     "substructure": [Chem.MolFromSmarts("cF")],
                     "eq": 1,
                 },
                 {
-                    "name": "smilesNu",
+                    "name": "smiles_Nu",
                     "substructure": [Chem.MolFromSmiles("c1ccc2c(c1)[nH]c1ccccc12")],
                     "eq": 2,
                 },
@@ -541,10 +539,10 @@ class Calculate:
         # NOTE: check if this actually modifies the graph's node: YES
         for mol_node in copy_mol_nodes:
             mol_node["smiles_type"] = Calculate().molecule_classifier(
-                mol_node, reaction_type, reaction_smiles
+                mol_node, reaction_type
             )[0]
             mol_node["eq_per_site"] = Calculate().molecule_classifier(
-                mol_node, reaction_type, reaction_smiles
+                mol_node, reaction_type
             )[1]
 
         # find reaction sites
@@ -561,17 +559,18 @@ class Calculate:
         else:
             for mol_node in copy_mol_nodes:
                 if (
-                    mol_node["smiles_type"] == "smilesB"
+                    mol_node["smiles_type"] == "smiles_halo-BMIDA"
                     and reaction_type == "wingSuzuki"
                 ):
                     reaction_sites = self.stoichiometry(mol_node["SMILES"], "Suzuki")
                 elif (
-                    mol_node["smiles_type"] == "smilesC"
+                    mol_node["smiles_type"] == "smiles_dihalide"
                     and reaction_type == "pentamerSuzuki"
                 ):
                     reaction_sites = self.stoichiometry(mol_node["SMILES"], "Suzuki")
                 elif (
-                    mol_node["smiles_type"] == "smilesNBoc" and reaction_type == "deboc"
+                    mol_node["smiles_type"] == "smiles_NBoc"
+                    and reaction_type == "deBoc"
                 ):
                     reaction_sites = self.stoichiometry(mol_node["SMILES"], "deBoc")
 
@@ -581,27 +580,27 @@ class Calculate:
         # print(reaction_sites)
         for mol_node in copy_mol_nodes:
             if reaction_type == "wingSuzuki":
-                if mol_node["smiles_type"] != "smilesB":
+                if mol_node["smiles_type"] != "smiles_halo-BMIDA":
                     mol_node["eq_per_site"] = reaction_sites * float(
                         mol_node["eq_per_site"]
                     )
             elif reaction_type == "pentamerSuzuki":
-                if mol_node["smiles_type"] != "smilesC":
+                if mol_node["smiles_type"] != "smiles_dihalide":
                     mol_node["eq_per_site"] = reaction_sites * float(
                         mol_node["eq_per_site"]
                     )
-            elif reaction_type == "deboc":
-                if mol_node["smiles_type"] != "smilesNBoc":
+            elif reaction_type == "deBoc":
+                if mol_node["smiles_type"] != "smiles_NBoc":
                     mol_node["eq_per_site"] = reaction_sites * float(
                         mol_node["eq_per_site"]
                     )
             elif reaction_type == "BHA":
-                if mol_node["smiles_type"] != "smilesNH":
+                if mol_node["smiles_type"] != "smiles_NH":
                     mol_node["eq_per_site"] = reaction_sites * float(
                         mol_node["eq_per_site"]
                     )
             elif reaction_type == "SNAr":
-                if mol_node["smiles_type"] != "smilesAr":
+                if mol_node["smiles_type"] != "smiles_ArF":
                     mol_node["eq_per_site"] = reaction_sites * float(
                         mol_node["eq_per_site"]
                     )
@@ -636,32 +635,32 @@ class Calculate:
         if not manual_bool:
             for mol_node in copy_mol_nodes:
                 if reaction_type == "pentamerSuzuki":
-                    if mol_node["smiles_type"] == "smilesAB":
+                    if mol_node["smiles_type"] == "smiles_BMIDA":
                         scale = scale * mol_node["eq_per_site"]
-                elif reaction_type == "deboc":
-                    if mol_node["smiles_type"] == "smilesNBoc":
+                elif reaction_type == "deBoc":
+                    if mol_node["smiles_type"] == "smiles_NBoc":
                         scale = scale * mol_node["eq_per_site"]
                 elif reaction_type == "BHA":
-                    if mol_node["smiles_type"] == "smilesNH":
+                    if mol_node["smiles_type"] == "smiles_NH":
                         scale = scale * mol_node["eq_per_site"]
                 elif reaction_type == "SNAr":
-                    if mol_node["smiles_type"] == "smilesAr":
+                    if mol_node["smiles_type"] == "smiles_ArF":
                         scale = scale * mol_node["eq_per_site"]
                 elif reaction_type == "manual":
                     scale = man_scale
         else:
             for mol_node in copy_mol_nodes:
                 if reaction_type == "pentamerSuzuki":
-                    if mol_node["smiles_type"] == "smilesAB":
+                    if mol_node["smiles_type"] == "smiles_BMIDA":
                         man_scale = scale * mol_node["eq_per_site"]
-                elif reaction_type == "deboc":
-                    if mol_node["smiles_type"] == "smilesNBoc":
+                elif reaction_type == "deBoc":
+                    if mol_node["smiles_type"] == "smiles_NBoc":
                         man_scale = scale * mol_node["eq_per_site"]
                 elif reaction_type == "BHA":
-                    if mol_node["smiles_type"] == "smilesNH":
+                    if mol_node["smiles_type"] == "smiles_NH":
                         man_scale = scale * mol_node["eq_per_site"]
                 elif reaction_type == "SNAr":
-                    if mol_node["smiles_type"] == "smilesAr":
+                    if mol_node["smiles_type"] == "smiles_ArF":
                         man_scale = scale * mol_node["eq_per_site"]
         # print("post: ", scale)
         # print("man: ", man_scale)
@@ -672,7 +671,7 @@ tester = Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH)
 
 
 # route_dict = tester.route_search(
-#     "Fc1cc(-c2ccsc2-c2ccc(-c3sccc3-c3ccnc(F)c3)o2)ccn1", 0.0000166666666666,
+#     "Fc1cc(-c2ccsc2-c2ccc(-c3sccc3-c3ccnc(F)c3)o2)ccn1", 0.00001666666666666666666666,
 # )
 
 # print(route_dict)
@@ -680,12 +679,24 @@ tester = Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH)
 # tester.route_visualizer(route_dict["visited_nodes"])
 
 
-tester.run(FULL_PROPS_PATH)
+# tester.run(FULL_PROPS_PATH)
 
-"""
-substruct = Chem.MolFromSmarts("Br")
-print(substruct)
-mol = Chem.MolFromSmiles("C[N+]12CC(=O)O[B-]1(c1ccc(Br)s1)OC(=O)C2")
-check = mol.HasSubstructMatch(substruct)
-print(check)eeqcx
-"""
+
+# substruct = Chem.MolFromSmiles("B1OC(=O)CN(C)CC(=O)O1")
+# mol = Chem.MolFromSmiles(
+#     "C[N+]12CC(=O)O[B-]1(c1cc(CS(=O)(=O)c3cccnc3)cc(C(F)(F)F)c1)OC(=O)C2"
+# )
+
+# qp = Chem.AdjustQueryParameters()
+# qp.makeDummiesQueries = True
+# qp.adjustDegree = True
+# qp.adjustDegreeFlags = Chem.ADJUST_IGNOREDUMMIES
+
+# qm = Chem.AdjustQueryProperties(substruct, qp)
+
+# check = mol.HasSubstructMatch(substruct)
+
+# mol_del = Chem.DeleteSubstructs(mol, substruct)
+# # mol_del_smiles = Chem.MolToSmiles(mol_del)
+# img = Draw.MolToImageFile(mol_del, "mol_del.png")
+

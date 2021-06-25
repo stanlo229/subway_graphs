@@ -16,9 +16,15 @@ Things to keep in mind:
 3. file path handling
 """
 
-JSON_PATH = pkg_resources.resource_filename("subway", "data/auto_nodes.json")
+# JSON_PATH = pkg_resources.resource_filename("subway", "data/auto_nodes.json")
+# JSON_PATH = pkg_resources.resource_filename("subway", "gephi/auto_nodes.json")
+JSON_PATH = pkg_resources.resource_filename("subway", "data/auto_nodes_stepscore.json")
 PKL_PATH = pkg_resources.resource_filename("subway", "data/adj_list.pkl")
-GRAPH_PKL_PATH = pkg_resources.resource_filename("subway", "data/graph.pkl")
+# PKL_PATH = pkg_resources.resource_filename("subway", "gephi/adj_list_gephi.pkl")
+GRAPH_PKL_PATH = pkg_resources.resource_filename("subway", "data/graph_step_score.pkl")
+GEPHI_PATH = pkg_resources.resource_filename(
+    "subway", "data/full_graph_nodes_step_score.gexf"
+)
 
 
 def graph_to_pkl(graph, pkl_path):
@@ -61,8 +67,12 @@ class Graph:
 
         return Graph(json_data, adj_data)
 
+    def create_gexf_from_file(self, gephi_path):
+        nx.write_gexf(self.graph, gephi_path)
+
 
 graph = Graph.create_graph_from_file(JSON_PATH, PKL_PATH)
 graph_to_pkl(graph.graph, GRAPH_PKL_PATH)
+graph.create_gexf_from_file(GEPHI_PATH)
 
 # nx.write_gexf(graph.graph, "test.gexf")

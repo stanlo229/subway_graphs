@@ -10,7 +10,8 @@ Format: [node_from, node_to]
 """
 
 JSON_PATH = pkg_resources.resource_filename("subway", "data/auto_nodes.json")
-PKL_PATH = pkg_resources.resource_filename("subway", "data/adj_list.pkl")
+# PKL_PATH = pkg_resources.resource_filename("subway", "data/adj_list.pkl")
+PKL_PATH = pkg_resources.resource_filename("subway", "gephi/adj_list_gephi.pkl")
 
 TGT_BASE_FILEPATH = r"C:\Users\Stanley Lo\Documents\Summer 2021 NSERC\subway_maps_repo\Targets\targets_Base_BLANK.csv"
 TGT_BS_FILEPATH = r"C:\Users\Stanley Lo\Documents\Summer 2021 NSERC\subway_maps_repo\Targets\targets_B-S_BLANK.csv"
@@ -105,8 +106,8 @@ def target_to_adj(pkl_path, tgt_path, json_path):
                         rxn_id = rxn_node["id"]
                         adj_list.append([a_mol_id, rxn_id])
                         adj_list.append([b_mol_id, rxn_id])
-                        adj_list.append([xphos_mol_id, rxn_id])
-                        adj_list.append([kpo_mol_id, rxn_id])
+                        # adj_list.append([xphos_mol_id, rxn_id])
+                        # adj_list.append([kpo_mol_id, rxn_id])
                         adj_list.append([rxn_id, ab_mol_id])
 
             # pentamerSuzuki
@@ -128,8 +129,8 @@ def target_to_adj(pkl_path, tgt_path, json_path):
                         rxn_id = rxn_node["id"]
                         adj_list.append([ab_mol_id, rxn_id])
                         adj_list.append([c_mol_id, rxn_id])
-                        adj_list.append([xphos_mol_id, rxn_id])
-                        adj_list.append([kpo_mol_id, rxn_id])
+                        # adj_list.append([xphos_mol_id, rxn_id])
+                        # adj_list.append([kpo_mol_id, rxn_id])
                         adj_list.append([rxn_id, pent_mol_id])
             # deboc
             # BHA
