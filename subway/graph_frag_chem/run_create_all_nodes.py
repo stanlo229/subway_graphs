@@ -376,6 +376,22 @@ prebuild = GraphPreBuild(JSON_PATH, ADJ_PATH)
 # prebuild.clear_pkl(ADJ_PATH)
 # prebuild.read_pkl(ADJ_PATH)
 # prebuild.route_Base()
-# prebuild.route_SNAr()
+prebuild.route_SNAr()
 # prebuild.route_Buch()
-prebuild.route_All()
+# prebuild.route_All()
+
+# tester
+# mol = Chem.MolFromSmiles(
+#     "Fc1cc(F)cc(-c2cc(-c3ccc4oc(-c5cc(-c6cc(F)cc(F)c6)cc(C(F)(F)F)c5)cc4c3)cc(C(F)(F)F)c2)c1"
+# )
+# file = open(JSON_PATH, "rb")
+# json_data = json.load(file)
+# file.close()
+
+# ReactionTemplates(JSON_PATH, ADJ_PATH).SNAr(
+#     [
+#         "Fc1cc(F)cc(-c2ccsc2-c2ccc3oc(-c4sccc4-c4cc(F)cc(F)c4)cc3c2)c1",
+#         "c1ccc2c(c1)[nH]c1ccccc12",
+#     ]
+# )
+

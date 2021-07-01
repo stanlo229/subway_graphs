@@ -573,7 +573,6 @@ class Calculate:
                     and reaction_type == "deBoc"
                 ):
                     reaction_sites = self.stoichiometry(mol_node["SMILES"], "deBoc")
-
         # process molecules by multiplying reaction site with equivalents
         # reagents and necessary reactants are multiplied
         # NOTE: molecule node is changed, so changes stay
@@ -679,24 +678,5 @@ tester = Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH)
 # tester.route_visualizer(route_dict["visited_nodes"])
 
 
-# tester.run(FULL_PROPS_PATH)
-
-
-# substruct = Chem.MolFromSmiles("B1OC(=O)CN(C)CC(=O)O1")
-# mol = Chem.MolFromSmiles(
-#     "C[N+]12CC(=O)O[B-]1(c1cc(CS(=O)(=O)c3cccnc3)cc(C(F)(F)F)c1)OC(=O)C2"
-# )
-
-# qp = Chem.AdjustQueryParameters()
-# qp.makeDummiesQueries = True
-# qp.adjustDegree = True
-# qp.adjustDegreeFlags = Chem.ADJUST_IGNOREDUMMIES
-
-# qm = Chem.AdjustQueryProperties(substruct, qp)
-
-# check = mol.HasSubstructMatch(substruct)
-
-# mol_del = Chem.DeleteSubstructs(mol, substruct)
-# # mol_del_smiles = Chem.MolToSmiles(mol_del)
-# img = Draw.MolToImageFile(mol_del, "mol_del.png")
+tester.run(FULL_PROPS_PATH)
 

@@ -723,12 +723,13 @@ class ReactionTemplates:
 
         # add product (import graph_frag_chem / graph_ibm_rxn)
         product_list = ProductMaker().rct_to_pdt(mol_node_list, "SNAr")
-
+        # print(product_list)
         # multiple products, for loop is required
         for product in product_list:
             # copy of reaction smile so original doesn't get modified
             reaction_smile_copy = copy.copy(reaction_smile)
             product_smile = Chem.MolToSmiles(product)
+            # print(product_smile)
             # add product molecule node and returns id of product node
             # check if node exists in json file
             duplicate_node = False

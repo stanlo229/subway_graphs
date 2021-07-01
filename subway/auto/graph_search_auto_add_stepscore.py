@@ -18,9 +18,9 @@ from rdkit.Chem.Draw import IPythonConsole
 IPythonConsole.ipython_useSVG = True
 import pkg_resources
 
-JSON_PATH = pkg_resources.resource_filename("subway", "data/auto_nodes_stepscore.json")
+JSON_PATH = pkg_resources.resource_filename("subway", "data/auto_nodes.json")
 GRAPH_PKL_PATH = pkg_resources.resource_filename("subway", "data/graph.pkl")
-CSV_PATH = pkg_resources.resource_filename("subway", "data/results.csv")
+CSV_PATH = pkg_resources.resource_filename("subway", "data/rxn_stepscore.csv")
 FULL_PROPS_PATH = pkg_resources.resource_filename(
     "subway", "data/subway_maps/full_props.csv"
 )
@@ -61,6 +61,11 @@ class Search:
 
         with open(self.json_path, "r+") as file:
             json.dump(self.json_data, file, indent=4)
+
+    def add_stepscore_to_csv(self, rxn_SMILES, step_score):
+        with open(self.csv_path, "a", newline="") as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow([rxn_SMILES, step_score])
 
     def route_search(self, product_smiles: str, final_scale: float):
         """ Determines routescore of all routes used to produce product_smiles
@@ -105,36 +110,36 @@ class Search:
         # return route_data
 
         # column names
-        headers = [
-            "index",
-            "product_SMILES",
-            "route_name",
-            "routescore",
-            "visited_nodes",
-        ]
-        # read csv_data (check if empty)
-        try:
-            # file.csv is an empty csv file
-            df = pd.read_csv(self.csv_path)
-        except pd.errors.EmptyDataError:
-            # print("The CSV file is empty")
-            index_count = 0
-            with open(self.csv_path, "w", newline="") as csvfile:
-                for route in route_data:
-                    route["index"] = index_count
-                    index_count += 1
-                writer = csv.DictWriter(csvfile, fieldnames=headers)
-                writer.writeheader()
-                writer.writerows(route_data)
-        else:
-            index_count = len(df.index)
-            # write route_dict data to csv_data
-            with open(self.csv_path, "a", newline="") as csvfile:
-                for route in route_data:
-                    route["index"] = index_count
-                    index_count += 1
-                writer = csv.DictWriter(csvfile, fieldnames=headers)
-                writer.writerows(route_data)
+        # headers = [
+        #     "index",
+        #     "product_SMILES",
+        #     "route_name",
+        #     "routescore",
+        #     "visited_nodes",
+        # ]
+        # # read csv_data (check if empty)
+        # try:
+        #     # file.csv is an empty csv file
+        #     df = pd.read_csv(self.csv_path)
+        # except pd.errors.EmptyDataError:
+        #     # print("The CSV file is empty")
+        #     index_count = 0
+        #     with open(self.csv_path, "w", newline="") as csvfile:
+        #         for route in route_data:
+        #             route["index"] = index_count
+        #             index_count += 1
+        #         writer = csv.DictWriter(csvfile, fieldnames=headers)
+        #         writer.writeheader()
+        #         writer.writerows(route_data)
+        # else:
+        #     index_count = len(df.index)
+        #     # write route_dict data to csv_data
+        #     with open(self.csv_path, "a", newline="") as csvfile:
+        #         for route in route_data:
+        #             route["index"] = index_count
+        #             index_count += 1
+        #         writer = csv.DictWriter(csvfile, fieldnames=headers)
+        #         writer.writerows(route_data)
         # print("Dataframe loaded successfully!!")
 
     def recursive_traversal(
@@ -536,7 +541,7 @@ class Calculate:
         yld = float(rxn_json_data["yield"])
         reaction_smiles = str(rxn_json_data["rxn_SMILES"])
         reaction_type = str(rxn_json_data["reaction_type"])
-        # print(reaction_type)
+        # print(reaction_smiles, reaction_type)
 
         # molecule information
         # copy molecule nodes
@@ -567,6 +572,7 @@ class Calculate:
             reaction_sites = self.stoichiometry(product_smiles, "SNAr-Cz")
         else:
             for mol_node in copy_mol_nodes:
+                # print(mol_node["smiles_type"])
                 if (
                     mol_node["smiles_type"] == "smiles_halo-BMIDA"
                     and reaction_type == "wingSuzuki"
@@ -673,9 +679,9 @@ class Calculate:
                         man_scale = scale * mol_node["eq_per_site"]
         # print("post: ", scale)
         # print("man: ", man_scale)
-        Search(
-            GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH
-        ).update_json_with_stepscore(rxn_node, cost)
+        Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH).add_stepscore_to_csv(
+            rxn_json_data["rxn_SMILES"], cost
+        )
         return cost, scale, man_scale
 
 
