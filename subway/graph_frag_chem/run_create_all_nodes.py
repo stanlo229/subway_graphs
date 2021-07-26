@@ -603,7 +603,7 @@ class GraphPreBuild:
         None
         """
         # creates all wingSuzuki and pentamerSuzuki intermediates/products
-        # self.route_Base()
+        self.route_Base()
         # creates all deBoc+BHA intermediates/products (excluding routes that required SNAr products)
         self.route_Buch()
         # creates all SNAr intermediates/products
