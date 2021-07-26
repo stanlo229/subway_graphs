@@ -20,7 +20,7 @@ import pkg_resources
 
 JSON_PATH = pkg_resources.resource_filename("subway", "data/auto_nodes.json")
 GRAPH_PKL_PATH = pkg_resources.resource_filename("subway", "data/graph.pkl")
-CSV_PATH = pkg_resources.resource_filename("subway", "data/fwd_results.csv")
+CSV_PATH = pkg_resources.resource_filename("subway", "data/bwd_results.csv")
 FULL_PROPS_PATH = pkg_resources.resource_filename(
     "subway", "data/subway_maps/full_props.csv"
 )
@@ -780,5 +780,5 @@ tester = Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH)
 # tester.route_visualizer(route_dict["visited_nodes"])
 
 
-tester.run(FULL_PROPS_PATH, True)
+tester.run(FULL_PROPS_PATH, False)
 
