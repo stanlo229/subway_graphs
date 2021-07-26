@@ -7,7 +7,7 @@ FULL_PROPS_CSV_PATH = pkg_resources.resource_filename(
     "subway", "data/subway_maps/full_props.csv"
 )
 
-RESULTS_CSV_PATH = pkg_resources.resource_filename("subway", "data/fwd_results.csv")
+RESULTS_CSV_PATH = pkg_resources.resource_filename("subway", "data/results.csv")
 
 
 def accuracy_checker(full_props_csv, results_csv):

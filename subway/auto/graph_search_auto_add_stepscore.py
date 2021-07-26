@@ -62,10 +62,12 @@ class Search:
         with open(self.json_path, "r+") as file:
             json.dump(self.json_data, file, indent=4)
 
+    def add_stepscore_to_csv(
+        self, rxn_SMILES, step_score, tH, tM, n_parr, reaction_type
     def add_stepscore_to_csv(self, rxn_SMILES, step_score):
         with open(self.csv_path, "a", newline="") as csvfile:
             writer = csv.writer(csvfile)
-            writer.writerow([rxn_SMILES, step_score])
+            writer.writerow([rxn_SMILES, step_score, tH, tM, n_parr, reaction_type])
 
     def route_search(self, product_smiles: str, final_scale: float):
         """ Determines routescore of all routes used to produce product_smiles
@@ -680,7 +682,7 @@ class Calculate:
         # print("post: ", scale)
         # print("man: ", man_scale)
         Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH).add_stepscore_to_csv(
-            rxn_json_data["rxn_SMILES"], cost
+            rxn_json_data["rxn_SMILES"], np.log(cost), tH, tM, n_parr, reaction_type
         )
         return cost, scale, man_scale
 

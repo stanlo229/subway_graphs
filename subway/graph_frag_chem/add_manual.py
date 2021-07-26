@@ -10,7 +10,17 @@ JSON_PATH = pkg_resources.resource_filename(
 
 MAN_JSON_PATH = pkg_resources.resource_filename("subway", "data/manual_nodes.json")
 
-ADJ_PATH = pkg_resources.resource_filename("subway", "data/reaction_template_adj.pkl")
+IBM_JSON_PATH = pkg_resources.resource_filename(
+    "subway", "data/reaction_template/IBM_RXN/ibm_reaction_template_nodes.json"
+)
+
+ADJ_PATH = pkg_resources.resource_filename(
+    "subway", "data/reaction_template/reaction_template_adj.pkl"
+)
+
+IBM_ADJ_PATH = pkg_resources.resource_filename(
+    "subway", "data/reaction_template/IBM_RXN/ibm_reaction_template_adj.pkl"
+)
 
 # NOTE: reaction_template_nodes.json must contain A, B, C building blocks and any reagent and all manual molecules
 
@@ -144,14 +154,7 @@ class Manual_Reactions:
         file.close()
 
 
-man = Manual_Reactions(JSON_PATH, ADJ_PATH, MAN_JSON_PATH)
+man = Manual_Reactions(IBM_JSON_PATH, IBM_ADJ_PATH, MAN_JSON_PATH)
 man.add_manual_nodes()
-man = Manual_Reactions(JSON_PATH, ADJ_PATH, MAN_JSON_PATH)
+man = Manual_Reactions(IBM_JSON_PATH, IBM_ADJ_PATH, MAN_JSON_PATH)
 man.add_manual_adj_list()
-
-# mol1 = Chem.MolFromSmiles("c1ccc(P(c2ccccc2)c2ccccc2)cc1")
-# smile1 = Chem.CanonSmiles("c1ccc(P(c2ccccc2)c2ccccc2)cc1")
-# mol2 = Chem.MolFromSmiles("P(c1ccccc1)(c2ccccc2)c3ccccc3")
-# smile2 = Chem.CanonSmiles("P(c1ccccc1)(c2ccccc2)c3ccccc3")
-# print(smile1, smile2)
-# print(mol1 == mol2)

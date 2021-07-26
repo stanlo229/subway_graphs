@@ -20,7 +20,7 @@ import pkg_resources
 
 JSON_PATH = pkg_resources.resource_filename("subway", "data/auto_nodes.json")
 GRAPH_PKL_PATH = pkg_resources.resource_filename("subway", "data/graph.pkl")
-CSV_PATH = pkg_resources.resource_filename("subway", "data/bwd_results.csv")
+CSV_PATH = pkg_resources.resource_filename("subway", "data/results.csv")
 FULL_PROPS_PATH = pkg_resources.resource_filename(
     "subway", "data/subway_maps/full_props.csv"
 )
@@ -52,14 +52,12 @@ class Search:
         self.adj_list = pickle.load(file)
         file.close()
 
-    def route_search(self, product_smiles: str, start_scale: float, direction: bool):
+    def route_search(self, product_smiles: str, final_scale: float):
         """ Determines routescore of all routes used to produce product_smiles
 
         Parameters
         ----------
         - product_smiles: SMILES of desired product
-        - start_scale: if Backward = final scale, if Forward = initial scale
-        - direction: if False = Backward, if True = Forward
 
         Returns
         -------
@@ -82,25 +80,17 @@ class Search:
         route_name = 1
         for rxn in child_of_product:
             route_lists, visited, scores, tracker, scale = self.recursive_traversal(
-                rxn, [], 0, start_scale, [], True, [], 0, direction
+                rxn, [], 0, final_scale, [], True, [], 0
             )
             for route in route_lists:
                 route_dict = {
                     "product_SMILES": product_smiles,
                     "route_name": route_name,
-                    "routescore": route[0] / start_scale,
+                    "routescore": route[0] / final_scale,
                     "visited_nodes": route[1],
                 }
                 route_name += 1
                 route_data.append(route_dict)
-
-        # calculating stepscore if the direction is forward with the list of visited_nodes
-        if direction:
-            for route in route_data:
-                fwd_score, final_scale = Calculate().forward_routescore(
-                    self.graph, route, scale, 0
-                )
-                route["routescore"] = fwd_score / final_scale
 
         # return route_data
 
@@ -147,7 +137,6 @@ class Search:
         separate_route: bool,
         route_tracker: List,
         man_scale: float,
-        direction: bool,
     ) -> List[List]:
         """ Traverses through graph to find all routes that produce product_node
 
@@ -160,8 +149,6 @@ class Search:
         - route_list: main list of routescores and visited nodes for all routes
         - separate_route: boolean for differentiating between breadth search and depth search, breadth search are separate routes, depth search is one route.
         - route_tracker: list of routes that are tracked for depth search
-        - man_scale: scale of manual reaction
-        - direction: if False = Backward, if True = Forward and don't calculate stepscore
 
         Returns
         -------
@@ -171,14 +158,10 @@ class Search:
         # NOTE: recursively traverse but calculate stepscore bottom up instead of top down
         # calculate stepscore
         child_of_rxn = list(self.graph.predecessors(rxn_node))
-        if not direction:
-            step_score, scale, man_scale = Calculate().StepScore(
-                self.graph, rxn_node, child_of_rxn, final_scale, man_scale, direction
-            )
-            score += step_score
-        else:
-            scale = final_scale
-            step_score = score
+        step_score, scale, man_scale = Calculate().StepScore(
+            self.graph, rxn_node, child_of_rxn, final_scale, man_scale
+        )
+        score += step_score
 
         # add current node to visited list
         new_visited = []
@@ -193,7 +176,7 @@ class Search:
                 not_last_mols.append(mol)
             new_visited.append(mol)
 
-        # re-order not_last_mols so manual molecules are searched through before the reaction (backward)
+        # re-order not_last_mols so manual molecules are searched through first
         # NOTE: important because of scale in StepScore
         for mol in not_last_mols:
             if self.graph.nodes[mol]["Manual?"] == "Yes":
@@ -221,7 +204,6 @@ class Search:
                             True,
                             route_tracker,
                             man_scale,
-                            direction,
                         )
                 elif len(child_of_not_last_mol) == 1:
                     for rxn_node in child_of_not_last_mol:
@@ -240,7 +222,6 @@ class Search:
                             False,
                             route_tracker,
                             man_scale,
-                            direction,
                         )
         elif not separate_route:
             if route_list == []:
@@ -256,13 +237,12 @@ class Search:
             route_tracker.append(len(route_list) - 1)
         return route_list, new_visited, score, route_tracker, scale
 
-    def run(self, full_props_path, direction):
+    def run(self, full_props_path):
         """ Opens full_props.csv and runs route_search for all target molecules
 
         Parameters
         ----------
         - full_props_path: path to full_props.csv
-        - direction: if True = Forward, if False = Backward
 
         Returns
         -------
@@ -273,10 +253,9 @@ class Search:
         unique_smiles = df.smiles.unique()
         count = 0
         while count < len(unique_smiles):
-            if direction:
-                self.route_search(unique_smiles[count], (0.0001), True)
-            else:
-                self.route_search(unique_smiles[count], (0.0001 / 6), False)
+            self.route_search(
+                unique_smiles[count], (0.0001 / 6),
+            )
             count += 1
         print(count)
 
@@ -385,7 +364,7 @@ class Calculate:
         """
         patts: dict = {
             "Suzuki": [Chem.MolFromSmarts("cBr"), Chem.MolFromSmarts("cI")],
-            "deboc": [Chem.MolFromSmiles("O=C(OC(C)(C)C)n1c2c(cc1)cccc2")],
+            "deBoc": [Chem.MolFromSmiles("O=C(OC(C)(C)C)n1c2c(cc1)cccc2")],
             "BHA-H": [Chem.MolFromSmiles("[H]n1c2c(cc1)cccc2")],
             "BHA-Py": [Chem.MolFromSmiles("n1(c2nccnc2)ccc3ccccc13")],
             "SNAr-F": [Chem.MolFromSmarts("cF")],
@@ -462,7 +441,7 @@ class Calculate:
                     "eq": 1,
                 },
             ]
-        elif rxn_type == "deboc":
+        elif rxn_type == "deBoc":
             patts: list = [
                 {
                     "name": "smiles_NBoc",
@@ -519,60 +498,8 @@ class Calculate:
 
         return mol_info
 
-    def forward_routescore(
-        self, graph, route_dict: Dict, scale: float, man_scale: float
-    ):
-        """ Function that pre-processes a full route for forward stepscore calculation
-
-        Parameters
-        -----------
-        graph: network of nodes
-        route_dict: dictionary containing info of one route (with routescore = 0)
-        scale: scale of reaction
-        """
-        rxn_node = None
-        mol_nodes = []
-        manual_reactions = []
-        score = 0
-        visited_nodes = route_dict["visited_nodes"]
-        # reverse the visited_nodes list
-        visited_nodes = visited_nodes[::-1]
-        # perform a stepscore calculation at each reaction node
-        for node_id in visited_nodes:
-            node_data = graph.nodes[node_id]
-            if node_data["type"] == "molecule":
-                mol_nodes.append(node_id)
-            elif node_data["type"] == "reaction":
-                rxn_node = node_id
-                # keep track of manual reactions
-                if node_data["reaction_type"] == "manual":
-                    manual_reactions.append([rxn_node, mol_nodes])
-                else:
-                    step_score, scale, man_scale = self.StepScore(
-                        graph, rxn_node, mol_nodes, scale, man_scale, True
-                    )
-                    score += step_score
-                    # perform accumulated manual reactions for the previous reaction
-                    # NOTE: reason is because Search().recursive_travel is designed to put manual reactions in front
-                    if manual_reactions:
-                        for rxn in manual_reactions:
-                            step_score, scale, man_scale = self.StepScore(
-                                graph, rxn[0], rxn[1], scale, man_scale, True
-                            )
-                            score += step_score
-                        manual_reactions = []
-                mol_nodes = []
-        final_scale = scale
-        return score, final_scale
-
     def StepScore(
-        self,
-        graph,
-        rxn_node: int,
-        mol_nodes: List[int],
-        scale: float,
-        man_scale: float,
-        direction: bool,
+        self, graph, rxn_node: int, mol_nodes: List[int], scale: float, man_scale: float
     ):
         """Perform calculations for the StepScore.
 
@@ -580,14 +507,12 @@ class Calculate:
         ----------
         rxn_node: node of the reaction taking place
         mol_nodes: list of molecule nodes required to execute the reaction (reactants and reagents)
-        scale: scale of reaction
-        man_scale: scale of manual reaction
-        direction: if False = Backward, if True = Forward
 
         Returns
         -------
         stepscore_results: tuple containing relevant information for stepscore (stepscore, yield)
         """
+
         # setup cost variables
         cost_time = 0
         cost_money = 0
@@ -645,12 +570,13 @@ class Calculate:
                     reaction_sites = self.stoichiometry(mol_node["SMILES"], "Suzuki")
                 elif (
                     mol_node["smiles_type"] == "smiles_NBoc"
-                    and reaction_type == "deboc"
+                    and reaction_type == "deBoc"
                 ):
-                    reaction_sites = self.stoichiometry(mol_node["SMILES"], "deboc")
+                    reaction_sites = self.stoichiometry(mol_node["SMILES"], "deBoc")
         # process molecules by multiplying reaction site with equivalents
         # reagents and necessary reactants are multiplied
         # NOTE: molecule node is changed, so changes stay
+        # print(reaction_sites)
         for mol_node in copy_mol_nodes:
             if reaction_type == "wingSuzuki":
                 if mol_node["smiles_type"] != "smiles_halo-BMIDA":
@@ -662,7 +588,7 @@ class Calculate:
                     mol_node["eq_per_site"] = reaction_sites * float(
                         mol_node["eq_per_site"]
                     )
-            elif reaction_type == "deboc":
+            elif reaction_type == "deBoc":
                 if mol_node["smiles_type"] != "smiles_NBoc":
                     mol_node["eq_per_site"] = reaction_sites * float(
                         mol_node["eq_per_site"]
@@ -677,30 +603,6 @@ class Calculate:
                     mol_node["eq_per_site"] = reaction_sites * float(
                         mol_node["eq_per_site"]
                     )
-
-        # forward stepscore, scale needs to be modified before calculation
-        if direction:
-            manual_bool = False
-            for mol_node in copy_mol_nodes:
-                if mol_node["Manual?"] == "Yes":
-                    manual_bool = True
-            # print(manual_bool)
-            for mol_node in copy_mol_nodes:
-                if reaction_type == "pentamerSuzuki":
-                    if mol_node["smiles_type"] == "smiles_BMIDA":
-                        scale = scale / mol_node["eq_per_site"]
-                elif reaction_type == "deboc":
-                    if mol_node["smiles_type"] == "smiles_NBoc":
-                        scale = scale / mol_node["eq_per_site"]
-                elif reaction_type == "BHA":
-                    if mol_node["smiles_type"] == "smiles_NH":
-                        scale = scale / mol_node["eq_per_site"]
-                elif reaction_type == "SNAr":
-                    if mol_node["smiles_type"] == "smiles_ArF":
-                        scale = scale / mol_node["eq_per_site"]
-                elif reaction_type == "manual":
-                    scale = man_scale
-            man_scale = scale
 
         # calculate money and materials
         for mol_node in copy_mol_nodes:
@@ -717,62 +619,58 @@ class Calculate:
         cost = cost_time * cost_money * cost_materials
         # print("----------")
         # print(reaction_type)
-        # print("post: ", scale)
+        # print("pre: ", scale)
         # print("cost:", cost_money, "time:", cost_time, "materials:", cost_materials)
         # print("stepscore: ", cost)
         # process scale
         # (NOTE: inverse design because recursive search follows backward reaction steps)
         # (NOTE: manual comes in between so order matters a lot because scale is modified in order)
-        # (NOTE: July 23 - modifying scale and manual scale needs to be put beforehand (look at subwaymaps))
         # check if there are manually made molecules
-        if not direction:
-            manual_bool = False
+        manual_bool = False
+        for mol_node in copy_mol_nodes:
+            if mol_node["Manual?"] == "Yes":
+                manual_bool = True
+
+        if not manual_bool:
             for mol_node in copy_mol_nodes:
-                if mol_node["Manual?"] == "Yes":
-                    manual_bool = True
-            # print(manual_bool)
-            if not manual_bool:
-                for mol_node in copy_mol_nodes:
-                    if reaction_type == "pentamerSuzuki":
-                        if mol_node["smiles_type"] == "smiles_BMIDA":
-                            scale = scale * mol_node["eq_per_site"]
-                    elif reaction_type == "deboc":
-                        if mol_node["smiles_type"] == "smiles_NBoc":
-                            scale = scale * mol_node["eq_per_site"]
-                    elif reaction_type == "BHA":
-                        if mol_node["smiles_type"] == "smiles_NH":
-                            scale = scale * mol_node["eq_per_site"]
-                    elif reaction_type == "SNAr":
-                        if mol_node["smiles_type"] == "smiles_ArF":
-                            scale = scale * mol_node["eq_per_site"]
-                    elif reaction_type == "manual":
-                        scale = man_scale
-            else:
-                for mol_node in copy_mol_nodes:
-                    if reaction_type == "pentamerSuzuki":
-                        if mol_node["smiles_type"] == "smiles_BMIDA":
-                            man_scale = scale * mol_node["eq_per_site"]
-                    elif reaction_type == "deboc":
-                        if mol_node["smiles_type"] == "smiles_NBoc":
-                            man_scale = scale * mol_node["eq_per_site"]
-                    elif reaction_type == "BHA":
-                        if mol_node["smiles_type"] == "smiles_NH":
-                            man_scale = scale * mol_node["eq_per_site"]
-                    elif reaction_type == "SNAr":
-                        if mol_node["smiles_type"] == "smiles_ArF":
-                            man_scale = scale * mol_node["eq_per_site"]
+                if reaction_type == "pentamerSuzuki":
+                    if mol_node["smiles_type"] == "smiles_BMIDA":
+                        scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "deBoc":
+                    if mol_node["smiles_type"] == "smiles_NBoc":
+                        scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "BHA":
+                    if mol_node["smiles_type"] == "smiles_NH":
+                        scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "SNAr":
+                    if mol_node["smiles_type"] == "smiles_ArF":
+                        scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "manual":
+                    scale = man_scale
+        else:
+            for mol_node in copy_mol_nodes:
+                if reaction_type == "pentamerSuzuki":
+                    if mol_node["smiles_type"] == "smiles_BMIDA":
+                        man_scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "deBoc":
+                    if mol_node["smiles_type"] == "smiles_NBoc":
+                        man_scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "BHA":
+                    if mol_node["smiles_type"] == "smiles_NH":
+                        man_scale = scale * mol_node["eq_per_site"]
+                elif reaction_type == "SNAr":
+                    if mol_node["smiles_type"] == "smiles_ArF":
+                        man_scale = scale * mol_node["eq_per_site"]
         # print("post: ", scale)
         # print("man: ", man_scale)
         return cost, scale, man_scale
 
 
-tester = Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH)
+# tester = Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH)
 
 
 # route_dict = tester.route_search(
-#     "c1cnc(-c2ccc3c(ccn3-c3cnccn3)c2)c(-c2cc(-n3c4ccccc4c4ccccc43)c(-c3cccnc3-c3ccc4c(ccn4-c4cnccn4)c3)cc2-n2c3ccccc3c3ccccc32)c1",
-#     (0.0001),
-#     True,
+#     "Fc1cc(-c2ccsc2-c2ccc(-c3sccc3-c3ccnc(F)c3)o2)ccn1", 0.00001666666666666666666666,
 # )
 
 # print(route_dict)
@@ -780,5 +678,5 @@ tester = Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH)
 # tester.route_visualizer(route_dict["visited_nodes"])
 
 
-tester.run(FULL_PROPS_PATH, False)
+# tester.run(FULL_PROPS_PATH)
 
