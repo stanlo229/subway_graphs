@@ -1,7 +1,0 @@
-,mol_matches,rxn_matches,total_matches,rs_mols,rs_rxns,rs_total,ibm_mols,ibm_rxns,ibm_total
-number,360,0,360,3885,3869,7754,398,340,738
-wingSuzuki,360,0,360,3885,110,7754,398,110,738
-pentamerSuzuki,360,0,360,3885,1980,7754,398,225,738
-deBoc,360,0,360,3885,247,7754,398,0,738
-BHA,360,0,360,3885,247,7754,398,0,738
-SNAr,360,0,360,3885,1280,7754,398,0,738

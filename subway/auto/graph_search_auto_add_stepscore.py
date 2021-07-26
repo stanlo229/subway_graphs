@@ -64,7 +64,7 @@ class Search:
 
     def add_stepscore_to_csv(
         self, rxn_SMILES, step_score, tH, tM, n_parr, reaction_type
-    def add_stepscore_to_csv(self, rxn_SMILES, step_score):
+    ):
         with open(self.csv_path, "a", newline="") as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow([rxn_SMILES, step_score, tH, tM, n_parr, reaction_type])
@@ -682,7 +682,7 @@ class Calculate:
         # print("post: ", scale)
         # print("man: ", man_scale)
         Search(GRAPH_PKL_PATH, JSON_PATH, CSV_PATH, ADJ_PATH).add_stepscore_to_csv(
-            rxn_json_data["rxn_SMILES"], np.log(cost), tH, tM, n_parr, reaction_type
+            rxn_json_data["rxn_SMILES"], cost
         )
         return cost, scale, man_scale
 

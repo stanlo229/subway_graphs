@@ -10,7 +10,7 @@ from rdkit.Chem.Draw import IPythonConsole
 from rdkit.Chem.Draw.IPythonConsole import _GetSubstructMatches
 from rdkit.Chem.MolStandardize import rdMolStandardize
 
-
+IPythonConsole.ipython_useSVG = True
 from subway.auto.graph_search_auto import Calculate
 
 # smiles list
@@ -86,43 +86,12 @@ class ProductMaker:
                         rxn_sites += len(mol.GetSubstructMatches(substruct))
         return rxn_sites
 
-    def check_symmetry(self, mol):
-        """Checks whether there is complete symmetry in the molecule
+    def check_symmetry(self, substruct_replaced_mol, atom_index_list):
+        """Checks whether there is symmetry at the indexes with replaced substructure
         
         Parameters
         ----------
-        - mol: rdkit mol object
-        
-        Returns
-        -------
-        - sym_checker: boolean for whether symmetry exists at all replaced substructures
-        """
-        # returns symmetry class of every atom in order
-        sym_list = list(Chem.rdmolfiles.CanonicalRankAtoms(mol, breakTies=False))
-        # track the number of unique symmetry classes
-        sym_dict = {}
-        for sym_class in sym_list:
-            if str(sym_class) not in list(sym_dict.keys()):
-                sym_dict[str(sym_class)] = 1
-            elif str(sym_class) in list(sym_dict.keys()):
-                sym_dict[str(sym_class)] += 1
-        # at the substructure index, check if symmetry exists
-        sym_checker = True
-        # print("LIST: ", sym_list)
-        # print("DICT: ", sym_dict)
-        for atom in sym_list:
-            sym_value = sym_dict[str(atom)]
-            if sym_value % 2 != 0:
-                sym_checker = False
-            # print(sym_checker)
-        return sym_checker
-
-    def r_grp_check_symmetry(self, substruct_reactive_mol, atom_index_list):
-        """Checks whether there is symmetry at the indexes of reactive substructure
-        
-        Parameters
-        ----------
-        - substruct_reactive_mol: rdkit mol object that has reactive substructures
+        - substruct_replaced_mol: rdkit mol object that has replaced substructures
         - atom_index_list: contains index of the substructure that needs to be replaced in original molecule
         
         Returns
@@ -131,7 +100,7 @@ class ProductMaker:
         """
         # returns symmetry class of every atom in order
         sym_list = list(
-            Chem.rdmolfiles.CanonicalRankAtoms(substruct_reactive_mol, breakTies=False)
+            Chem.rdmolfiles.CanonicalRankAtoms(substruct_replaced_mol, breakTies=False)
         )
         # track the number of unique symmetry classes
         sym_dict = {}
@@ -151,44 +120,6 @@ class ProductMaker:
             if sym_value % 2 != 0:
                 sym_checker = False
             # print(sym_checker)
-        return sym_checker
-
-    def sub_grp_symmetry_check(self, substruct_replaced_mol):
-        """Checks whether there is symmetry at the indexes of replaced substructure
-        
-        Parameters
-        ----------
-        - substruct_reactive_mol: rdkit mol object that has replaced substructures
-        
-        Returns
-        -------
-        - sym_checker: boolean for whether symmetry exists at all replaced substructures
-        """
-        bonds = substruct_replaced_mol.GetBonds()
-        bond_idx = []
-        for bond in bonds:
-            if bond.GetBondTypeAsDouble() == 1.0:
-                atom = bond.GetBeginAtom()
-                atom2 = bond.GetEndAtom()
-                if atom.GetAtomicNum() == 6 and atom2.GetAtomicNum() == 6:
-                    bond_idx.append(bond.GetBeginAtomIdx())
-
-        with Chem.RWMol(substruct_replaced_mol) as rwmol:
-            for b_idx in bond_idx:
-                b = rwmol.GetBondWithIdx(b_idx)
-                rwmol.RemoveBond(b.GetBeginAtomIdx(), b.GetEndAtomIdx())
-        rwmol_f = Chem.GetMolFrags(rwmol, asMols=True)
-        # pair same fragments
-        rw_mol_len = len(rwmol_f)
-        frag_pairs = []
-        for i in range(rw_mol_len // 2):
-            frag_pairs.append([rwmol_f[i], rwmol_f[rw_mol_len - 1 - i]])
-
-        sym_checker = True
-        for pair in frag_pairs:
-            if Chem.MolToSmiles(pair[0]) != Chem.MolToSmiles(pair[1]):
-                sym_checker = False
-                return sym_checker
         return sym_checker
 
     def rct_to_pdt(self, reactant_nodes: List, rxn_type: str):
@@ -277,9 +208,9 @@ class ProductMaker:
                                     product_list.append(mol["rdkit_mol"])
                                     continue
         elif rxn_type == "SNAr":
-            carbazole_grp = Chem.MolFromSmiles("c1ccc3c(c1)[nH]c2ccccc23")
             for patt in self.patts:
                 if patt["rxn_type"] == rxn_type:
+                    # find index of replacement and delete the substructure with less reaction sites
                     for mol in mol_info:
                         # replace substructure with the entire nH containing group
                         nH_grp = Chem.MolFromSmarts("[nH]")
@@ -319,9 +250,11 @@ class ProductMaker:
                                     # creates all the necessary combinations
                                     # if only 2 F's there is only one combination
                                     # if there is no symmetry, get the product with all F's substituted
-                                    if len(atom_index_list) == 2:
-                                        # or not self.check_symmetry(
-                                        # mol["rdkit_mol"])
+                                    if len(
+                                        atom_index_list
+                                    ) == 2 or not self.check_symmetry(
+                                        mol["rdkit_mol"], atom_index_list
+                                    ):
                                         for index in atom_index_list:
                                             atom = mol["rdkit_mol"].GetAtomWithIdx(
                                                 index
@@ -340,42 +273,6 @@ class ProductMaker:
                                             if atom.GetAtomicNum() == 7:
                                                 atom.SetNumExplicitHs(0)
                                         product_list.append(mol["rdkit_mol"])
-                                    elif not self.r_grp_check_symmetry(
-                                        mol["rdkit_mol"], atom_index_list
-                                    ):
-                                        # makes combinations of F atoms.
-                                        # There will be a lot of non-viable symmetry but index pattern is too complicated
-                                        pairings = list(
-                                            combinations(atom_index_list, 2)
-                                        )
-                                        for j in range(int(len(atom_index_list) / 2)):
-                                            comb = list(combinations(pairings, j + 1))
-                                            for comb_pairings in comb:
-                                                temp_pairings = []
-                                                for pair in comb_pairings:
-                                                    temp_pairings.extend(pair)
-                                                # new copy of mol so original is not modified
-                                                new_mol_ArF = copy.copy(
-                                                    mol["rdkit_mol"]
-                                                )
-                                                for atom_index in temp_pairings:
-                                                    new_mol_ArF.GetAtomWithIdx(
-                                                        atom_index
-                                                    ).SetAtomicNum(86)
-                                                new_mol_ArF = Chem.ReplaceSubstructs(
-                                                    new_mol_ArF,
-                                                    temp_replace_grp,
-                                                    substitute_grp,
-                                                    replaceAll=True,
-                                                    replacementConnectionPoint=nH_index,
-                                                )[0]
-                                                for atom in new_mol_ArF.GetAtoms():
-                                                    if atom.GetAtomicNum() == 7:
-                                                        atom.SetNumExplicitHs(0)
-                                                if self.sub_grp_symmetry_check(
-                                                    new_mol_ArF
-                                                ):
-                                                    product_list.append(new_mol_ArF)
                                     else:
                                         # makes combinations of F atoms.
                                         # There will be a lot of non-viable symmetry but index pattern is too complicated
@@ -406,33 +303,29 @@ class ProductMaker:
                                                 for atom in new_mol_ArF.GetAtoms():
                                                     if atom.GetAtomicNum() == 7:
                                                         atom.SetNumExplicitHs(0)
+                                                # check if there is symmetry at the replaced substructure
                                                 # print(Chem.MolToSmiles(new_mol_ArF))
                                                 # Draw.ShowMol(new_mol_ArF)
-                                                # check if there is symmetry at the replaced substructure
-                                                # get index of nitrogens that are part of carbazole substructure
-                                                nitrogen_index_list = []
-                                                carbazole_index_tuple = new_mol_ArF.GetSubstructMatches(
-                                                    carbazole_grp
-                                                )
-                                                carbazole_index_list = []
-                                                for tuple in carbazole_index_tuple:
-                                                    carbazole_index_list.extend(
-                                                        list(tuple)
-                                                    )
-                                                for c_index in carbazole_index_list:
-                                                    if (
-                                                        new_mol_ArF.GetAtomWithIdx(
-                                                            c_index
-                                                        ).GetAtomicNum()
-                                                        == 7
-                                                    ):
-                                                        nitrogen_index_list.append(
-                                                            c_index
-                                                        )
-                                                if self.r_grp_check_symmetry(
-                                                    new_mol_ArF, nitrogen_index_list
+                                                if self.check_symmetry(
+                                                    new_mol_ArF, atom_index_list
                                                 ):
                                                     product_list.append(new_mol_ArF)
+                                                else:
+                                                    nitrogen_index_list = []
+                                                    for atom in mol[
+                                                        "rdkit_mol"
+                                                    ].GetAtoms():
+                                                        # check if N
+                                                        if atom.GetAtomicNum() == 7:
+                                                            # check aromatic N with only carbazole substructure
+                                                            if atom.GetIsAromatic():
+                                                                nitrogen_index_list.append(
+                                                                    atom.GetIdx()
+                                                                )
+                                                    if self.check_symmetry(
+                                                        new_mol_ArF, nitrogen_index_list
+                                                    ):
+                                                        product_list.append(new_mol_ArF)
 
         elif rxn_type == "BHA":
             for patt in self.patts:
@@ -717,7 +610,7 @@ class ProductMaker:
 # substruct_index_list = []
 # substruct_index_list2 = []
 # molagain = Chem.MolFromSmiles(
-#     "Fc1cc(F)cc(-c2ncccc2-c2ccc3oc(-c4cccnc4-c4cc(F)cc(F)c4)cc3c2)c1"
+#     "Cc1nc2c(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)c3nsnc3c(-c3c(-c4ccc5[nH]ccc5c4)cccc3-n3c4ccccc4c4ccccc43)c2nc1C"
 # )
 # substruct_index_tuples = molagain.GetSubstructMatches(indole_grp)
 # substruct_index_tuples2 = molagain.GetSubstructMatches(carbazole_grp)
@@ -772,8 +665,7 @@ class ProductMaker:
 # )
 # print(Chem.MolToSmiles(new_bha_mol[0]))
 # img = Draw.MolToImageFile(new_bha_mol[0], "new_BHA_mol.png")
-
-# NOTE: SNAr Symmetry!
+# SNAr
 # mol = Chem.MolFromSmiles(
 #     "Fc1cc(F)cc(-c2cccc(F)c2-c2ccc3oc(-c4c(F)cccc4-c4cc(F)cc(F)c4)cc3c2)c1"
 # )
@@ -782,43 +674,16 @@ class ProductMaker:
 # img = Draw.MolToImageFile(mol, "no_core_grp.png")
 # og_str = "Fc1cc(F)cc(-c2ccsc2-c2ccc3oc(-c4sccc4-c4cc(F)cc(F)c4)cc3c2)c1"
 # str1 = "Fc1cc(F)cc(-c2ccsc2-c2cc3cc(-c4sccc4-c4cc(-n5c6ccccc6c6ccccc65)cc(-n5c6ccccc6c6ccccc65)c4)ccc3o2)c1"
-# str2 = "Fc1cc(F)cc(-c2ncccc2-c2cc(F)c(-c3cccnc3-c3cc(F)cc(F)c3)cc2F)c1"
-# str4 = "Fc1cc(F)cc(-c2ncccc2-c2cc(F)c(-c3cccnc3-c3cc(-n4c5ccccc5c5ccccc54)cc(-n4c5ccccc5c5ccccc54)c3)cc2F)c1"
-# str3 = "Fc1cc(-c2cccc(F)c2-c2ccc3oc(-c4c(F)cccc4-c4ccnc(F)c4)cc3c2)ccn1"
-# sym_mol = Chem.MolFromSmiles(str3)
+# str2 = "Fc1cc(-c2ccsc2-c2ccc3oc(-c4sccc4-c4cc(F)cc(-n5c6ccccc6c6ccccc65)c4)cc3c2)cc(-n2c3ccccc3c3ccccc32)c1"
+# str4 = "Fc1cc(-c2ccsc2-c2ccc3oc(-c4sccc4-c4cc(F)cc(-n5c6ccccc6c6ccccc65)c4)cc3c2)cc(-n2c3ccccc3c3ccccc32)c1"
+# str3 = "c1ccc2c(c1)c1ccccc1n2-c1cc(-c2ccsc2-c2ccc3oc(-c4sccc4-c4cc(-n5c6ccccc6c6ccccc65)cc(-n5c6ccccc6c6ccccc65)c4)cc3c2)cc(-n2c3ccccc3c3ccccc32)c1"
+# sym_mol = Chem.MolFromSmiles(str2)
 
 # for atom in sym_mol.GetAtoms():
 #     atom.SetAtomMapNum(atom.GetIdx())
 # img = Draw.MolToImageFile(sym_mol, "sym_mol.png")
 
-# bonds = sym_mol.GetBonds()
-# bond_idx = []
-# for bond in bonds:
-#     if bond.GetBondTypeAsDouble() == 1.0:
-#         atom = bond.GetBeginAtom()
-#         atom2 = bond.GetEndAtom()
-#         if atom.GetAtomicNum() == 6 and atom2.GetAtomicNum() == 6:
-#             bond_idx.append(bond.GetBeginAtomIdx())
-
-# with Chem.RWMol(sym_mol) as rwmol:
-#     for b_idx in bond_idx:
-#         b = rwmol.GetBondWithIdx(b_idx)
-#         rwmol.RemoveBond(b.GetBeginAtomIdx(), b.GetEndAtomIdx())
-# rwmol_f = Chem.GetMolFrags(rwmol, asMols=True)
-# # get outside fragments (disregard middle one)
-# # attach fragments from each side
-# rw_mol_len = len(rwmol_f)
-# frag_pairs = []
-# for i in range(rw_mol_len // 2):
-#     frag_pairs.append([rwmol_f[i], rwmol_f[rw_mol_len - 1 - i]])
-
-# for pair in frag_pairs:
-#     print(Chem.MolToSmiles(pair[0]) == Chem.MolToSmiles(pair[1]))
-
-# img2 = Draw.MolsToImage(frag_pairs)
-# img2.save("split_mol.png")
-
 # ProductMaker().check_symmetry(
-#     Chem.MolFromSmiles(str3), [0, 23, 26, 45],
+#     Chem.MolFromSmiles(str2), [0, 23, 26, 45],
 # )
 

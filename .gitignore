@@ -24,7 +24,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -368,3 +369,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm+all,python,linux,windows,osx,sublimetext,vim,powershell
+subway/data/reaction_template/IBM_RXN/ibm_reaction_template_adj_new.pkl

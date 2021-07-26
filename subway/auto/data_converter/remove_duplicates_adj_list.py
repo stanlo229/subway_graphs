@@ -2,10 +2,8 @@ import pickle
 import pkg_resources
 import itertools
 
-# PKL_PATH = pkg_resources.resource_filename("subway", "data/adj_list.pkl")
-PKL_PATH = pkg_resources.resource_filename(
-    "subway", "data/reaction_template/ibm_reaction_template_adj.pkl"
-)
+PKL_PATH = pkg_resources.resource_filename("subway", "data/adj_list.pkl")
+# PKL_PATH = pkg_resources.resource_filename("subway", "gephi/adj_list_gephi.pkl")
 
 
 def remove_dup_pkl(pkl_path):
