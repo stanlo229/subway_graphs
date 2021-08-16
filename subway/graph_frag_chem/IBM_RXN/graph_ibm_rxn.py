@@ -229,17 +229,17 @@ class IBM_RXN:
 
 # ws1 = "OB(O)c1ccc2ncccc2c1"
 # ws2 = "CC(C)(C)OC(=O)n1ccc2cc(B3OC(C)(C)C(C)(C)O3)ccc21"
-# ws3 = "CC(C)C1=CC(=C(C(=C1)C(C)C)C2=CC(=CC=C2)P(C3CCCCC3)C4CCCCC4)C(C)C~C1=CC=C([C-]=C1)C2=CC=CC=C2N~Cl[Pd+]"
-# ws4 = "[O-]P(=O)([O-])[O-]~[K+]~[K+]~[K+]"
+ws3 = "CC(C)C1=CC(=C(C(=C1)C(C)C)C2=CC(=CC=C2)P(C3CCCCC3)C4CCCCC4)C(C)C~C1=CC=C([C-]=C1)C2=CC=CC=C2N~Cl[Pd+]"
+ws4 = "[O-]P(=O)([O-])[O-]~[K+]~[K+]~[K+]"
 # ws5 = "CN1CC(=O)OB(c2cccc(Br)c2F)OC(=O)C1"
-# ps1 = "CN1CC(=O)OB(c2ccc(-c3cc(Cl)ccc3Cl)cc2)OC(=O)C1"
-# ps2 = "Clc1ccc(Cl)c(-c2ccc(-c3ccc(Br)cn3)cc2)c1"
+ps1 = "O=C1CNCC(=O)O1"
+ps2 = "Fc1c(F)c(Br)c2nsnc2c1Br"
 # ps3 = "Clc1ccc(Cl)c(-c2ccc(-c3ccc(-c4ccc(-c5cc(Cl)ccc5Cl)cc4)nc3)cc2)c1"
 # ps4 = "Brc1ccc(Br)nc1"
 
-# product_list, ibm_reaction_list = IBM_RXN(API_KEY, PROJECT_ID).get_product_batch(
-#     [ps1 + "." + ps2 + "." + ws3 + "." + ws4]
-# )
+product_list, ibm_reaction_list = IBM_RXN(API_KEY, PROJECT_ID).get_product_batch(
+    [ps1 + "." + ps2 + "." + ws3 + "." + ws4]
+)
 
-# print(product_list, ibm_reaction_list)
+print(product_list, ibm_reaction_list)
 

@@ -8,6 +8,7 @@ import networkx as nx
 import numpy as np
 import pkg_resources
 from networkx.drawing.nx_agraph import graphviz_layout, write_dot
+from timeit import default_timer as timer
 
 """
 Things to keep in mind:
@@ -15,6 +16,12 @@ Things to keep in mind:
 2. global variables = uppercase
 3. file path handling
 """
+
+# ---------------------------------------------------------
+# ADDITION OF NEW REACTIONS AND MOLECULES
+# The following class/function/variable needs to be modified!
+# NOTE: .json, adj_list file needs to be modified
+# ---------------------------------------------------------
 
 JSON_PATH = pkg_resources.resource_filename("subway", "data/auto_nodes.json")
 # JSON_PATH = pkg_resources.resource_filename("subway", "gephi/auto_nodes.json")
@@ -72,7 +79,7 @@ class Graph:
 
 
 graph = Graph.create_graph_from_file(JSON_PATH, PKL_PATH)
-graph_to_pkl(graph.graph, GRAPH_PKL_PATH)
+# graph_to_pkl(graph.graph, GRAPH_PKL_PATH)
 # graph.create_gexf_from_file(GEPHI_PATH)
 
 # nx.write_gexf(graph.graph, "test.gexf")

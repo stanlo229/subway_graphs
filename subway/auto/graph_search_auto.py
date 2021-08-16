@@ -376,13 +376,18 @@ class Calculate:
 
         Parameters
         ----------
-        smiles:    SMILES of the molecule with reaction site substructures
-        rxn:    Name of reaction to match to dictionary with substructures to count
+        smiles: SMILES of the molecule with reaction site substructures
+        rxn: Name of reaction to match to dictionary with substructures to count
 
         Returns
         -------
         mult: Number of reaction sites on the molecule
         """
+        # ---------------------------------------------------------
+        # ADDITION OF NEW REACTIONS AND MOLECULES
+        # The following class/function/variable needs to be modified!
+        # NOTE: .json, adj_list file needs to be modified
+        # ---------------------------------------------------------
         patts: dict = {
             "Suzuki": [Chem.MolFromSmarts("cBr"), Chem.MolFromSmarts("cI")],
             "deboc": [Chem.MolFromSmiles("O=C(OC(C)(C)C)n1c2c(cc1)cccc2")],
@@ -416,6 +421,11 @@ class Calculate:
         cost_t: float = np.sqrt((self.a * time_H) ** 2 + (self.a_ * time_M) ** 2)
         return cost_t
 
+    # ---------------------------------------------------------
+    # ADDITION OF NEW REACTIONS AND MOLECULES
+    # The following class/function/variable needs to be modified!
+    # NOTE: .json, adj_list file needs to be modified
+    # ---------------------------------------------------------
     def molecule_classifier(self, mol_node: Dict, rxn_type: str):
         """Determines molecule type by substructure and gives appropriate equivalents
         
@@ -565,6 +575,11 @@ class Calculate:
         final_scale = scale
         return score, final_scale
 
+    # ---------------------------------------------------------
+    # ADDITION OF NEW REACTIONS AND MOLECULES
+    # The following class/function/variable needs to be modified!
+    # NOTE: .json, adj_list file needs to be modified
+    # ---------------------------------------------------------
     def StepScore(
         self,
         graph,
