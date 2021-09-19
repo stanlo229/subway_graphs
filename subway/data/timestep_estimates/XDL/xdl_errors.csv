@@ -1,0 +1,52 @@
+,Input(Procedure Step),Error Message
+0,"Syringe R1 containing starting materials was added to Module 1, which was equipped with a 3D printed polypropylene high surface condenser: 10 min.",Error: No Output
+1,The solvent was removed and obtained white pure product (Yield 88%): 5 min,Error: No Output
+2,The solvent was removed and obtained white pure product (Yield 88%): 5 min,Error: No Output
+3,The reactionware monolith was lowered into a preheated silicone oil bath (50 °C): 5 min,Error: No Output
+4,Reaction mixture was left to stir for 24 hours at 400 RPM,Error: No Output
+5,The reactionware monolith was taken out of the oil bath and let to cool to RT: 5 min,Error: No Output
+6,"Then, benzhydrylthioacetyl chloride dissolved in about 100 ml of methylene chloride is added drop by drop: 30 min",Error: No Output
+7,The mixture was cooled by adding ice followed by vacuum filtration to obtain the crude solid which upon recrystallization in aqueous methanol yield white solid (Yield 91%).: 30 min,Error: No Output
+8,The mixture was cooled by adding ice followed by vacuum filtration to obtain pale yellow gummy liquid (Yield 96%).: 10 min,Error: No Output
+9,"Once at RT, the condenser was unmounted, and a vacuum was applied to Module 1 under stirring to remove DCM (400 mbar for 3 hours, afterwards 200 mbar for 30 minutes): 10 min",Error: No Output
+10,A Solution of 2-benzhydrylsulfanylacetonitrile in 5 ml of EtOH was added 5% KOH (2 mL) and the mixture was stirred for 20 min at room temperature: 10 min,Error: list index out of range
+11,A hot Solution of chloroacetamide (22.0 g) in water (66 ml) is added in about 1 hour: 1 h ,Error: list index out of range
+12,"Once the addition is complete, the organic phase is washed with a dilute solution of soda and dried over Na2SO4: 10 min",Error: list index of range
+13,"Suction filtration gave the 6.9 g of the acid (3, 46%): 10 min",Error: No Output
+14, An oil separates from the mixture and at the end of the addition compound (II) solidifies: 10 min ,Error: No Output
+15,N2(g.) line was turned on to transfer reaction liquid from Module 1 to Module 2: 5 min,Error: No Output
+16,1.430 liters of hydrogen peroxide at 130 volumes are passed in over 3 hours at about 30° C  over benzhydryl thioacetic acid: 15 min,Error: No Output
+17,"20 gr. of the product was recrystallized twice from ethyl acetate, dried in vacuo to give 15 gr. of pure title compound: 30 min ",Error: Recrystallize is not a valid step type
+18,"Addition of diphenylmethylthioacetic acid (19.5 g, 0.076 moles) in 114 ml of dry benzene, under N2 gas: 15 min (considering weighing)",Error: No Output
+19,"Module 2 was equipped with a PTFE stir bar (25x8 mm), then 4M HCl(aq.) (4.5 mL) was added at which point a white precipitate started forming (Considering HCl solution preparation): 20 min",Error: No Output
+20,Removal of the solvent under reduced  pressure  afforded  a  crude  solid  that  was recrystallized from isopropyl ether to give 17.0 g (87%): 30 min,Error: Recrystallize is not a valid step type.
+21,Vacuum applied to port V2 and the mixture filtered. White precipitate formed in Module 2 was isolated: 30 min ,Error: No Output
+22,A hot Solution of chloroacetamide (22.0 g) in water (66 ml) is added in about 1 hour: 1 h ,Error: list index out of range
+23,"Filtration, washing with water to reform a paste and drying without heat are carried out. In this way, the benzhydryl sulfinyl acetic acid is obtained: 20 min",Error: No Output
+24,"By recrystallisation from methanol, 11.2 g of benzhydryl sulphinylacetamide are obtained: 30 min",Error: No Output
+25,The solid was collected by filtration and recrystallized from MeOH to afford 10.2 g (67%) of modafinil as a white solid: 30 min,Error: Recrystallize is not a valid step type.
+26, An oil separates from the mixture and at the end of the addition compound (II) solidifies: 10 min ,Error: No Output
+27,"Then, 5.8% H2O2 solution (500 g, 1.2 eq.) was added dropwise during 0.5 hours at 40-450 C: 35 min ",Error: No Output
+28,Oxalyl chloride was taken out of the refrigerator to warm up to RT for 30 minutes: 5 min,Error: No Output
+29,The solid was collected by filtration and recrystallized from MeOH to afford 10.2 g (67%) of modafinil as a white solid: 30 min,Error: Recrystallize is not a valid step type.
+30,"Then,  it was taken up in about 100 ml of CH2Cl2 and filtered to yield a clear orange solution: 10 min",Error: No Output
+31,"Anhydrous DCM (46 mL), 1 drop of DMF was added to Module 2: 10 min",Error: No Output
+32,"After one hour, crystallisation is induced. Filtration, drying without heat and washing are carried out. Methyl benzhydryl sulfinyl acetate is obtained: 30 min",Error: No Output
+33,This was chilled in ice water and added slowly to an ice-cold solution of concentrated NH4OH in H2O (40:40 ml): 20 min,Error: 'Word' object has no attribute 'name'
+34,The mixture stirred until the white powder dissolved,Error: No Output
+35,"Reslurry in refluxing ethyl acetate, followed by recrystallization from methanol:water (4:1) solution afforded pure Modafinil (125 g): 20 min",Error: No Output
+36,Reactionware monolith was lowered into an ice-bath: 5 min,Error: No Output
+37,"NH3 is bubbled in at a high rate of flow for 1 hour, and then left in contact for 4 hours: 15 min",Error: No Output
+38,"Filtration, drying without heat and washing with water are then carried out: 20 min",Error: No Output
+39,"The reaction was left to stir for 30 minutes, then the reactionware monolith was raised from the ice bath and left to stir for another 2.5 h: 5 min",Error: No Output
+40,"By recrystallisation from a mixture of water and methanol (4:1 v/v) and then from a mixture of water and methanol (9:1 v/v) and drying under reduced pressure, the product is obtained in the form of a white crystalline powder: 40 min",Error: No Output
+41,The mixture was left in the refrigerator for 4 h,Error: No Output
+42,Thereafter worked up by treating it with 70 ml of ice-cold water: 5 min,Error: No Output
+43,The reaction mixture was filtered by transferring the filtrate from Module 2 to Module 3: 10 min,Error: No Output
+44,"To ensure full removal of DCM, MeOH (30 mL) was added to Module 3 and the mixture stirred until dissolved: 5 min",Error: No Output
+45,"Syringe R2 preparation: aqueous ammonium molybdate tetrahydrate solution (48 µL, 8.7 µmol), Na2CO3 (22 mg, 203 µmol) in MeOH (30 mL): 20 min",Error: No Output
+46,"Syringe R2 containing starting materials was prepared and added to Module 3 to dissolve 2- (diphenylmethylthio) acetamide (1.07 g, 4.2 mmol, 1 eq.): 5 min",Error: No Output
+47,"Once a constant temperature was reached, 50% H2O2 (aq.) (0.24 mL, 4.1 mmol, 1 eq.) was added in portions to Module 3 under stirring: 5 min  ",Error: No Output
+48,"Following the addition, the reactionware monolith was taken out of the ice bath and put in a preheated to 70 °C oil bath: 5 min",Error: No Output
+49,"Thus, another equivalent of 50% H2O2 (aq.) (0.24 mL, 4.1 mmol, 1 eq.) was added to Module 3: 5 min",Error: No Output
+50,Material was transferred from Module 3 to Module 4: 10 min,Error: No Output
