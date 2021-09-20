@@ -59,7 +59,53 @@ class xdl_stats:
                 action_idx.append(j)
             if value == "XDL":
                 xdl_idx.append(j)
-        print(action_idx, xdl_idx)
+
+        idx = 0
+        ord_match = 0
+        total_actions = 0
+        error = 0
+        while idx < len(action_idx):
+            a_idx = action_idx[idx]
+            x_idx = xdl_idx[idx]
+            for i in range(self.data.shape[0]):  # iterate through rows
+                # create list of actions
+                a_value = self.data.iloc[i, a_idx]
+                x_value = self.data.iloc[i, x_idx]
+                if isinstance(a_value, float) or isinstance(x_value, float):
+                    continue
+                # count number of errors
+                if x_value[0:5] == "Error":
+                    error += 1
+                a_list = a_value.split(",")
+                x_list = x_value.split(",")
+                print(a_list, x_list)
+
+                # add max number of actions to total_actions (includes extra actions)
+                total_actions += max(len(a_list), len(x_list))
+
+                # ordered matches
+                if len(a_list) < len(x_list):
+                    for order in range(len(a_list)):
+                        if a_list[order] == x_list[order]:
+                            ord_match += 1
+                else:
+                    for order in range(len(x_list)):
+                        if a_list[order] == x_list[order]:
+                            ord_match += 1
+
+            idx += 1
+        print(
+            "Matches:",
+            ord_match,
+            "Total # of Actions:",
+            total_actions,
+            "Accuracy(%):",
+            (ord_match * 100 / total_actions),
+            "Errors:",
+            error,
+            "Accuracy_w/o_errors(%):",
+            (ord_match * 100 / (total_actions - error)),
+        )
 
 
 stats = xdl_stats(TIMESTEP_CSV)
